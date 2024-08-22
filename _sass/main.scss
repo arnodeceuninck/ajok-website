@@ -19,3 +19,21 @@
   align-items: center;
   gap: 20px; /* Set your desired gap between images */
 }
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+}
+h2 {
+  color: #ffcc00;
+}
+.btn-success {
+  background-color: #28a745;
+  border-color: #28a745;
+}
+.text-warning {
+  color: #ffcc00 !important;
+}
+.bg-orange {
+  background-color: #ffcc00;
+}
