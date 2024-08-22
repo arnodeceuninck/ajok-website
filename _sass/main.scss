@@ -1,3 +1,21 @@
 .current {
-    color: green;
-  }
+  color: green;
+}
+
+.navbar-line {
+  height: 15px; /* Adjust the height of the line */
+  background-color: #def5ff; /* Change to your desired color */
+}
+
+.fixed-height-img {
+  height: 150px; /* Set your desired fixed height */
+  width: auto;
+  object-fit: cover; /* Ensure the image covers the container without stretching */
+}
+
+.image-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; /* Set your desired gap between images */
+}
