@@ -1,5 +1,5 @@
 <div class="row align-items-center mb-0">
-    <div class="col-md-8" style="position: relative; height:max-content; min-height: 100%; position: relative;">
+    <div class="col-md-8  d-flex flex-column justify-content-between" style="position: relative; height:max-content; min-height: 100%; position: relative; ">
         <div class="row">
             <div style="padding: 50px;">
                 <h2 class="text-uppercase font-italic black-line-below">{{ include.title }}</h2>
@@ -9,13 +9,13 @@
                 {% endif %}
              </div>
         </div>
-        <div class="row">
-            <img id="hills" src="/assets/images/heuveltjes.png" style="padding: 0;"/>
+        <div class="row mt-auto">
+            <img id="hills" src="/assets/images/heuveltjes.png" style="padding: 0; width: 100%;"/>
         </div>
 
         
     </div>
-    <div class="col-md-4" style="padding-left: 0;">
+    <div class="col-md-4 img-fluid" style="padding-left: 0; max-height: 100%;">
         <img src="{{ include.img }}">
     </div>
 </div>

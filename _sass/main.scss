@@ -7,6 +7,23 @@
   background-color: #def5ff; /* Change to your desired color */
 }
 
+.nav-link {
+  color: #fff !important;
+}
+
+.nav-item {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+// img {
+//   max-width: 100%;
+//   height: auto;
+// }
+
+.row {
+  overflow-x: hidden;
+}
+
 .fixed-height-img {
   height: 150px; /* Set your desired fixed height */
   width: auto;
@@ -24,6 +41,7 @@ body {
   font-family: Montserrat, sans-serif;
   background-color: #f8f9fa;
   overflow-x: hidden;
+  width: 100%;
 }
 h2 {
   // color: #ffcc00;
