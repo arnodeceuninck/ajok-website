@@ -1,20 +1,10 @@
-<!-- <div class="row align-items-center mb-0">
-    <div class="col-md-8">
-        <h3 class="text-uppercase"></h3>
-        <p></p>
-        <a href="#" class="btn btn-success"></a>
-    </div>
-    <div class="col-md-4">
-        <img src="" class="img-fluid rounded" alt="Image of a campsite">
-    </div>
-</div> -->
-
-
 <div class="row align-items-center mb-0">
     <div class="col-md-8">
-        <h2 class="text-uppercase fw-bold">{{ include.title }}</h2>
+        <h2 class="text-uppercase font-italic black-line-below">{{ include.title }}</h2>
         <p>{{ include.text }}</p>
-        <a href="{{ include.url }}" class="btn btn-success">{{ include.call_to_action }}</a>
+        {% if include.call_to_action %}
+            <a href="{{ include.url }}" class="btn btn-success">{{ include.call_to_action }}</a>
+        {% endif %}
     </div>
     <div class="col-md-4">
         <img src="{{ include.img }}" class="img-fluid rounded">

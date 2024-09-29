@@ -1,0 +1,106 @@
+---
+layout: default
+title: "Op Kamp"
+---
+
+<h2 class="text-uppercase">Vakantieaanbod</h2>
+
+<p>
+    AJOK organiseert vakantiekampen voor jongeren van 6 tot 17 jaar 
+    die geen aansluiting vinden bij het reguliere jeugdwerk. Dit kan 
+    om verschillende redenen zoals financiële of gedragsproblemen zijn. 
+    We bieden vier zomerkampen en één paaskamp aan. Elk jaar kiezen we 
+    een thema voor ons programma - dit jaar is het thema 'Feestdagen'! 
+    Wil je meer weten over onze vakantiemogelijkheden? Bekijk hieronder ons aanbod!
+</p>
+
+<a href="/op-kamp#kampen" class="btn btn-primary">Kamp overzicht</a>
+<a href="/op-kamp#verblijf" class="btn btn-primary">Vakantieverblijf</a>
+
+{% include image-row.html %}
+
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        {% include camp-card.html 
+            naam="PAASKAMP" 
+            leeftijd="6-9 JAAR" 
+            prijs="€70*/€85**" %}
+        {% include camp-card.html 
+            naam="PICO" 
+            leeftijd="6-8 JAAR" 
+            prijs="€80*/€100**" %}
+        {% include camp-card.html 
+            naam="NANO" 
+            leeftijd="9-11 JAAR" 
+            prijs="€90*/€110*" %}
+    </div>
+
+    <div class="row justify-content-center">
+        {% include camp-card.html 
+            naam="HECTO" 
+            leeftijd="12-13 JAAR" 
+            prijs="€90*/€110**" %}
+        {% include camp-card.html 
+            naam="GIGA" 
+            leeftijd="14-16 JAAR" 
+            prijs="€90/€110*" %}
+        {% include camp-card.html 
+            naam="OP SCHOK" 
+            leeftijd="16-17 JAAR" 
+            prijs="€75/€95*" %}
+    </div>
+</div>
+
+
+{% include section-img-left.html 
+    title="Wie zijn we?" 
+    text="Om onze deelnemers een hartelijk verblijf te bieden kiezen
+    we ervoor onze kampen te houden in het rustige Wiesme,
+    dat dichtbij het bedevaartsoord Beauraing ligt.
+    </br></br>
+    La Laiterie is een volledig uitgerust kamphuis met een
+    capaciteit van 100 personen. Het kamphuis is gevestigd in
+    een oude melkfabriek en ligt in een groene omgeving
+    waarin de deelnemers zich kunnen uitleven. In de
+    speelweiden en -bossen kunnen kinderen en tieners he-lemaal losgaan. Plaats genoeg!
+    </br></br>
+    Daarnaast zijn er in de nabije omgeving veel
+    recreatiemogelijkheden. Denk maar aan wandelen,
+    mountainbiken, speleologie, kanoën, abseilen, vissen en ga
+    zo maar door. Plezier gegarandeerd!
+    "
+    img="assets/images/img5_crop.jpg"  %}
+
+
+
+{% include section-img-right.html 
+    title="Paaskamp!" 
+    text="
+    <div class='row'>
+        <div class='col-md-6'>
+            <h5>Programma</h5>
+            <p>
+                We dansen, zingen, doen gek
+                en springen op het paaskamp!
+                We lachen hard in de
+                speeltuin van Chevetogne en
+                het Wildpark in Han. Kom
+                naar de kinderboerderij en
+                help ons een feestje te
+                bouwen!
+            </p>
+        </div>
+        <div class='col-md-6'>
+            <h5>Praktisch</h5>
+            <p>
+                <i class='fa fa-calendar'></i> 11-15 april 2022
+                </br>
+                <i class='fa fa-euro-sign'></i> Thuiswonend: €70 / Niet-thuiswonend: €85**
+                </br>
+                <i class='fa fa-user'></i> 6-9 jaar
+            </p>
+        </div>
+    </div>
+"
+    img="assets/images/img5_crop.jpg"  %}
