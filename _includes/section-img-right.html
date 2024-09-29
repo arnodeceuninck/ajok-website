@@ -1,12 +1,21 @@
 <div class="row align-items-center mb-0">
-    <div class="col-md-8">
-        <h2 class="text-uppercase font-italic black-line-below">{{ include.title }}</h2>
-        <p>{{ include.text }}</p>
-        {% if include.call_to_action %}
-            <a href="{{ include.url }}" class="btn btn-success">{{ include.call_to_action }}</a>
-        {% endif %}
+    <div class="col-md-8" style="position: relative; height:max-content; min-height: 100%; position: relative;">
+        <div class="row">
+            <div style="padding: 50px;">
+                <h2 class="text-uppercase font-italic black-line-below">{{ include.title }}</h2>
+                <p>{{ include.text }}</p>
+                {% if include.call_to_action %}
+                    <a href="{{ include.url }}" class="btn btn-success">{{ include.call_to_action }}</a>
+                {% endif %}
+             </div>
+        </div>
+        <div class="row">
+            <img id="hills" src="/assets/images/heuveltjes.png" style="padding: 0;"/>
+        </div>
+
+        
     </div>
-    <div class="col-md-4">
-        <img src="{{ include.img }}" class="img-fluid rounded">
+    <div class="col-md-4" style="padding-left: 0;">
+        <img src="{{ include.img }}">
     </div>
 </div>
