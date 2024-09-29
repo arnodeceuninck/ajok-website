@@ -1,12 +1,12 @@
 - name: AJOK
-  link: /
+  link: 
 - name: Over ons
-  link: /over-ons.html
+  link: over-ons.html
 - name: Op kamp
-  link: /op-kamp.html
+  link: op-kamp.html
 - name: Vrijwilligers
-  link: /vrijwilligers.html
+  link: vrijwilligers.html
 - name: Steun
-  link: /steun.html
+  link: steun.html
 - name: Contact
-  link: /contact.html
+  link: contact.html
