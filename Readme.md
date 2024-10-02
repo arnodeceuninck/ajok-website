@@ -1,4 +1,27 @@
 # ajok-website
+## Todo's
+### Required features
+- [ ] Template afbeeldingen updaten, dat er niet overal dezelfde afbeelding staat
+- [ ] Vrijwilligers pagina
+- [ ] Steun pagina
+- [ ] Contact pagina
+- [ ] Copyright jaartal onderaan (startjaar, eindjaar updatet al automatisch)
+- [ ] Inschrijvingspagina (ik ben niet zo'n fan van embeded forms, liever inees doorlinken naar google forms), maar daarvoor nog algeemene pagina met inschrijvingsvoorwaarden kan wel handig zijn
+- [ ] Makkeelijk aanpasbare variabel voor inschrijvigsvorm
+
+### Required bugfixes
+- [ ] Sections die niet altijd mooi aansluiten, bv. omdat de afbeelding te groot is
+- [ ] Kamp aanbod tegels klikbaar maken
+
+### Nice to have bugfixes
+- [ ] tekst overlapt soms boompjes in  de achtergrond
+- [ ] Huidige heuveltjes afbeelding is een te lage resolutie, beter ergens een svg vinden
+
+### Nice to haves
+- [ ] Neem contact met ons op heeft nog wat layout updates nodig
+- [ ] Meer variatie in secties, dat het niet altijd exact dezelfde boompjes en heuveltjes zijn
+- [ ] Kamp aanbod tegels variabelen uit kampen.yml laten gebruiken
+
 ## Aanpassingen
 
 ### Tekst
