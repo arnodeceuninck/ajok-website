@@ -1,0 +1,46 @@
+{% capture camp_info %}
+<div class='row'>
+    <div class='col-md-6'>
+        <h5>Programma</h5>
+        <p>
+            {{ include.description }}
+        </p>
+    </div>
+    <div class='col-md-6'>
+        <h5>Praktisch</h5>
+        <p>
+            <i class='fa fa-calendar'></i> {{ include.datum }}
+            </br>
+            <i class='fa fa-euro-sign'></i> Thuiswonend: €{{ include.prijs_thuiswonend }} / Niet-thuiswonend: €{{ include.prijs_niet_thuiswonend }}
+            </br>
+            <i class='fa fa-user'></i> {{ include.leeftijd }}
+        </p>
+    </div>
+</div>
+{% endcapture %}
+
+{% capture title %}
+{{ include.title }}
+{% endcapture %}
+
+{% capture img %}
+{{ include.img }}
+{% endcapture %}
+
+{% capture img_mobile %}
+{{ include.img_mobile }}
+{% endcapture %}
+
+{% if include.type == 'left' %}
+    {% include section-img-left.html
+        title=title
+        text=camp_info
+        img=img
+        img_mobile=img_mobile %}
+{% else %}
+    {% include section-img-right.html
+        title=title
+        text=camp_info
+        img=img
+        img_mobile=img_mobile %}
+{% endif %}

@@ -6,8 +6,8 @@
         </div>
     {% endif %}
 
-    <div class="col-md-8  d-flex flex-column justify-content-between equal-height-col " style="position: relative; position: relative; ">
-        <div class="row">
+    <div class="col-md-8" style="position: relative; position: relative;">
+        <div class="row" style="height: fit-content;">
             <div style="padding: 50px;">
                 <h2 class="text-uppercase font-italic black-line-below">{{ include.title }}</h2>
                 <p>{{ include.text }}</p>
@@ -22,7 +22,7 @@
     </div>
 
     <div class="col-md-4 d-none d-md-block" style="padding-left: 0;">
-        <img src="{{ include.img }}" style="object-fit: cover; width: 100%;">
+        <img src="{{ include.img }}">
     </div>
 
 </div>

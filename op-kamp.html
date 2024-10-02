@@ -3,22 +3,19 @@ layout: default
 title: "Op Kamp"
 ---
 
-<h2 class="text-uppercase">Vakantieaanbod</h2>
-
-<p>
-    AJOK organiseert vakantiekampen voor jongeren van 6 tot 17 jaar 
-    die geen aansluiting vinden bij het reguliere jeugdwerk. Dit kan 
-    om verschillende redenen zoals financiële of gedragsproblemen zijn. 
-    We bieden vier zomerkampen en één paaskamp aan. Elk jaar kiezen we 
-    een thema voor ons programma - dit jaar is het thema 'Feestdagen'! 
-    Wil je meer weten over onze vakantiemogelijkheden? Bekijk hieronder ons aanbod!
-</p>
-
-<a href="/op-kamp#kampen" class="btn btn-primary">Kamp overzicht</a>
-<a href="/op-kamp#verblijf" class="btn btn-primary">Vakantieverblijf</a>
-
-{% include image-row.html %}
-
+{% include section.html 
+     title="Vakantieaanbod"
+     text="<p>
+        AJOK organiseert vakantiekampen voor jongeren van 6 tot 17 jaar 
+        die geen aansluiting vinden bij het reguliere jeugdwerk. Dit kan 
+        om verschillende redenen zoals financiële of gedragsproblemen zijn. 
+        We bieden vier zomerkampen en één paaskamp aan. Elk jaar kiezen we 
+        een thema voor ons programma - dit jaar is het thema 'Feestdagen'! 
+        Wil je meer weten over onze vakantiemogelijkheden? Bekijk hieronder ons aanbod!
+    </p>
+    
+    <a href='op-kamp#kampen' class='btn btn-danger'>Kamp overzicht</a>
+    <a href='op-kamp#verblijf' class='btn btn-danger'>Vakantieverblijf</a>" %}
 
 <div class="container mt-5">
     <div class="row justify-content-center">
@@ -53,6 +50,12 @@ title: "Op Kamp"
 </div>
 
 
+<div class="row mt-auto">
+    <img id="hills" src="assets/images/heuveltjes.png" style="padding: 0; width: 100%;"/>
+</div>
+
+
+
 {% include section-img-left.html 
     title="Wie zijn we?" 
     text="Om onze deelnemers een hartelijk verblijf te bieden kiezen
@@ -74,33 +77,25 @@ title: "Op Kamp"
 
 
 
-{% include section-img-right.html 
-    title="Paaskamp!" 
-    text="
-    <div class='row'>
-        <div class='col-md-6'>
-            <h5>Programma</h5>
-            <p>
-                We dansen, zingen, doen gek
-                en springen op het paaskamp!
-                We lachen hard in de
-                speeltuin van Chevetogne en
-                het Wildpark in Han. Kom
-                naar de kinderboerderij en
-                help ons een feestje te
-                bouwen!
-            </p>
-        </div>
-        <div class='col-md-6'>
-            <h5>Praktisch</h5>
-            <p>
-                <i class='fa fa-calendar'></i> 11-15 april 2022
-                </br>
-                <i class='fa fa-euro-sign'></i> Thuiswonend: €70 / Niet-thuiswonend: €85**
-                </br>
-                <i class='fa fa-user'></i> 6-9 jaar
-            </p>
-        </div>
-    </div>
-"
-    img="assets/images/img5_crop.jpg"  %}
+
+
+{% for item in site.data.kampen %}
+
+    {% assign type = 'right' %}
+    {% assign remainder = forloop.index | modulo: 2 %}
+    {% if remainder == 0 %}
+        {% assign type = 'left' %}
+    {% endif %}
+
+    {% include camp-info.html 
+        title=item.name 
+        description=item.description
+        datum = item.datum
+        prijs_thuiswonend = item.prijs_thuiswonend
+        prijs_niet_thuiswonend = item.prijs_niet_thuiswonend
+        leeftijd = item.leeftijd
+        img=item.img
+        img_mobile=item.img_mobile
+        type=type  %}
+
+  {% endfor %}

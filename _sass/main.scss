@@ -4,7 +4,7 @@
 
 .navbar-line {
   height: 15px; /* Adjust the height of the line */
-  background-color: #def5ff; /* Change to your desired color */
+  background-color: #c5f1fe; /* Change to your desired color */
 }
 
 .nav-link {
@@ -39,7 +39,7 @@
 
 body {
   font-family: Montserrat, sans-serif;
-  background-color: #f8f9fa;
+  background-color: #c5f1fe;
   overflow-x: hidden;
   width: 100%;
 }
@@ -58,10 +58,14 @@ h2 {
   text-decoration: underline;
   font-size: 12px;
   width: fit-content;
+  margin: 10px;
 }
 .btn-success {
   background-color: #28a745;
   border-color: #28a745;
+}
+.btn-danger {
+  background-color: #df6316;
 }
 .text-warning {
   color: #ffcc00 !important;
@@ -73,13 +77,17 @@ h2 {
 
 .camp-card {
   background-color: #F7B52C;
-  padding: 20px;
+  border-style: solid;
+  border-color: #fff;
+  border-width: 12px;
   border-radius: 10px;
+  padding: 5px;
   text-align: center;
   color: #000;
-  font-weight: bold;
+  // font-weight: bold;
   margin: 15px;
 }
+
 .camp-card h5 {
   font-size: 1.5rem;
   margin-bottom: 10px;
