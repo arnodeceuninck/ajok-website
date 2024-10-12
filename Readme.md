@@ -12,6 +12,7 @@
 ### Required bugfixes
 - [ ] Sections die niet altijd mooi aansluiten, bv. omdat de afbeelding te groot is
 - [ ] Kamp aanbod tegels klikbaar maken
+- [ ] Paaskamp knop gaat somehow niet nar paaskamp
 
 ### Nice to have bugfixes
 - [ ] tekst overlapt soms boompjes in  de achtergrond

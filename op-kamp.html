@@ -77,8 +77,6 @@ title: "Op Kamp"
 
 
 
-
-
 {% for item in site.data.kampen %}
 
     {% assign type = 'right' %}
@@ -88,7 +86,7 @@ title: "Op Kamp"
     {% endif %}
 
     {% include camp-info.html 
-        title=item.name 
+        title=item.name
         description=item.description
         datum = item.datum
         prijs_thuiswonend = item.prijs_thuiswonend

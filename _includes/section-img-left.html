@@ -1,11 +1,12 @@
-<div class="row align-items-center mb-0 bg-primary  text-light" style="position: relative;">
+<div class="row align-items-center mb-0 bg-primary  text-light" style="position: relative;"
+    id="{{ include.title | strip }}">
     {% if include.img_mobile %}
     <div class="d-md-none" style="width: 100%;">
         <img src="{{ include.img_mobile }}" style="width: 100%;">
     </div>
     {% endif %}
-    
-    <div class="col-md-4 d-none d-md-block"  style="padding: 0%;">
+
+    <div class="col-md-4 d-none d-md-block" style="padding: 0%;">
         <img src="{{ include.img }}" class="img-fluid" style="object-fit: cover;">
     </div>
 
@@ -13,13 +14,13 @@
         <h2 class="text-uppercase text-light font-italic white-line-below">{{ include.title }}</h2>
         <p style="padding-right: 20%;">{{ include.text }}</p>
         {% if include.call_to_action %}
-            <a href="{{ include.url }}" class="btn btn-success">{{ include.call_to_action }}</a>
+        <a href="{{ include.url }}" class="btn btn-success">{{ include.call_to_action }}</a>
         {% endif %}
     </div>
 
 
 
     <img id="tree" src="assets/images/boompjes.png"
-    style="position: absolute; height: auto; width: 20%; right: -50px; z-index: 0; bottom: 0" />
+        style="position: absolute; height: auto; width: 20%; right: -50px; z-index: 0; bottom: 0" />
 
 </div>

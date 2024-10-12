@@ -1,9 +1,9 @@
-<div class="row align-items-center mb-0 d-flex flex-wrap equal-height-row">
-    
+<div class="row align-items-center mb-0 d-flex flex-wrap equal-height-row" id="{{ include.title | strip }}">
+
     {% if include.img_mobile %}
-        <div class="col-12 d-md-none" style="width: 100%;">
-            <img src="{{ include.img_mobile }}" class="img-fluid" style="object-fit: cover;">
-        </div>
+    <div class="col-12 d-md-none" style="width: 100%;">
+        <img src="{{ include.img_mobile }}" class="img-fluid" style="object-fit: cover;">
+    </div>
     {% endif %}
 
     <div class="col-md-8" style="position: relative; position: relative;">
@@ -12,12 +12,12 @@
                 <h2 class="text-uppercase font-italic black-line-below">{{ include.title }}</h2>
                 <p>{{ include.text }}</p>
                 {% if include.call_to_action %}
-                    <a href="{{ include.url }}" class="btn btn-success">{{ include.call_to_action }}</a>
+                <a href="{{ include.url }}" class="btn btn-success">{{ include.call_to_action }}</a>
                 {% endif %}
-             </div>
+            </div>
         </div>
         <div class="row mt-auto">
-            <img id="hills" src="assets/images/heuveltjes.png" style="padding: 0; width: 100%;"/>
+            <img id="hills" src="assets/images/heuveltjes.png" style="padding: 0; width: 100%;" />
         </div>
     </div>
 
