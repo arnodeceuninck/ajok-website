@@ -1,0 +1,16 @@
+---
+layout: default
+title: "Contact"
+---
+
+
+{% capture contact_items %}
+{% include contact-items.html %}
+{% endcapture %}
+
+
+{% include section.html
+title="Neem contact met ons op!"
+text=contact_items
+img="assets/images/img5_crop.jpg"
+img_mobile="assets/images/img5_mobile.jpg" %}
