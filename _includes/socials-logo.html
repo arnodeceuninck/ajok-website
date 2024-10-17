@@ -1,0 +1,21 @@
+<a
+                data-mdb-ripple-init
+                class="btn text-white btn-floating m-2"
+                style="
+                    background-color: {{ include.color }};
+                    transform: rotate(45deg);
+                    border: 5px solid white;
+                    width: 40px; 
+                    height: 40px;
+                    padding: 0;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    text-align: center;
+                    border-radius: 20%; /* Adds round corners */
+                "
+                href="{{ include.link }}"
+                role="button"
+            >
+                <i class="{{ include.icon }}" style="transform: rotate(-45deg);"></i>
+            </a>
