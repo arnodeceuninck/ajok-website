@@ -27,98 +27,42 @@ title: "Vrijwilligers"
         <h2 id="Vrijwilligerfuncties" class="text-uppercase font-italic black-line-below">Vrijwilligerfuncties</h2>
         
         <div class="row justify-content-center">
-            {% include camp-card.html 
-                naam="Zorgverlener"  %}
-            {% include camp-card.html 
-                naam="Keukenpersoneel"  %}
-            {% include camp-card.html 
-                naam="Manus"  %}
-            {% include camp-card.html 
-                naam="Monitor"  %}
+
+            {% for item in site.data.kampfuncties %}
+                {% include camp-card.html 
+                    naam=item.naam  %}
+            {% endfor %}
         </div>
     </div>
 </div>
 
-{% include section-img-right.html
-    title="Zorgverlener"
-    text="PROFIEL: Als zorgverlener sta je in voor de dagelijkse verzorging en
-    begeleiding van de kinderen. Dat betekent dat je EHBO ervaring
-    hebt, en dat je een hart voor het verzorgen van kinderen hebt. [JB1]
-    <br><br>
-    TAKKENPAKKET: Naast de medische taken zoals medicatieverdeling
-    en wondjes verzorgen, maak je ook tijd voor babbels en spelletjes;
-    samen met het animatieteam. Zo help je AJOK een sfeervolle
-    omgeving te creëren waarin kinderen zich thuis kunnen voelen. Ben
-    jij de persoon die deze verantwoordelijkheid op zich neemt? Meld je
-    dan nu aan als zorgverlener!
-    [JB1]Je beschikt over EHBO ervaring en bovenal heb je een hart voor
-    het verzorgen van kinderen."
 
-    call_to_action="Meld je aan!"
-    url="/todo" 
-    img="assets/images/img5_crop.jpg"
-    img_mobile="assets/images/img5_mobile.jpg" %}
+{% for item in site.data.kampfuncties %}
 
-{% include section-img-left.html
-    title="Keukenpersoneel"
-    text="PROFIEL: Als keukenpersoneel ben je verantwoordelijk voor het
-    bereiden van verschillende maaltijden. Om in aanmerking te
-    komen voor deze functie moet je niet enkel 18 jaar of ouder zijn,
-    maar ook in staat zijn om met eenvoudige ingrediënten lekkere
-    maaltijden op tafel te toveren.
-    <br><br>
-    TAKKENPAKKET: Je bent verantwoordelijk voor het bereiden van
-    ontbijt, lunch, het vieruurtje en avondeten, zorgt ervoor dat de
-    boodschappen binnen het budget blijven, en dat de keuken en
-    apparatuur goed onderhouden blijven. Ben je klaar om samen
-    met het AJOK-keukenteam de heerlijkste gerechten voor alle
-    deelnemers op tafel te toveren? Meld je dan nu aan voor deze
-    vrijwilligersfunctie!"
+    {% assign type = 'right' %}
+    {% assign remainder = forloop.index | modulo: 2 %}
+    {% if remainder == 0 %}
+        {% assign type = 'left' %}
+    {% endif %}
 
-    call_to_action="Meld je aan!"
-    url="/todo" 
-    img="assets/images/img5_crop.jpg"
-    img_mobile="assets/images/img5_mobile.jpg" %}
+    {% if type == 'left' %}
+        {% include section-img-left.html
+            title=item.naam
+            text=item.text
+            img=item.img
+            img_mobile=item.img_mobile
+            call_to_action="Meld je aan!"
+            url="vrijwilligers-inschrijven.html" %}
+    {% else %}
+        {% include section-img-right.html
+            title=item.naam
+            text=item.text
+            img=item.img
+            img_mobile=item.img_mobile
+            call_to_action="Meld je aan!"
+            url="vrijwilligers-inschrijven.html" %}
+    {% endif %}
 
-{% include section-img-right.html
-    title="Manus"
-    text="PROFIEL: Als manus ben je verantwoordelijk voor het verbeteren van
-    kampervaringen voor de deelnemers. We zoeken mensen die
-    minimaal 18 jaar oud zijn en bovendien sterk zijn in administratief
-    werk en organiseren.    
-    <br><br>
-    TAKKENPAKKET: Samen met de verpleegkundigen, het
-    keukenpersoneel en de monitoren stel je de dagelijkse agenda op en
-    bied je ondersteuning waar nodig. Je houdt ook de boekhouding bij
-    en zorgt ervoor dat het sport- en spelmateriaal op de juiste plek ligt.
-    Als belangrijkste functie coördineer, ondersteun en coach je het
-    team met veel enthousiasme. Ben je klaar om je administratief
-    hoedje op te zetten? Meld je dan aan als manus!"
-
-    call_to_action="Meld je aan!"
-    url="/todo" 
-    img="assets/images/img5_crop.jpg"
-    img_mobile="assets/images/img5_mobile.jpg" %}
-
-{% include section-img-left.html
-    title="Monitor"
-    text="PROFIEL: Als monitor ben je verantwoordelijk voor
-    het begeleiden van de kinderen tijdens de kampen.
-    Je bent minimaal 16 jaar oud met een jonge,
-    enthousiaste geest.
-    <br><br>
-    kinderen. Bovendien sta je in voor de
-    verzorging en de nodige opvolging van de
-    deelnemers. Het is ook jouw taak om ervoor te
-    zorgen dat de kinderen en jongeren zich op hun
-    gemak voelen op kamp en tegelijkertijd een leerrijke,
-    avontuurlijke en onvergetelijke tijd beleven. Ben je
-    klaar om gek te doen en plezier te beleven met de
-    kinderen? Meld je dan aan als monitor!"
-
-    call_to_action="Meld je aan!"
-    url="/todo" 
-    img="assets/images/img5_crop.jpg"
-    img_mobile="assets/images/img5_mobile.jpg" %}
+  {% endfor %}
 
 TODO: activiteitneop kamp, regels op kamp, evnementen, maak kennis met de vrijwilligers, hoe word ik vrijwilliger + op heel deze pagina is er veel te veel tekst (schrikt af) -> zien op te splitsen, irrelevante delen weghalen en/of tekstjes korter maken
