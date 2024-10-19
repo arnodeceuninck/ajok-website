@@ -140,3 +140,14 @@ a {
   // font-weight: bold;
   word-wrap: break-word;
 }
+
+
+.scroll-animation {
+  // transform: translateY(-30px);
+ opacity: 0;
+ transition: 1.7s;
+}
+.scroll--show {
+//  transform: translateY(0px);
+ opacity: 1;
+}
