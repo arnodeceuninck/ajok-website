@@ -115,3 +115,28 @@ a {
 .ajok-orange {
   color: #F7B52C;
 }
+
+
+.image-card-list {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.image-card {
+  text-align: center;
+  width: 200px; /* Adjust width as needed */
+}
+
+.image-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.image-card p {
+  margin-top: 10px;
+  // font-weight: bold;
+  word-wrap: break-word;
+}

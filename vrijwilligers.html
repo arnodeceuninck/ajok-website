@@ -29,8 +29,9 @@ title: "Vrijwilligers"
         <div class="row justify-content-center">
 
             {% for item in site.data.kampfuncties %}
-                {% include camp-card.html 
-                    naam=item.naam  %}
+                {% include image-card.html 
+                    label=item.naam
+                    image=item.img_square  %}
             {% endfor %}
         </div>
     </div>
