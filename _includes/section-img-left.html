@@ -14,12 +14,20 @@
         <div style="background-image: url('{{ include.img }}'); background-size: cover; background-position: center; height: 100%;"></div>
     </div>
 
-    <div class="col-md-8 d-flex flex-column justify-content-center" style="padding-left: 50px; padding-right: 50px; padding-top: 150px; padding-bottom: 150px; z-index: 1;">
+    <div class="col-md-8 d-flex flex-column justify-content-center" style="padding: 50px; z-index: 1;">
+        
+        <!-- This empty div adds extra padding on desktop -->
+        <div class="d-none d-md-block" style="height: 100px;"></div>
+
         <h2 class="text-uppercase text-light font-italic white-line-below">{{ include.title }}</h2>
         <p style="padding-right: 20%;">{{ include.text }}</p>
         {% if include.call_to_action %}
         <a href="{{ include.url }}" class="btn btn-success">{{ include.call_to_action }}</a>
         {% endif %}
+
+        <!-- This empty div adds extra padding on desktop -->
+        <div class="d-none d-md-block" style="height: 100px;"></div>
+
     </div>
 
 

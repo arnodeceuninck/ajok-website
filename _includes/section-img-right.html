@@ -8,12 +8,20 @@
 
     <div class="col-md-8" style="position: relative;"> 
         <div class="row" style="height: fit-content;">
-            <div style="padding-left: 50px; padding-right: 50px; padding-top: 100px; padding-bottom: 100px;">
+            <div style="padding: 50px;">
+
+                <!-- This empty div adds extra padding on desktop -->
+                <div class="d-none d-md-block" style="height: 50px;"></div>
+
                 <h2 class="text-uppercase font-italic black-line-below">{{ include.title }}</h2>
                 <p>{{ include.text }}</p>
                 {% if include.call_to_action %}
                 <a href="{{ include.url }}" class="btn btn-success">{{ include.call_to_action }}</a>
                 {% endif %}
+
+                <!-- This empty div adds extra padding on desktop -->
+                <div class="d-none d-md-block" style="height: 50px;"></div>
+                
             </div>
         </div>
         <div class="row mt-auto">
