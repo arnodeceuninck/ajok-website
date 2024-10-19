@@ -1,30 +1,7 @@
 <div class='row'>
-    <div class='col-md-6'>
-        {% include contact-item.html 
-            icon='fa fa-archive' 
-            description='Lodewijk Van Berckenlaan 85</br>2600 Berchem'
-            url='https://maps.app.goo.gl/e1benh1Sir4K5sLh8' %}
-        {% include contact-item.html 
-            icon='fa fa-envelope' 
-            description='info@ajokvzw.be'
-            url='mailto:info@ajokvzw.be' %}
-        {% include contact-item.html
-            icon='fa fa-phone'
-            description='+32 496 393 776'
-            url='tel:32 496 393 776' %}
-    </div>
-    <div class='col-md-6'>
-        {% include contact-item.html 
-            icon='fa fa-facebook' 
-            description='AJOKVZW op Facebook'
-            url='https://www.facebook.com/ajokvzw' %}
-        {% include contact-item.html
-            icon='fa fa-instagram'
-            description='AJOKVZW op Instagram'
-            url='https://www.instagram.com/ajokvzw/' %}
-        {% include contact-item.html
-            icon='fa fa-twitter'
-            description='AJOK VZW op Twitter'
-            url='https://twitter.com/ajokvzw' %}
-    </div>
+    {% for item in site.data.contact %}
+        <div class="col-md-5">
+            {% include contact-item.html item=item %}
+        </div>
+    {% endfor %}
 </div>

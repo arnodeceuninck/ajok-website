@@ -4,8 +4,10 @@
       <!-- Section: Social media -->
       <section class="mb-4" style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;">
 
-        {% for item in site.data.socials %}
+        {% for item in site.data.contact %}
+          {% if item.footer %}
               {% include socials-logo.html icon=item.icon color=item.color link=item.link %}
+          {% endif %}
         {% endfor %}
         
       </section>

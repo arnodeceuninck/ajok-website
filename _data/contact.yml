@@ -1,0 +1,48 @@
+# Icoontjes van hier halen: https://fontawesome.com/search?o=r&m=free
+
+- name: Facebook
+  description: AJOKvzw
+  color: '#3b5998'
+  icon: fab fa-facebook-f
+  link: https://www.facebook.com/ajokvzw/
+  footer: true
+
+- name: Instagram
+  description: AJOKvzw
+  color: '#ac2bac'
+  icon: fab fa-instagram
+  link: https://www.instagram.com/ajokvzw/
+  footer: true
+
+- name: Tiktok
+  description: AJOKvzw
+  color: '#000000'
+  icon: fab fa-tiktok
+  link: https://www.tiktok.com/@ajokvzw
+  footer: true
+
+- name: Mail
+  description: info@ajokvzw.be
+  color: '#D44638'
+  icon: fa-regular fa-envelope
+  link: mailto:info@ajokvzw.be
+  footer: true
+
+- name: Telefoon
+  description: +32 496 39 37 76
+  color: '#0082ca'
+  icon: fa-solid fa-phone
+  link: tel:+32496393776
+  footer: true
+
+- name: Adres vzw
+  description: Lodewijk Van Berckenlaan 85<br> 2600 Berchem
+  color: '#1AA260'
+  icon: fa fa-archive
+  link: https://maps.app.goo.gl/e1benh1Sir4K5sLh8
+
+- name: Ondernemingsnummer
+  description: 0884.932.681
+  color: '#F67A00'
+  icon: fa-solid fa-briefcase
+  link: https://www.companyweb.be/en/0884932681/alle-jongeren-op-kamp

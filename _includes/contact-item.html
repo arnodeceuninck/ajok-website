@@ -1,9 +1,6 @@
-<div class="row">
-  <div class="col-md-2">
-    {% include socials-logo.html icon=include.icon color="#ffff00" link=include.url %}
-      <!-- <a href="{{ include.url }}"><i class="fa {{ include.icon }}"></i></a> -->
-  </div>
-  <div class="col-md-10">
-      <a href="{{ include.url }}"><p>{{ include.description }}</p></a>
-  </div>
+<div class="container" style="display: flex; align-items: center;">
+  {% include socials-logo.html icon=include.item.icon color=include.item.color link=include.item.url %}
+  <a href="{{ include.item.link }}" style="margin-left: 10px; color: black;">
+    <p style="color: black;">{{ include.item.name }}<br>{{ include.item.description }}</p>
+  </a>
 </div>
