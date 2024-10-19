@@ -17,8 +17,19 @@ title: "Op Kamp"
     <a href='op-kamp#kampen' class='btn btn-danger'>Kamp overzicht</a>
     <a href='op-kamp#verblijf' class='btn btn-danger'>Vakantieverblijf</a>" %}
 
-<div class="container mt-5">
+<div class="container">
     <div class="row justify-content-center">
+        {% for item in site.data.kampen %}
+
+            {% capture prijs %}{{ item.prijs_thuiswonend }}*/{{ item.prijs_niet_thuiswonend }}**{% endcapture %}
+
+            {% include camp-card.html 
+                naam=item.name
+                leeftijd=item.leeftijd_kort
+                prijs=prijs%}
+        {% endfor %}
+    </div>
+    <!-- <div class="row justify-content-center">
         {% include camp-card.html 
             naam="PAASKAMP" 
             leeftijd="6-9 JAAR" 
@@ -46,7 +57,7 @@ title: "Op Kamp"
             naam="OP SCHOK" 
             leeftijd="16-17 JAAR" 
             prijs="€75/€95*" %}
-    </div>
+    </div> -->
 </div>
 
 

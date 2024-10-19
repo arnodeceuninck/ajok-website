@@ -10,7 +10,8 @@
   datum: 11-15 april 2022
   prijs_thuiswonend: 70
   prijs_niet_thuiswonend: 85
-  leeftijd: 6-9 jaar
+  leeftijd: Kinderen tussen 6 en 9 jaar
+  leeftijd_kort: 6-9 jaar
   img: assets/images/img5_crop.jpg
   img_mobile: assets/images/img5_mobile.jpg
 
@@ -20,6 +21,7 @@
   prijs_thuiswonend: 80
   prijs_niet_thuiswonend: 100
   leeftijd: Kinderen tussen 6 en 8 jaar oud
+  leeftijd_kort: 6-8 jaar
   img: assets/images/img5_crop.jpg
   img_mobile: assets/images/img5_mobile.jpg
 
@@ -29,6 +31,7 @@
   prijs_thuiswonend: 90
   prijs_niet_thuiswonend: 110
   leeftijd: Kinderen tussen 9 en 10 jaar oud
+  leeftijd_kort: 9-10 jaar
   img: assets/images/img5_crop.jpg
   img_mobile: assets/images/img5_mobile.jpg
 
@@ -38,6 +41,7 @@
   prijs_thuiswonend: 90
   prijs_niet_thuiswonend: 110
   leeftijd: Kinderen tussen 12 en 13 jaar oud
+  leeftijd_kort: 12-13 jaar
   img: assets/images/img5_crop.jpg
   img_mobile: assets/images/img5_mobile.jpg
 
@@ -47,6 +51,7 @@
   prijs_thuiswonend: 75
   prijs_niet_thuiswonend: 95
   leeftijd: Kinderen tussen 14 en 16 jaar oud
+  leeftijd_kort: 14-16 jaar
   img: assets/images/img5_crop.jpg
   img_mobile: assets/images/img5_mobile.jpg
 
@@ -56,5 +61,6 @@
   prijs_thuiswonend: 75
   prijs_niet_thuiswonend: 95
   leeftijd: Kinderen tussen 16 en 17 jaar oud
+  leeftijd_kort: 16-17 jaar
   img: assets/images/img5_crop.jpg
   img_mobile: assets/images/img5_mobile.jpg
