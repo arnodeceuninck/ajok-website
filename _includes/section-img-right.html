@@ -1,4 +1,4 @@
-<div class="row align-items-center mb-0 d-flex flex-wrap equal-height-row" id="{{ include.title | strip }}">
+<div class="row align-items-stretch mb-0 d-flex flex-wrap equal-height-row" id="{{ include.title | strip }}">
 
     {% if include.img_mobile %}
     <div class="col-12 d-md-none" style="width: 100%;">
@@ -6,7 +6,7 @@
     </div>
     {% endif %}
 
-    <div class="col-md-8" style="position: relative; position: relative;">
+    <div class="col-md-8" style="position: relative;">
         <div class="row" style="height: fit-content;">
             <div style="padding: 50px;">
                 <h2 class="text-uppercase font-italic black-line-below">{{ include.title }}</h2>
@@ -22,7 +22,7 @@
     </div>
 
     <div class="col-md-4 d-none d-md-block" style="padding-left: 0;">
-        <img src="{{ include.img }}">
+        <div style="background-image: url('{{ include.img }}'); background-size: cover; background-position: center; height: 100%;"></div>
     </div>
 
 </div>

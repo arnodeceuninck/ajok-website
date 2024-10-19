@@ -19,17 +19,11 @@
 </div>
 {% endcapture %}
 
-{% capture title %}
-{{ include.title }}
-{% endcapture %}
+{% capture title %}{{ include.title }}{% endcapture %}
 
-{% capture img %}
-{{ include.img }}
-{% endcapture %}
+{% capture img %}{{ include.img }}{% endcapture %}
 
-{% capture img_mobile %}
-{{ include.img_mobile }}
-{% endcapture %}
+{% capture img_mobile %}{{ include.img_mobile }}{% endcapture %}
 
 {% if include.type == 'left' %}
     {% include section-img-left.html
