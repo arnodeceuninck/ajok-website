@@ -18,7 +18,8 @@ title: "Vrijwilligers"
    </p>
    
    <a href='#Vrijwilligerfuncties' class='btn btn-danger'>Vrijwilligerfuncties</a>
-   <a href='#activiteiten' class='btn btn-danger'>Activiteiten & Regels</a>" %}
+   <!-- <a href='#activiteiten' class='btn btn-danger'>Activiteiten</a> TODO : evt alsnog wat voorbeeld activiteiten toevoegen?  -->
+   " %}
 
 
 
@@ -67,3 +68,35 @@ title: "Vrijwilligers"
   {% endfor %}
 
 <!-- TODO: activiteitneop kamp, regels op kamp, evnementen, maak kennis met de vrijwilligers, hoe word ik vrijwilliger + op heel deze pagina is er veel te veel tekst (schrikt af) -> zien op te splitsen, irrelevante delen weghalen en/of tekstjes korter maken -->
+
+
+{% capture getuigenissen_text %}
+<div class="p-5">
+        
+        <div class="row">
+
+            {% for item in site.data.vrijwilliger_getuigenissen %}
+                {% include getuigenis.html 
+                    label=item.name
+                    image=item.img
+                    getuigenis=item.getuigenis  %}
+            {% endfor %}
+        </div>
+</div>
+{% endcapture %}
+
+{% include section.html 
+    title="Getuigenissen van vrijwilligers"
+    text=getuigenissen_text %}
+
+{% include section-img-left.html
+    title="Hoe word ik vrijwilliger?"
+    text="Wil je mee op kamp? Schrijf je dan nu in! 
+        Volg de onderstaande link en vul het inschrijvingsformulier in. 
+        Je kiest een kamp en geeft je voorkeur van functie aan. 
+        Als de functie waarvoor je je opgaf niet meer vrij is, 
+        nemen we contact met je op en zoeken we samen naar een oplossing. "
+    img="assets/images/vrijwilligers/vrijwilliger-worden-desktop.jpg"
+    img_mobile="assets/images/vrijwilligers/vrijwilliger-worden-mobile.jpg"
+    call_to_action="Meld je aan!"
+    url="vrijwilligers-inschrijven.html" %}
