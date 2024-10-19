@@ -3,6 +3,9 @@ layout: default
 title: "Steun"
 ---
 
+{% assign rekeningnummer_item = site.data.contact | where: "name", "Rekeningnummer" | first %}
+{% assign rekeningnummer = rekeningnummer_item.description %}
+
 {% include section.html
 title="Steun ons!"
 text="<p>
@@ -29,9 +32,8 @@ url="/todo"
 img="assets/images/img5_crop.jpg"
 img_mobile="assets/images/img5_mobile.jpg" %}
 
-{% include section-img-left.html
-title="Word peter of meter"
-text="Je kan AJOK ook steunen met een bijdrage van 50
+{% capture peter_meter_text %}
+Je kan AJOK ook steunen met een bijdrage van 50
 euro om het eten van een kind op kamp te dekken.
 Dan word je officiël de peter of meter van een
 deelnemer en krijgt je in ruil daarvoor een certificaat,
@@ -40,30 +42,37 @@ een kaartje van op kamp.
 
 <h4>Hoe?</h4>
 <ol>
-    <li>Maak het bedrag over op ons rekeningnummer: BE22 8902 3428 5747</li>
+    <li>Maak het bedrag over op ons rekeningnummer: {{ rekeningnummer }}</li>
     <li>Vermeld als mededeling 'peter/meter AJOK vzw - naam - e-mailadres'</li>
     <li>Nadat we het bedrag ontvangen hebben, nemen we contact met u op voor verdere gegevens</li>
 </ol>
-"
+{% endcapture %}
+
+
+{% include section-img-left.html
+title="Word peter of meter"
+text=peter_meter_text
 img="assets/images/img5_crop.jpg"
 img_mobile="assets/images/img5_mobile.jpg" %}
 
-{% include section-img-right.html
-title="Doe een gift"
-text="Je kan ons ook steunen door een gift te doen. Geef jouw
-gewenste bedrag en stort het op ons rekeningnummer BE22
-8902 3428 5747.
+{% capture doe_een_gift_text %}
+Je kan ons ook steunen door een gift te doen. Geef jouw
+gewenste bedrag en stort het op ons rekeningnummer {{ rekeningnummer }}.
 <br><br>
 Een gift gedaan? Laat het ons zeker weten, dan vermelden we
 het op onze site. We zorgen ervoor dat we met dit geld nog
 meer blije gezichten op onze kampen zien!
-"
+{% endcapture %}
+
+{% include section-img-right.html
+title="Doe een gift"
+text=doe_een_gift_text
 img="assets/images/img5_crop.jpg"
 img_mobile="assets/images/img5_mobile.jpg" %}
 
 {% include section-img-left.html
 title="Trooper"
-text="Wist je dat je AJOK ook kan helpen als je inkopen doet? Als
+text="Wist je dat je AJOK ook kan helpen als je inkopen doet? AlsF
 je bij Trooper winkelt, schenk je automatisch een klein
 bedrag aan ons - en dat zonder extra kosten! Hieronder
 zetten we alles op een rijtje voor je:

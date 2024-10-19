@@ -46,3 +46,8 @@
   color: '#F67A00'
   icon: fa-solid fa-briefcase
   link: https://www.companyweb.be/en/0884932681/alle-jongeren-op-kamp
+
+- name: Rekeningnummer
+  description: BE22 8902 3428 5747
+  color: '#F67A00'
+  icon: fa-solid fa-euro-sign
