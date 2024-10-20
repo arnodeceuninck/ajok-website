@@ -178,3 +178,9 @@ a {
 .h-20 {
   height: 20%; /* Set height to 20% */
 }
+
+@media (max-width: 767px) {
+  .opacity-sm-80 {
+    opacity: 0.8; /* Set opacity to 0.8 */
+  }
+}
