@@ -228,3 +228,19 @@ a {
       transform: translateX(-100%); 
   }
 }
+
+.slideshow-container {
+  position: relative;
+}
+
+.fade {
+  position: absolute;
+  // width: 100%;
+  // height: auto; /* Maintain aspect ratio */
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.fade.active {
+  opacity: 1;
+}

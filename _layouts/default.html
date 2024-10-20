@@ -26,6 +26,7 @@
   </body>
 
   <script>
+    // Fade show elements on page on scroll
     // src: https://www.codehim.com/animation-effects/fade-in-on-scroll-css-javascript
     var elScroll = document.querySelectorAll('.scroll-animation'); // all elements with class .scroll-animation
 
@@ -42,5 +43,31 @@
 
     document.onscroll = handleScroll;
     window.onload = handleScroll;
+
+
+    // Section with multiple images slideshow
+    document.querySelectorAll('.slideshow-container').forEach(container => {
+        const images = container.querySelectorAll('.fade');
+
+        if (images.length === 0) {
+            console.warn('No images found in this slideshow container:', container);
+            return; // Skip this slideshow if no images are found
+        }
+
+        let currentIndex = 0;
+
+        function showNextImage() {
+            images[currentIndex].classList.remove('active');
+            currentIndex = (currentIndex + 1) % images.length;
+            images[currentIndex].classList.add('active');
+        }
+
+        function initSlideshow() {
+            images[currentIndex].classList.add('active');
+            setInterval(showNextImage, 5000); // Change image every 5 seconds
+        }
+
+        initSlideshow();
+    });
   </script>
 </html>
