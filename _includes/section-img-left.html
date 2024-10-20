@@ -11,8 +11,24 @@
     </div> -->
 
     <div class="col-md-4 d-none d-md-block scroll-animation" style="padding-right: 0;">
-        <div style="background-image: url('{{ include.img }}'); background-size: cover; background-position: center; height: 100%;"></div>
+        <div id="slideshow" style="background-size: cover; background-position: center; height: 100%;"></div>
     </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var images = ["assets/images/kampen/pico.jpg","assets/images/kampen/paaskamp_desktop.jpg","assets/images/img5_crop.jpg"];//{{ include.img_list | jsonify }};
+            var slideshow = document.getElementById('slideshow');
+            var index = 0;
+
+            function changeImage() {
+                slideshow.style.backgroundImage = 'url(' + images[index] + ')';
+                index = (index + 1) % images.length;
+            }
+
+            changeImage();
+            setInterval(changeImage, 3000);
+        });
+    </script>
 
     <div class="col-md-8 d-flex flex-column justify-content-center scroll-animation" style="padding: 50px; z-index: 1;">
         
@@ -20,7 +36,7 @@
         <div class="d-none d-md-block" style="height: 100px;"></div>
 
         <h2 class="text-uppercase text-light font-italic white-line-below">{{ include.title }}</h2>
-        <p style="padding-right: 20%;">{{ include.text }}</p>
+        <p style="padding-right: 20%;">{{include.img_list}}{{ include.text }}</p>
         {% if include.call_to_action %}
         <a href="{{ include.url }}" class="btn btn-success">{{ include.call_to_action }}</a>
         {% endif %}

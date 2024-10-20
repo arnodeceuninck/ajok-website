@@ -24,6 +24,11 @@
   leeftijd_kort: 6-8 jaar
   img: assets/images/kampen/pico.jpg
   img_mobile: assets/images/kampen/pico_mobile.jpg
+  img_list:
+    - assets/images/kampen/pico.jpg
+    - assets/images/kampen/paaskamp_desktop.jpg
+    - assets/images/img5_crop.jpg
+
 
 - name: NANO
   description: Kom  mee  op  kamp  dezezomer!  We  gaan  knutselen,een  toneelstukje  opvoeren,een  beektocht  maken,baseball  spelen  en  elke  dageven  feest  vieren.  DeKerstman,  paashaas  ennieuwe  vrienden  wachten  opje. Doe je mee?

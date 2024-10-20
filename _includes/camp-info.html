@@ -1,7 +1,7 @@
 {% capture camp_info %}
 <div class='row'>
     <div class='col-md-6'>
-        <h5>Programma</h5>
+        <h5>Programmabc</h5>
         <p>
             {{ include.description }}
         </p>
@@ -19,26 +19,22 @@
 </div>
 {% endcapture %}
 
-{% capture title %}{{ include.title }}{% endcapture %}
-
-{% capture img %}{{ include.img }}{% endcapture %}
-
-{% capture img_mobile %}{{ include.img_mobile }}{% endcapture %}
-
 {% if include.type == 'left' %}
     {% include section-img-left.html
-        title=title
+        title=include.title
         text=camp_info
-        img=img
-        img_mobile=img_mobile
+        img=include.img
+        img_mobile=include.img_mobile
         call_to_action="Schrijf je in!"
-        url="kamp-inschrijven.html" %}
+        url="kamp-inschrijven.html"
+        img_list=include.img_list %}
 {% else %}
     {% include section-img-right.html
-        title=title
+        title=include.title
         text=camp_info
-        img=img
-        img_mobile=img_mobile
+        img=include.img
+        img_mobile=include.img_mobile
         call_to_action="Schrijf je in!"
-        url="kamp-inschrijven.html" %}
+        url="kamp-inschrijven.html"
+        img_list=include.img_list %}
 {% endif %}
