@@ -1,0 +1,7 @@
+<h2 class="text-uppercase font-italic 
+          {% if include.text_mode == 'dark' %}black-line-below{% else %}white-line-below{% endif %}
+          ">{{ include.title }}</h2>
+<p style="padding-right: 20%;">{{ include.text }}</p>
+{% if include.call_to_action %}
+<a href="{{ include.url }}" class="btn btn-success">{{ include.call_to_action }}</a>
+{% endif %}
