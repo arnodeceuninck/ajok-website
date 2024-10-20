@@ -1,60 +1,28 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AJOK Website</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <style>
-    .sky-background {
-      background: url('sky-clouds-background.jpg') no-repeat center center;
-      background-size: cover;
-      height: 100vh;
-    }
-    .logo {
-      width: 200px;
-      height: auto;
-      margin-top: 50px;
-    }
-  </style>
-</head>
-<body>
-
-<div class="container-fluid sky-background">
-  <div class="row justify-content-center">
-    <div class="col-md-6 text-center">
-      <img src="ajok-logo.png" alt="AJOK Logo" class="logo"/>
-      <h2>ALLE JONGEREN OP KAMP</h2>
-    </div>
+---
+layout: default
+---
+<div class="row align-items-stretch mb-0 bg-primary text-light" style="position: relative;" id="Organisatiestructuur">
+  <div class="col-md-4 d-none d-md-block scroll-animation scroll--show" style="padding-right: 0;">
+      <div style="background-image: url('assets/images/over-ons/organisatiestructuur-desktop.jpg'); background-size: cover; background-position: center; height: 100%;"></div>
   </div>
 
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container-fluid">
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="#">OVER ONS</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">BEKIJK ONS AANBOD</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">WORD NU VRIJWILLIGER</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">BIED JE STEUN</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-</div>
+  <div class="col-md-8 d-flex flex-column justify-content-center scroll-animation scroll--show" style="padding: 50px; z-index: 1; position: relative;">
+      <h2 class="text-uppercase text-light font-italic white-line-below">Organisatiestructuur</h2>
+      <p style="padding-right: 20%;">
+          Als vrijwilliger kan je op verschillende manieren actief zijn. Hoe intensief je je als vrijwilliger inzet, is afhankelijk van je motivatie en tijdschema.
+          <br><br>
+          AJOK bestaat uit kamp- en hoofdleiders, crewleden en stuurgroepen:
+      </p>
+      <ul style="padding-right: 20%;">
+          <li><b>Kamp- en hoofdleiders</b> zetten zich gedurende het jaar voor het organiseren van vakantiekampen.</li>
+          <li><b>Crewleden</b> doen minstens twee dagen per jaar mee.</li>
+          <li><b>Stuurgroepen</b> werken samen om het project van begin tot einde te verwezenlijken.</li>
+      </ul>
+  </div>
 
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-</body>
-</html>
+  <!-- Invisible placeholder for shape-outside -->
+  <div id="tree-shape" style="width: 150px; height: 300px; float: right; shape-outside: url('assets/images/artifacts/boompjes.png'); clip-path: polygon(30% 0, 100% 0, 100% 100%, 0% 100%, 0 30%); margin-right: -50px;"></div>
+
+  <!-- Actual tree image -->
+  <img id="tree" src="assets/images/artifacts/boompjes.png" class="w-md-20 h-md-auto w-auto h-30" style="position: absolute; right: -50px; bottom: 0; z-index: 0;">
+</div>
