@@ -12,8 +12,8 @@
   prijs_niet_thuiswonend: 85
   leeftijd: Kinderen tussen 6 en 9 jaar
   leeftijd_kort: 6-9 jaar
-  img: assets/images/kampen/paaskamp_desktop.jpg
-  img_mobile: assets/images/kampen/paaskamp_mobile.jpg
+  img: assets/images/kampen/paaskamp_desktop.webp
+  img_mobile: assets/images/kampen/paaskamp_mobile.webp
 
 - name: PICO
   description: Voor  feestjes  groot  en  klein,  moetje  op  het  PICO-kamp  zijn!  Dansenzingen,  gek  doen  en  springendoen  we  graag!  Wil  jij  Kerstmisvieren,  je  verjaardag  of  Valentijn?Aarzel  niet  en  maak  samen  metons van dit kamp een echt festijn
@@ -23,13 +23,13 @@
   leeftijd: Kinderen tussen 6 en 8 jaar oud
   leeftijd_kort: 6-8 jaar
   img_list:
-    - assets/images/kampen/pico.jpg
-    - assets/images/kampen/paaskamp_desktop.jpg
-    - assets/images/img5_crop.jpg
+    - assets/images/kampen/pico.webp
+    - assets/images/kampen/paaskamp_desktop.webp
+    - assets/images/img5_crop.webp
   img_list_mobile:
-    - assets/images/kampen/pico_mobile.jpg
-    - assets/images/kampen/paaskamp_mobile.jpg
-    - assets/images/img5_mobile.jpg
+    - assets/images/kampen/pico_mobile.webp
+    - assets/images/kampen/paaskamp_mobile.webp
+    - assets/images/img5_mobile.webp
 
 - name: NANO
   description: Kom  mee  op  kamp  dezezomer!  We  gaan  knutselen,een  toneelstukje  opvoeren,een  beektocht  maken,baseball  spelen  en  elke  dageven  feest  vieren.  DeKerstman,  paashaas  ennieuwe  vrienden  wachten  opje. Doe je mee?
@@ -38,8 +38,8 @@
   prijs_niet_thuiswonend: 110
   leeftijd: Kinderen tussen 9 en 10 jaar oud
   leeftijd_kort: 9-10 jaar
-  img: assets/images/img5_crop.jpg
-  img_mobile: assets/images/img5_mobile.jpg
+  img: assets/images/img5_crop.webp
+  img_mobile: assets/images/img5_mobile.webp
 
 - name: HECTO
   description: Ben  je  klaar  voor  een  avontuurtijdens  de  onvergetelijke  HECTO-kamp  feesteditie?  Op  onsprogramma  staan  plezier,  spel,tocht en avontuur. Kom met ons intenten  slapen,  duik  in  hetkampvuur  en  doe    een  leukezoektocht.  Het  wordt  zeker  een  spektakelweekje!
@@ -48,8 +48,8 @@
   prijs_niet_thuiswonend: 110
   leeftijd: Kinderen tussen 12 en 13 jaar oud
   leeftijd_kort: 12-13 jaar
-  img: assets/images/kampen/hecto.jpg
-  img_mobile: assets/images/kampen/hecto_mobile.jpg
+  img: assets/images/kampen/hecto.webp
+  img_mobile: assets/images/kampen/hecto_mobile.webp
 
 - name: GIGA
   description: Op  dit  AJOK-kamp  is  het  elkedag  feest!  De  paashaas,  deKerstman,  Sinterklaas  en  deDrie  Koningen&#58;  iedereen  iswelkom!  We  beginnen  deweek  met  een  stuw  in  debossen.  Daarna  gaan  we  opkajaktocht  met  de  driekoningen.  En  als  klap  op  devuurpijl  eindigen  we  de  weekmet  Nieuwjaarsviering.    Ietsvoor jou? Schrijf je dan in!
@@ -58,8 +58,8 @@
   prijs_niet_thuiswonend: 95
   leeftijd: Kinderen tussen 14 en 16 jaar oud
   leeftijd_kort: 14-16 jaar
-  img: assets/images/kampen/giga.jpg
-  img_mobile: assets/images/kampen/giga_mobile.jpg
+  img: assets/images/kampen/giga.webp
+  img_mobile: assets/images/kampen/giga_mobile.webp
 
 - name: OP SCHOK
   description: Tijdens  het  trektochtenkampovernachten  we  elke  dag  op  eenandere  plaats.  We  verplaatsen  onsmeestal  lopend,  maar  kunnen  af  entoe  afwisselen  met  kajaks  enmountainbikes. We slapen in tenten(zonder  douche  en  elektriciteit)  enbereiden  `s  avonds  zelf  ons  eten.Aan  het  eind  van  de  kampperiodewordt  er  een  uitdagendeslotactiviteit  georganiseerd,  zoalsmountainboarden.  Kom je mee?
@@ -68,5 +68,5 @@
   prijs_niet_thuiswonend: 95
   leeftijd: Kinderen tussen 16 en 17 jaar oud
   leeftijd_kort: 16-17 jaar
-  img: assets/images/kampen/op-schok.jpg
-  img_mobile: assets/images/kampen/op-schok_mobile.jpg
+  img: assets/images/kampen/op-schok.webp
+  img_mobile: assets/images/kampen/op-schok_mobile.webp

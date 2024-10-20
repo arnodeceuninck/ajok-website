@@ -37,8 +37,17 @@ Not familiar with jekyll, but already familiar with html/css/js? Here is a small
 - Install jekyll: https://jekyllrb.com/docs/installation/windows/
 - `bundle install`
 
-
 ### running
 ```
 bundle exec jekyll serve
 ```
+
+### image compression
+For faster static website loading times, it is best to compress all your images. I used XnConvert for this. 
+
+In input, select `assets-original` as source folder. Set the output to the `assets` folder, format `WebP` , with `File size` e.g. `100kbytes` as settings. 
+
+You can check the loading speeds with sites like this one: https://gtmetrix.com/reports/arnodeceuninck.github.io/SdANANEp/
+
+Before using compressed images: Homepage 1.4s to fully load, 17.5 MB
+After compressing to 100kb and converting to webp: 
