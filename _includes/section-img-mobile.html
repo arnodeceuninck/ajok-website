@@ -4,6 +4,12 @@
     {% assign img = include.img %}
 {% endif %}
 
+{% if include.img_list_mobile %}
+    {% assign img_list = include.img_list_mobile %}
+{% else %}
+    {% assign img_list = include.img_list %}
+{% endif %}
+
 {% if img or img_list %}
     <div class="col-12 d-md-none h-imgh-mobile {% if img_list %}slideshow-container{% endif %}" style="width: 100%;">
         {% if img_list %}
