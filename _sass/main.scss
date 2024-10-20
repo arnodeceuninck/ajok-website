@@ -43,6 +43,9 @@ body {
   overflow-x: hidden;
   width: 100%;
 }
+html {
+  overflow-x: hidden;
+}
 h2 {
   // color: #ffcc00;
   font-style: italic;
@@ -127,6 +130,7 @@ a {
 .image-card {
   text-align: center;
   width: 200px; /* Adjust width as needed */
+  cursor: pointer;
 }
 
 .image-card img {

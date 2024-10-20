@@ -43,7 +43,7 @@ bundle exec jekyll serve
 ```
 
 ### image compression
-For faster static website loading times, it is best to compress all your images. I used XnConvert for this. 
+For faster static website loading times, it is best to compress all your images. I used [XnConvert](https://www.xnview.com/en/xnconvert/#downloads) for this. (I also tried some jekyll plugins, but those give less compression configuration options and are not supported on the Github runner)
 
 In input, select `assets-original` as source folder. Set the output to the `assets` folder, format `WebP` , with `File size` e.g. `100kbytes` as settings. 
 
