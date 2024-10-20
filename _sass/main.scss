@@ -184,3 +184,16 @@ a {
     opacity: 0.8; /* Set opacity to 0.8 */
   }
 }
+
+.img-tree {
+  // Sizes for mobile
+  @extend .w-auto;
+  @extend .h-30;
+
+  // Sizes for larger devices
+  @extend .w-md-20;
+  @extend .h-md-auto;
+
+  // Reduce opacity on small screen for better text readability if the tree should overlap with the text
+  @extend .opacity-sm-80;
+}
