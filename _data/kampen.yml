@@ -13,7 +13,6 @@
   leeftijd: Kinderen tussen 6 en 9 jaar
   leeftijd_kort: 6-9 jaar
   img: assets/images/kampen/paaskamp_desktop.webp
-  img_mobile: assets/images/kampen/paaskamp_mobile.webp
 
 - name: PICO
   description: Voor  feestjes  groot  en  klein,  moetje  op  het  PICO-kamp  zijn!  Dansenzingen,  gek  doen  en  springendoen  we  graag!  Wil  jij  Kerstmisvieren,  je  verjaardag  of  Valentijn?Aarzel  niet  en  maak  samen  metons van dit kamp een echt festijn
@@ -24,12 +23,9 @@
   leeftijd_kort: 6-8 jaar
   img_list:
     - assets/images/kampen/pico.webp
-    - assets/images/kampen/paaskamp_desktop.webp
-    - assets/images/img5_crop.webp
-  img_list_mobile:
-    - assets/images/kampen/pico_mobile.webp
-    - assets/images/kampen/paaskamp_mobile.webp
-    - assets/images/img5_mobile.webp
+    - assets/images/kampen/pico-2.webp
+    - assets/images/kampen/pico-3.webp
+    - assets/images/kampen/pico-4.webp
 
 - name: NANO
   description: Kom  mee  op  kamp  dezezomer!  We  gaan  knutselen,een  toneelstukje  opvoeren,een  beektocht  maken,baseball  spelen  en  elke  dageven  feest  vieren.  DeKerstman,  paashaas  ennieuwe  vrienden  wachten  opje. Doe je mee?
@@ -39,7 +35,6 @@
   leeftijd: Kinderen tussen 9 en 10 jaar oud
   leeftijd_kort: 9-10 jaar
   img: assets/images/img5_crop.webp
-  img_mobile: assets/images/img5_mobile.webp
 
 - name: HECTO
   description: Ben  je  klaar  voor  een  avontuurtijdens  de  onvergetelijke  HECTO-kamp  feesteditie?  Op  onsprogramma  staan  plezier,  spel,tocht en avontuur. Kom met ons intenten  slapen,  duik  in  hetkampvuur  en  doe    een  leukezoektocht.  Het  wordt  zeker  een  spektakelweekje!
@@ -48,16 +43,10 @@
   prijs_niet_thuiswonend: 110
   leeftijd: Kinderen tussen 12 en 13 jaar oud
   leeftijd_kort: 12-13 jaar
-  # img: assets/images/kampen/hecto.webp
-  img_mobile: assets/images/kampen/hecto-3.webp
   img_list:
     - assets/images/kampen/hecto-2.webp
     - assets/images/kampen/hecto-3.webp
     - assets/images/kampen/hecto-4.webp
-  # img_list_mobile:
-  #   - assets/images/kampen/hecto-2.webp
-  #   - assets/images/kampen/hecto-3.webp
-  #   - assets/images/kampen/hecto-4.webp
     
 
 - name: GIGA
@@ -68,7 +57,6 @@
   leeftijd: Kinderen tussen 14 en 16 jaar oud
   leeftijd_kort: 14-16 jaar
   img: assets/images/kampen/giga.webp
-  img_mobile: assets/images/kampen/giga_mobile.webp
 
 - name: OP SCHOK
   description: Tijdens  het  trektochtenkampovernachten  we  elke  dag  op  eenandere  plaats.  We  verplaatsen  onsmeestal  lopend,  maar  kunnen  af  entoe  afwisselen  met  kajaks  enmountainbikes. We slapen in tenten(zonder  douche  en  elektriciteit)  enbereiden  `s  avonds  zelf  ons  eten.Aan  het  eind  van  de  kampperiodewordt  er  een  uitdagendeslotactiviteit  georganiseerd,  zoalsmountainboarden.  Kom je mee?

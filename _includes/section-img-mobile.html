@@ -1,13 +1,19 @@
-{% if include.img or include.img_list %}
-    <div class="col-12 d-md-none h-imgh-mobile {% if include.img_list %}slideshow-container{% endif %}" style="width: 100%;">
-        {% if include.img_list %}
-            {% for item in include.img_list %}
+{% if include.img_mobile %}
+    {% assign img = include.img_mobile %}
+{% else %}
+    {% assign img = include.img %}
+{% endif %}
+
+{% if img or img_list %}
+    <div class="col-12 d-md-none h-imgh-mobile {% if img_list %}slideshow-container{% endif %}" style="width: 100%;">
+        {% if img_list %}
+            {% for item in img_list %}
                 {% if item %}
                     <img src="{{ item }}" class="img-fluid fade" style="object-fit: cover; width: 100%; height: 100%;">
                 {% endif %}
             {% endfor %}
         {% else %}
-            <img src="{{ include.img }}" class="img-fluid" style="object-fit: cover; width: 100%; height: 100%;">
+            <img src="{{ img }}" class="img-fluid" style="object-fit: cover; width: 100%; height: 100%;">
         {% endif %}
     </div>
 {% endif %}
