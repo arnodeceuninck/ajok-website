@@ -1,5 +1,15 @@
-{% if include.img_mobile %}
-<div class="col-12 d-md-none" style="width: 100%;">
-    <img src="{{ include.img_mobile }}" class="img-fluid" style="object-fit: cover;">
-</div>
+{% if include.img_mobile or include.img_list_mobile %}
+    <div class="col-12 d-md-none {% if include.img_list_mobile %}slideshow-container h-imgh-mobile{% endif %}" style="width: 100%;">
+        {% if include.img_list_mobile %}
+            {% for item in include.img_list_mobile %}
+                {% if item %}
+                    <img src="{{ item }}" class="img-fluid fade" style="object-fit: cover;">
+                {% endif %}
+            {% endfor %}
+<!--             
+            <img src="{{ include.img_mobile }}" class="img-fluid" style="object-fit: cover; opacity: 10%;"> -->
+        {% else %}
+            <img src="{{ include.img_mobile }}" class="img-fluid" style="object-fit: cover;">
+        {% endif %}
+    </div>
 {% endif %}
