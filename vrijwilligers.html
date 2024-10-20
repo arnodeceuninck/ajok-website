@@ -10,23 +10,13 @@ title: "Vrijwilligers"
         vrijwilliger actief kan zijn: van verzorgend personeel tot leidinggevend personeel. Sommige functies vereisen
         specifieke kennis, andere vragen enkel enthousiasme en betrokkenheid. Interesse? Klik op onderstaande
         knop en ontdek welke jou op het lijf geschreven is!
-
-        Er gaan maximum 18 kinderen mee per kamp, we rekenen een animator per drie kinderen en hanteren een
-        vaste structuur en duidelijke regels. Als vrijwilliger is het dus belangrijk dat je deze goed onder de knie hebt.
-        We leggen deze en de activiteiten die je als vrijwilliger mag organiseren daarom graag uit. Lees ze snel na
-        via de volgende link!
-   </p>
-   
-   <a href='#Vrijwilligerfuncties' class='btn btn-danger'>Vrijwilligerfuncties</a>
-   <!-- <a href='#activiteiten' class='btn btn-danger'>Activiteiten</a> TODO : evt alsnog wat voorbeeld activiteiten toevoegen?  -->
+        <br><br>
+        <a href='#Vrijwilligerfuncties' class='btn btn-danger'>Vrijwilligerfuncties</a>
    " %}
 
 
 
 <div class="bg-orange p-5 scroll-animation" id="Vrijwilligerfuncties">
-    <!-- <div class="container m-5"> -->
-        <!-- <h2 id="Vrijwilligerfuncties" class="text-uppercase font-italic black-line-below">Vrijwilligerfuncties</h2> -->
-        
         <div class="row justify-content-center">
 
             {% for item in site.data.kampfuncties %}
@@ -35,7 +25,6 @@ title: "Vrijwilligers"
                     image=item.img_square  %}
             {% endfor %}
         </div>
-    <!-- </div> -->
 </div>
 
 
@@ -72,7 +61,6 @@ title: "Vrijwilligers"
 
 {% capture getuigenissen_text %}
 <div class="p-5">
-        
         <div class="row scroll-animation">
 
             {% for item in site.data.vrijwilliger_getuigenissen %}
@@ -88,6 +76,7 @@ title: "Vrijwilligers"
 {% include section.html 
     title="Getuigenissen van vrijwilligers"
     text=getuigenissen_text %}
+
 
 {% include section-img-left.html
     title="Hoe word ik vrijwilliger?"

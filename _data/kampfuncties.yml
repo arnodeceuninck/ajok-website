@@ -1,7 +1,4 @@
 - naam: Zorgverlener
-  profiel: Als zorgverlener sta je in voor de dagelijkse verzorging en
-    begeleiding van de kinderen. Dat betekent dat je EHBO ervaring
-    hebt, en dat je een hart voor het verzorgen van kinderen hebt.
   text: PROFIEL&#58; Als zorgverlener sta je in voor de dagelijkse verzorging en
     begeleiding van de kinderen. Dat betekent dat je EHBO ervaring
     hebt, en dat je een hart voor het verzorgen van kinderen hebt. [JB1]
@@ -12,7 +9,8 @@
     omgeving te creëren waarin kinderen zich thuis kunnen voelen. Ben
     jij de persoon die deze verantwoordelijkheid op zich neemt? Meld je
     dan nu aan als zorgverlener!
-    [JB1]Je beschikt over EHBO ervaring en bovenal heb je een hart voor
+    <br>
+    Je beschikt over EHBO ervaring en bovenal heb je een hart voor
     het verzorgen van kinderen.
   img: assets/images/kampfuncties/verpleger_vertical.webp
   img_mobile: assets/images/kampfuncties/verpleger_horizontal.webp
@@ -21,9 +19,9 @@
 - naam: Kookploeg
   text: PROFIEL&#58; Als kookploeg ben je verantwoordelijk voor het
     bereiden van verschillende maaltijden. Om in aanmerking te
-    komen voor deze functie moet je niet enkel 18 jaar of ouder zijn,
-    maar ook in staat zijn om met eenvoudige ingrediënten lekkere
-    maaltijden op tafel te toveren.
+    komen voor deze functie moet je in staat zijn om met eenvoudige 
+    ingrediënten lekkere maaltijden op tafel te toveren en 18 jaar
+    of ouder zijn.
     <br><br>
     TAKKENPAKKET&#58; Je bent verantwoordelijk voor het bereiden van
     ontbijt, lunch, het vieruurtje en avondeten, zorgt ervoor dat de

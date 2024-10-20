@@ -14,8 +14,25 @@
   leeftijd_kort: 6-9 jaar
   img: assets/images/kampen/paaskamp_desktop.webp
 
+- name: Herfstkamp
+  description: 
+       Terwijl iedereen bang is voor de spoken en heksen,
+       jagen wij ze weg met al ons plezier! Het herfstkamp
+       zorgt dat je er doorheen het jaar weer even tussenuit
+       kan en samen kan spelen op één van de geweldige AJOK-kampen!
+  datum: 28 oktober - 1 november 2024
+  locatie: Sint-Niklaas
+  prijs_thuiswonend: 70
+  prijs_niet_thuiswonend: 85
+  leeftijd: Kinderen tussen 13 en 16 jaar
+  leeftijd_kort: 13-16 jaar
+  img: assets/images/img6_crop.webp
+  img_mobile: assets/images/img6_mobile.webp
+
 - name: PICO
-  description: Voor  feestjes  groot  en  klein,  moetje  op  het  PICO-kamp  zijn!  Dansenzingen,  gek  doen  en  springendoen  we  graag!  Wil  jij  Kerstmisvieren,  je  verjaardag  of  Valentijn?Aarzel  niet  en  maak  samen  metons van dit kamp een echt festijn
+  description: Voor  feestjes  groot  en  klein,  moetje  op  het  PICO-kamp  zijn!  
+       Dansen, zingen,  gek  doen  en  springen doen  we  graag!  Wil  jij  Kerstmis vieren,  
+       je  verjaardag  of  Valentijn? Aarzel  niet  en  maak  samen  met ons van dit kamp een echt festijn
   datum: 10-16 april 2023
   prijs_thuiswonend: 80
   prijs_niet_thuiswonend: 100
@@ -28,7 +45,11 @@
     - assets/images/kampen/pico-4.webp
 
 - name: NANO
-  description: Kom  mee  op  kamp  dezezomer!  We  gaan  knutselen,een  toneelstukje  opvoeren,een  beektocht  maken,baseball  spelen  en  elke  dageven  feest  vieren.  DeKerstman,  paashaas  ennieuwe  vrienden  wachten  opje. Doe je mee?
+  description: Kom  mee  op  kamp  dezezomer!  
+    We  gaan  knutselen, een  toneelstukje  opvoeren, 
+    beektocht  maken, baseball  spelen  en  elke  dag 
+    even  feest  vieren.  De Kerstman,  paashaas  en 
+    nieuwe  vrienden  wachten  op je. Doe je mee?
   datum: 16-23 april 2023
   prijs_thuiswonend: 90
   prijs_niet_thuiswonend: 110
@@ -37,7 +58,11 @@
   img: assets/images/img5_crop.webp
 
 - name: HECTO
-  description: Ben  je  klaar  voor  een  avontuurtijdens  de  onvergetelijke  HECTO-kamp  feesteditie?  Op  onsprogramma  staan  plezier,  spel,tocht en avontuur. Kom met ons intenten  slapen,  duik  in  hetkampvuur  en  doe    een  leukezoektocht.  Het  wordt  zeker  een  spektakelweekje!
+  description: Ben je klaar  voor  een  avontuur tijdens  
+      de  onvergetelijke HECTO-kamp  feesteditie?  
+      Op  ons programma staan  plezier,  spel, tocht en avontuur. 
+      Kom met ons inntenten slapen, duik  in  het kampvuur  en  
+      doe een  leuke zoektocht. Het  wordt zeker een spektakelweekje!
   datum: 03-10 juli 2023
   prijs_thuiswonend: 90
   prijs_niet_thuiswonend: 110
@@ -50,7 +75,12 @@
     
 
 - name: GIGA
-  description: Op  dit  AJOK-kamp  is  het  elkedag  feest!  De  paashaas,  deKerstman,  Sinterklaas  en  deDrie  Koningen&#58;  iedereen  iswelkom!  We  beginnen  deweek  met  een  stuw  in  debossen.  Daarna  gaan  we  opkajaktocht  met  de  driekoningen.  En  als  klap  op  devuurpijl  eindigen  we  de  weekmet  Nieuwjaarsviering.    Ietsvoor jou? Schrijf je dan in!
+  description: Op  dit  AJOK-kamp  is  het  elkedag  feest!  
+      De  paashaas,  deKerstman,  Sinterklaas  en  deDrie  Koningen&#58;  
+      iedereen  is welkom!  We  beginnen  deweek  met  een  stuw  in  de 
+      bossen.  Daarna  gaan  we  op kajaktocht  met  de  driekoningen.  
+      En als klap op de vuurpijl  eindigen  we  de  week
+      met  Nieuwjaarsviering. Iets voor jou? Schrijf je dan in!
   datum: 23-30 april 2023
   prijs_thuiswonend: 75
   prijs_niet_thuiswonend: 95
@@ -59,7 +89,14 @@
   img: assets/images/kampen/giga.webp
 
 - name: OP SCHOK
-  description: Tijdens  het  trektochtenkampovernachten  we  elke  dag  op  eenandere  plaats.  We  verplaatsen  onsmeestal  lopend,  maar  kunnen  af  entoe  afwisselen  met  kajaks  enmountainbikes. We slapen in tenten(zonder  douche  en  elektriciteit)  enbereiden  `s  avonds  zelf  ons  eten.Aan  het  eind  van  de  kampperiodewordt  er  een  uitdagendeslotactiviteit  georganiseerd,  zoalsmountainboarden.  Kom je mee?
+  description: Tijdens het trektochtenkampovernachten we elke 
+      da  op eenandere  plaats.  We  verplaatsen  ons meestal
+       al wandelend,  maar  kunnen  af  en toe  afwisselen  
+       met  kajaks  en mountainbikes. We slapen in tenten 
+       (zonder  douche  en  elektriciteit)  en bereiden  `s  avonds  
+       zelf  ons  eten. Aan  het  eind  van  de  kampperiode wordt  
+       er  een  uitdagende slotactiviteit  georganiseerd,  
+       zoals mountainboarden.  Kom je mee?
   datum: 24-28 juli 2023
   prijs_thuiswonend: 75
   prijs_niet_thuiswonend: 95

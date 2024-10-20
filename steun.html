@@ -6,33 +6,35 @@ title: "Steun"
 {% assign rekeningnummer_item = site.data.contact | where: "name", "Rekeningnummer" | first %}
 {% assign rekeningnummer = rekeningnummer_item.description %}
 
+
 {% include section.html
 title="Steun ons!"
 text="<p>
     Wil jij ons helpen om nog meer fijne vakantiekampen te organiseren? Je kunt op verschillende manieren
     je steentje bijdragen. Klik op de link voor meer informatie.
-</p>
+    </p>
 
-<a href='#word%20vrijwilliger' class='btn btn-danger'>Lees meer</a>" %}
+    <a href='#word%20vrijwilliger' class='btn btn-danger'>Lees meer</a>" %}
+
 
 <div class="bg-orange pt-1 pb-1"> 
     {% include image-row.html %}
 </div>
 
-{% include section-img-right.html
-title="Word vrijwilliger"
-text="Ben jij op zoek naar een leuke manier om je te engageren?
-Word dan vrijwilliger bij AJOK! We staan steeds klaar om extra
-helpende handen te verwelkomen. Op het
-inschrijvingsformulier kan je uit meerdere vrijwilligersfuncties
-kiezen. Ben je flexibel qua periode? Geef die dan zeker
-helemaal door! Volg de link onderaan om je aan te melden als
-vrijwilliger voor onze kampen."
 
-call_to_action="Meld je aan!"
-url="steun"
-img="assets/images/steun-ons/word-vrijwilliger-desktop.webp"
-img_mobile="assets/images/steun-ons/word-vrijwilliger-mobile.webp" %}
+{% include section-img-right.html
+    title="Word vrijwilliger"
+        text="Ben jij op zoek naar een leuke manier om je te engageren?
+        Word dan vrijwilliger bij AJOK! We staan steeds klaar om extra
+        helpende handen te verwelkomen. Op het
+        inschrijvingsformulier kan je uit meerdere vrijwilligersfuncties
+        kiezen. Ben je flexibel qua periode? Geef die dan zeker
+        helemaal door! Volg de link onderaan om je aan te melden als
+        vrijwilliger voor onze kampen."
+    call_to_action="Meld je aan!"
+    url="steun"
+    img="assets/images/steun-ons/word-vrijwilliger-desktop.webp"
+    img_mobile="assets/images/steun-ons/word-vrijwilliger-mobile.webp" %}
 
 {% capture peter_meter_text %}
 Je kan AJOK ook steunen met een bijdrage van 50
@@ -50,12 +52,23 @@ een kaartje van op kamp.
 </ol>
 {% endcapture %}
 
-
 {% include section-img-left.html
-title="Word peter of meter"
-text=peter_meter_text
-img="assets/images/steun-ons/peter-meter.webp"
-img_mobile="assets/images/steun-ons/peter-meter-mobile.webp" %}
+    title="Word peter of meter"
+    text=peter_meter_text
+    img="assets/images/steun-ons/peter-meter.webp"
+    img_mobile="assets/images/steun-ons/peter-meter-mobile.webp" %}
+
+
+<div class="bg-orange pt-2 pb-2 text-center text-light">
+    <h2 class="white-line-below w-100">Dankjewel peters en meters!</h2>
+    <p>
+        {% for item in site.data.peter_meters %}
+            {{ item.naam }}{% if forloop.last == false %} &bull;{% endif %}
+        {% endfor %}
+    </p>
+</div>
+
+
 
 {% capture doe_een_gift_text %}
 Je kan ons ook steunen door een gift te doen. Geef jouw
@@ -67,26 +80,25 @@ meer blije gezichten op onze kampen zien!
 {% endcapture %}
 
 {% include section-img-right.html
-title="Doe een gift"
-text=doe_een_gift_text
-img="assets/images/steun-ons/gift.webp"
-img_mobile="assets/images/steun-ons/gift-mobile.webp" %}
+    title="Doe een gift"
+    text=doe_een_gift_text
+    img="assets/images/steun-ons/gift.webp"
+    img_mobile="assets/images/steun-ons/gift-mobile.webp" %}
 
 {% include section-img-left.html
-title="Trooper"
-text="Wist je dat je AJOK ook kan helpen als je inkopen doet? AlsF
-je bij Trooper winkelt, schenk je automatisch een klein
-bedrag aan ons - en dat zonder extra kosten! Hieronder
-zetten we alles op een rijtje voor je:
-<ol>
-    <li>Ga naar <a href='https://www.trooper.be/nl/trooperverenigingen/ajokvzw/''>trooper.be</a> of klik op de balk
-        onderaan</li>
-    <li>Bezoek via onze trooperpagina jouw favoriete webshops</li>
-    <li>Voor iedere aankoop die je doet via onze trooperpagina,
-        gaat er een deel van het aankoopbedrag naar AJOK vzw</li>
-</ol>"
-
-call_to_action="Trooper: AJOK"
-url="https://www.trooper.be/nl/trooperverenigingen/ajokvzw/"
-img="assets/images/steun-ons/trooper-desktop.webp"
-img_mobile="assets/images/steun-ons/trooper.webp" %}
+    title="Trooper"
+    text="Wist je dat je AJOK ook kan helpen als je inkopen doet? Als
+        je bij Trooper winkelt, schenk je automatisch een klein
+        bedrag aan ons - en dat zonder extra kosten! Hieronder
+        zetten we alles op een rijtje voor je:
+        <ol>
+            <li>Ga naar <a href='https://www.trooper.be/nl/trooperverenigingen/ajokvzw/''>trooper.be</a> of klik op de balk
+                onderaan</li>
+            <li>Bezoek via onze trooperpagina jouw favoriete webshops</li>
+            <li>Voor iedere aankoop die je doet via onze trooperpagina,
+                gaat er een deel van het aankoopbedrag naar AJOK vzw</li>
+        </ol>"
+    call_to_action="Trooper: AJOK"
+    url="https://www.trooper.be/nl/trooperverenigingen/ajokvzw/"
+    img="assets/images/steun-ons/trooper-desktop.webp"
+    img_mobile="assets/images/steun-ons/trooper.webp" %}
