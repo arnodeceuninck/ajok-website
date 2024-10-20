@@ -3,14 +3,14 @@
 
 ### Inhoudelijk
 - [ ] Inhoud van alle teksten moet sowieso nog eens afgecheckt worden, is nu gewoon overgenomen van mockups, maar zitten ook wel dingen tussen waar ik m'n twijfels bij heb
+- [ ] Doe een gift -> geen automatische vermelding op site zou ik denken, is pas voor peter/meter
+- Regels op kamp en evenementen heb ik weggehouden van de vrijwilligerspagina (evenementen staan nu ook nergens, want die info kan heel makkelijk outdated worden). Indien toch gewenst, mss beter iets maken in de stijl van "Houd onze facebook in 't oog voor onze evenementen"
 
 ### Required features
 - [ ] Copyright jaartal onderaan (startjaar, eindjaar updatet al automatisch)
-- [ ] Vrijwilligerspagina; activiteiten op kamp, regels op kamp, evnementen, maak kennis met de vrijwilligers, hoe word ik vrijwilliger + op heel deze pagina is er veel te veel tekst (schrikt af) -> zien op te splitsen, irrelevante delen weghalen en/of tekstjes korter maken
 
 ### Required bugfixes
-- [ ] Paaskamp knop gaat somehow niet nar paaskamp
-- [ ] Doe een gift -> geen automatische vermelding op site zou ik denken, is pas voor peter/meter
+/
 
 ### Nice to have bugfixes
 - [ ] tekst overlapt soms boompjes in  de achtergrond

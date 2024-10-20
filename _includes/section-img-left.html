@@ -1,5 +1,5 @@
 <div class="row align-items-stretch mb-0 bg-primary  text-light" style="position: relative;"
-    id="{{ include.title | strip }}">
+    id="{{ include.id | default: include.title | strip }}">
     {% if include.img_mobile %}
     <div class="d-md-none" style="width: 100%;">
         <img src="{{ include.img_mobile }}" style="width: 100%;">
