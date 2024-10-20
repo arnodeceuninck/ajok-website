@@ -47,7 +47,7 @@ For faster static website loading times, it is best to compress all your images.
 
 In input, select `assets-original` as source folder. Set the output to the `assets` folder, format `WebP` , with `File size` e.g. `100kbytes` as settings. 
 
-You can check the loading speeds with sites like this one: https://gtmetrix.com/reports/arnodeceuninck.github.io/SdANANEp/
+You can check the loading speeds with sites like this one: https://gtmetrix.com/
 
-Before using compressed images: Homepage 1.4s to fully load, 17.5 MB
-After compressing to 100kb and converting to webp: 
+Before using compressed images: Homepage 1.4s to fully load, 17.5 MB (https://gtmetrix.com/reports/arnodeceuninck.github.io/SdANANEp/)
+After compressing to 100kb and converting to webp: Homepage 0.8s to fully load, 2.53Mb (https://gtmetrix.com/reports/arnodeceuninck.github.io/tAtjmTx8/)
