@@ -48,8 +48,17 @@
   prijs_niet_thuiswonend: 110
   leeftijd: Kinderen tussen 12 en 13 jaar oud
   leeftijd_kort: 12-13 jaar
-  img: assets/images/kampen/hecto.webp
-  img_mobile: assets/images/kampen/hecto_mobile.webp
+  # img: assets/images/kampen/hecto.webp
+  img_mobile: assets/images/kampen/hecto-3.webp
+  img_list:
+    - assets/images/kampen/hecto-2.webp
+    - assets/images/kampen/hecto-3.webp
+    - assets/images/kampen/hecto-4.webp
+  # img_list_mobile:
+  #   - assets/images/kampen/hecto-2.webp
+  #   - assets/images/kampen/hecto-3.webp
+  #   - assets/images/kampen/hecto-4.webp
+    
 
 - name: GIGA
   description: Op  dit  AJOK-kamp  is  het  elkedag  feest!  De  paashaas,  deKerstman,  Sinterklaas  en  deDrie  Koningen&#58;  iedereen  iswelkom!  We  beginnen  deweek  met  een  stuw  in  debossen.  Daarna  gaan  we  opkajaktocht  met  de  driekoningen.  En  als  klap  op  devuurpijl  eindigen  we  de  weekmet  Nieuwjaarsviering.    Ietsvoor jou? Schrijf je dan in!
@@ -68,5 +77,7 @@
   prijs_niet_thuiswonend: 95
   leeftijd: Kinderen tussen 16 en 17 jaar oud
   leeftijd_kort: 16-17 jaar
-  img: assets/images/kampen/op-schok.webp
-  img_mobile: assets/images/kampen/op-schok_mobile.webp
+  img_list:
+    - assets/images/kampen/op-schok.webp
+    - assets/images/kampen/op-schok-1.webp
+    - assets/images/kampen/op-schok-2.webp
