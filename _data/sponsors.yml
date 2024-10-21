@@ -1,4 +1,4 @@
-- naam: Werkjaar 2022-2023
+- name: Werkjaar 2022-2023
   sponsors:
     - description: "We ontvingen dit jaar projectsteun van welzijnszorg vzw voor AJOK."
       img: assets/images/sponsors/welzijnszorg.jpg
@@ -7,7 +7,7 @@
     - description: "Op 26 november 2022 organiseerde <a href='https://www.happyfriendszedelgem.com/'>Happy Friends Zedelgem</a> de KOM-DER-NIE-UP quiz. Naast Move For Life deelde ook AJOK vzw in de sponsoring, waarvoor veel dank!"
       img: assets/images/sponsors/happyfriends.jpg
 
-- naam: Werkjaar 2021-2022
+- name: Werkjaar 2021-2022
   sponsors:
     - description: "Veel dank aan KU Leuven voor de sponsoring"
       img: assets/images/sponsors/KULeuven.png
@@ -16,7 +16,7 @@
     - description: "Op dezelfde quiz ontvingen we twee gesponsorde schoentjes van Cezar Schoenen in Zedelgem, dankuwel!"
       img: assets/images/sponsors/cezarSchoenen.jpg
 
-- naam: Werkjaar 2020-2021
+- name: Werkjaar 2020-2021
   sponsors:
     - description: "Bedankt aan IMEC voor de sinterklaassponsoring!"
       img: assets/images/sponsors/imec.png
@@ -31,14 +31,14 @@
     - description: "Dankuwel Chiro Achter-Olen om voor AJOK te kiezen bij de organisatie van jullie warmste chirozondag!"
       img: assets/images/sponsors/Chiro.png
 
-- naam: Werkjaar 2018-2019
+- name: Werkjaar 2018-2019
   sponsors:
     - description: "Bedankt aan onze vriendjes die glaslabels maakten ten voordele van AJOK."
       img: assets/images/sponsors/de_warmste_week.svg
     - description: "Dankuwel aan basisscholen Sint-Lodewijk in Deerlijk en Sint-Jozefschool in Emblem voor hun bijdragen!"
       img: assets/images/sponsors/ChequeSintJozef.jpg
 
-- naam: Werkjaar 2017-2018
+- name: Werkjaar 2017-2018
   sponsors:
     - description: "Delhaize"
       img: assets/images/sponsors/delhaize.jpg
@@ -55,7 +55,7 @@
     - description: "Bruneel-Cox"
       img: assets/images/sponsors/bruneel.png
 
-- naam: Werkjaar 2016-2017
+- name: Werkjaar 2016-2017
   sponsors:
     - description: "Delhaize"
       img: assets/images/sponsors/delhaize.jpg
@@ -64,12 +64,12 @@
     - description: "2 BSO van het Atheneum in Schoten, voor hun inspanningen in kader van de warmste week"
     - description: "De scouts van Vremde voor de verkoop ten voordele van AJOK op de kerstmarkt van Vremde"
 
-- naam: Werkjaar 2014-2015
+- name: Werkjaar 2014-2015
   sponsors:
     - description: "Iedereen die onze snoepzakjes gekocht en verkocht heeft"
     - description: "Kegelkluis"
 
-- naam: Werkjaar 2013-2014
+- name: Werkjaar 2013-2014
   sponsors:
     - description: "Iedereen die onze snoepzakjes gekocht en verkocht heeft"
     - description: "Ritmica Leef-en Trainingscentrum Hove"
@@ -78,7 +78,7 @@
     - description: "Kepler BVBA"
     - description: "Mijlstraats Muziekorkest Koninklijke Fanfare De Trouwe Vrienden en Musikverein Lichtenstein Sachsen"
 
-- naam: Werkjaar 2010-2011
+- name: Werkjaar 2010-2011
   sponsors:
     - description: "Iedereen die onze snoepzakjes gekocht en verkocht heeft"
     - description: "Vrije basisschool Bierbeek"
@@ -86,7 +86,7 @@
     - description: "KHLeuven departement gezondheidszorg en technologie"
     - description: "Ortec"
 
-- naam: Werkjaar 2009-2010
+- name: Werkjaar 2009-2010
   sponsors:
     - description: "Iedereen die onze snoepzakjes gekocht en verkocht heeft"
     - description: "Colruyt, Dreamland, ijsboerke en dokter Oetker voor de middelen in natura"
@@ -98,7 +98,7 @@
     - description: "Menuiserie Small Concepts"
     - description: "Belgosoft"
 
-- naam: Werkjaar 2008-2009
+- name: Werkjaar 2008-2009
   sponsors:
     - description: "Fortis foundation"
     - description: "Leerlingen en leekrachten van de KH Leuven, Departement gezondheidszorg & technologie"
@@ -109,7 +109,7 @@
     - description: "Leerlingen van het Sint Pieterscollege Leuven voor het organiseren van speelplaatsrock"
     - description: "VPPK"
 
-- naam: Werkjaar 2007-2008
+- name: Werkjaar 2007-2008
   sponsors:
     - description: "Methanex Europe NV"
     - description: "KSA-VKSJ"
@@ -119,7 +119,7 @@
     - description: "Belgosoft"
     - description: "Iedereen die onze snoepzakjes gekocht en verkocht heeft!"
 
-- naam: Werkjaar 2006-2007
+- name: Werkjaar 2006-2007
   sponsors:
     - description: "Jeugdhuis Alleman"
     - description: "VPPK"
