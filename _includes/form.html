@@ -5,7 +5,7 @@ Via onderstaande form kan je je inschrijven als vrijwilliger voor een van onze k
           Problemen met het formulier? Vul het dan in via <a href='{{ form_item.link }}' target='_blank' class="ajok-orange">deze link</a>.
 {% if include.extra_info %}
 <br>
-{{ include.extra_info }}
+{{ include.extra_info | replace: "FORM_LINK", form_item.link }}
 {% endif %}
 {% endcapture %}
 
@@ -14,9 +14,22 @@ Via onderstaande form kan je je inschrijven als vrijwilliger voor een van onze k
     text=text
    %}
   
-  <div class="form-container scroll-animation">
+   <div class="form-container scroll-animation" style="position: relative">
     <iframe src="{{ form_item.link }}?embedded=true" width="640" height="{{ form_item.height | default: '1000' }}" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+    {% assign cloud_count = form_item.height | default: 1000 | divided_by: 200 %}
+    {% for i in (1..cloud_count) %}
+      {% assign random_side = i | modulo: 2 %}
+      {% assign random_vertical = 8531 | times: i | plus: 200 | divided_by: 3 | modulo: form_item.height %}
+      {% assign random_size = 1267 | times: i | modulo: 150 %}
+      {% assign random_offset = 3157 | times: i | modulo: 596 | min: 100 | modulo: 320 %}
+      
+      <img id="clouds" src="assets/images/artifacts/wolkjes.webp" class="opacity-sm-80"
+           style="position: absolute; height: {{ random_size }}px; width: auto; 
+                  {% if random_side == 0 %} right: {{ random_offset}}px; {% else %} left: {{ random_offset}}px; {% endif %}
+                  z-index: -1; top: {{ random_vertical }}px;" />
+    {% endfor %}
   </div>
+   
   
   <style>
     .form-container {
