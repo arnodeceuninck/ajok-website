@@ -130,20 +130,22 @@ meer blije gezichten op onze kampen zien!
     <img id="clouds" src="assets/images/artifacts/wolkjes.webp" class="opacity-sm-80"
             style="position: absolute; height: 120px; width: auto; right: -30px; z-index: -1;" />
 
-    {% for werkjaar in site.data.sponsors %}
-        <div class="container">
-            {% capture werkjaar_text %}<p style="font-weight: bold;">{{ werkjaar.name }}</p>{% endcapture %}
+    <div class="row">
+        {% for werkjaar in site.data.sponsors %}
+            <div class="col" style="padding-right: 5px;">
+                {% capture werkjaar_text %}<p style="font-weight: bold;">{{ werkjaar.name }}</p>{% endcapture %}
 
-            {% include sponsor-card.html 
-                description=werkjaar_text
-                img=werkjaar.img  %}
-
-            {% for item in werkjaar.sponsors %}
                 {% include sponsor-card.html 
-                    description=item.description
-                    img=item.img  %}
-            {% endfor %}
-        </div>
-    {% endfor %}
+                    description=werkjaar_text
+                    img=werkjaar.img  %}
+
+                {% for item in werkjaar.sponsors %}
+                    {% include sponsor-card.html 
+                        description=item.description
+                        img=item.img  %}
+                {% endfor %}
+            </div>
+        {% endfor %}
+    </div>
 </div>
 
