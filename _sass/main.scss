@@ -266,7 +266,7 @@ a {
 .sponsor-card {
   text-align: center;
   width: 250px; /* Adjust width as needed */
-  cursor: pointer;
+  // cursor: pointer;
 }
 
 .sponsor-card img {
@@ -279,4 +279,49 @@ a {
   margin-top: 10px;
   // font-weight: bold;
   word-wrap: break-word;
+}
+
+
+.masonry-container {
+  column-count: 5; /* Default number of columns */
+  column-gap: 10px;
+}
+
+@media (max-width: 1250px) {
+  .masonry-container {
+      column-count: 4;
+  }
+}
+
+@media (max-width: 1200px) {
+  .masonry-container {
+      column-count: 3;
+  }
+}
+
+@media (max-width: 990px) {
+  .masonry-container {
+      column-count: 2;
+  }
+}
+
+@media (max-width: 800px) {
+  .masonry-container {
+      column-count: 1;
+  }
+}
+
+@media (max-width: 600px) {
+  .masonry-container {
+      column-count: 1;
+  }
+}
+
+.masonry-item {
+  break-inside: avoid; /* Prevent items from breaking */
+  /* background-color: white; */
+  /* padding: 10px; */
+  /* margin-bottom: 10px; */
+  border-radius: 15px;
+  display: inline-block; /* Ensure proper column behavior */
 }
