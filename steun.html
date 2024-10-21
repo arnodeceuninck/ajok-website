@@ -14,7 +14,7 @@ text="<p>
     je steentje bijdragen. Klik op de link voor meer informatie.
     </p>
 
-    <a href='#word%20vrijwilliger' class='btn btn-danger'>Lees meer</a>" %}
+    <a href='#Word%20vrijwilliger' class='btn btn-danger'>Lees meer</a>" %}
 
 
 <div class="bg-orange pt-1 pb-1"> 
@@ -59,17 +59,6 @@ een kaartje van op kamp.
     img_mobile="assets/images/steun-ons/peter-meter-mobile.webp" %}
 
 
-<div class="bg-orange pt-2 pb-2 text-center text-light">
-    <h2 class="white-line-below w-100">Dankjewel peters en meters!</h2>
-    <p>
-        {% for item in site.data.peter_meters %}
-            {{ item.naam }}{% if forloop.last == false %} &bull;{% endif %}
-        {% endfor %}
-    </p>
-</div>
-
-
-
 {% capture doe_een_gift_text %}
 Je kan ons ook steunen door een gift te doen. Geef jouw
 gewenste bedrag en stort het op ons rekeningnummer {{ rekeningnummer }}.
@@ -102,3 +91,59 @@ meer blije gezichten op onze kampen zien!
     url="https://www.trooper.be/nl/trooperverenigingen/ajokvzw/"
     img="assets/images/steun-ons/trooper-desktop.webp"
     img_mobile="assets/images/steun-ons/trooper.webp" %}
+
+
+{% include section.html
+    title="Met dank aan"
+    text="<p>
+        Zonder de steun van onze sponsors, peter en meters en vrijwilligers zouden 
+        we kinderen in maatschappelijk kwetsbare situaties niet de vakantie kunnen 
+        bieden die ze verdienen. Daarom willen we hen van harte bedanken voor hun steun en inzet!
+        </p>
+    
+        <a href='#dankje-peter-meter' class='btn btn-danger'>Peters en meters</a>
+        <a href='#bedrijven-organisaties' class='btn btn-danger'>Bedrijven en organisaties</a>" %}
+
+<div class="pt-1"> 
+    {% include image-row.html %}
+</div>
+
+{% capture peter_meter_text %}
+    {% for item in site.data.peter_meters %}
+        {{ item.naam }}{% if forloop.last == false %} &bull;{% endif %}
+    {% endfor %}
+    {% for item in site.data.peter_meters %}
+        {{ item.naam }}{% if forloop.last == false %} &bull;{% endif %}
+    {% endfor %}
+{% endcapture %}
+
+{% include section-img-left.html
+        title="Dankjewel peters en meters!"
+        text=peter_meter_text
+        id="dankje-peter-meter"
+        img="assets/images/kampen/pico.webp" %}
+
+<div class="container scroll-animation" id="bedrijven-organisaties" style="padding: 20px;">
+
+    <h2 class="text-uppercase font-italic black-line-below">Bedrijven en organisaties</h2>
+    
+    <img id="clouds" src="assets/images/artifacts/wolkjes.webp" class="opacity-sm-80"
+            style="position: absolute; height: 120px; width: auto; right: -30px; z-index: -1;" />
+
+    {% for werkjaar in site.data.sponsors %}
+        <div class="container">
+            {% capture werkjaar_text %}<p style="font-weight: bold;">{{ werkjaar.name }}</p>{% endcapture %}
+
+            {% include sponsor-card.html 
+                description=werkjaar_text
+                img=werkjaar.img  %}
+
+            {% for item in werkjaar.sponsors %}
+                {% include sponsor-card.html 
+                    description=item.description
+                    img=item.img  %}
+            {% endfor %}
+        </div>
+    {% endfor %}
+</div>
+

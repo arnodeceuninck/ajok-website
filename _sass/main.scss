@@ -254,3 +254,29 @@ a {
 .h-imgh-mobile {
   height: 200px;
 }
+
+
+.sponsor-card-list {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.sponsor-card {
+  text-align: center;
+  width: 250px; /* Adjust width as needed */
+  cursor: pointer;
+}
+
+.sponsor-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.sponsor-card p {
+  margin-top: 10px;
+  // font-weight: bold;
+  word-wrap: break-word;
+}

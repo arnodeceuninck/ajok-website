@@ -1,0 +1,116 @@
+- name: Werkjaar 2022-2023
+  sponsors:
+    - description: "We ontvingen dit jaar projectsteun van welzijnszorg vzw voor AJOK."
+      img: assets/images/sponsors/welzijnszorg.jpg
+    - description: "Op 11 en 12 augustus 2023 wandelden Inge en Anaïs mee op de dodentocht, en zamelden daarmee een mooi bedrag in voor AJOK. Bedankt!"
+      img: assets/images/sponsors/dodentocht2023.jpg
+    - description: "Op 26 november 2022 organiseerde <a href='https://www.happyfriendszedelgem.com/'>Happy Friends Zedelgem</a> de KOM-DER-NIE-UP quiz. Naast Move For Life deelde ook AJOK vzw in de sponsoring, waarvoor veel dank!"
+      img: assets/images/sponsors/happyfriends.jpg
+- name: Werkjaar 2021-2022
+  sponsors:
+    - description: "Veel dank aan KU Leuven voor de sponsoring"
+      img: assets/images/sponsors/KULeuven.png
+    - description: "Op 13 november 2021 organiseerde <a href='https://www.happyfriendszedelgem.com/'>Happy Friends Zedelgem</a> de KOM-DER-NIE-UP quiz ten voordele van AJOK, waarvoor veel dank! Ook AJOK was aanwezig met een delegatie, en we hebben ons goed geamuseerd."
+      img: assets/images/sponsors/happyfriends2021.webp
+    - description: "Op dezelfde quiz ontvingen we twee gesponsorde schoentjes van Cezar Schoenen in Zedelgem, dankuwel!"
+      img: assets/images/sponsors/cezarSchoenen.jpg
+- name: Werkjaar 2020-2021
+  sponsors:
+    - description: "Bedankt aan IMEC voor de sinterklaassponsoring!"
+      img: assets/images/sponsors/imec.png
+    - description: "Ook de scouts 40 van Antwerpen noord brachten met een heuse sponsorwandeltocht geld in ons laatje. Super bedankt!"
+      img: assets/images/sponsors/Scouts.png
+    - description: "Onze giga-kokkinnen Bo en Deborah verkochten chocoladelepels en wafels ten voordele van AJOK voor nieuwe matjes. Onze jongeren zullen slapen als roosjes, bedankt!"
+      img: assets/images/sponsors/BoDeborah.png
+    - description: "Verder zijn wij ook Jong CD&V Roosdaal dankbaar voor de gulle sponsoring!"
+      img: assets/images/sponsors/JongCDVroosdaal.jpg
+    - description: "Merci aan Chigant voor hun Croques For Life actie in de warmste week!"
+      img: assets/images/sponsors/Chigant.png
+    - description: "Dankuwel Chiro Achter-Olen om voor AJOK te kiezen bij de organisatie van jullie warmste chirozondag!"
+      img: assets/images/sponsors/Chiro.png
+- name: Werkjaar 2018-2019
+  sponsors:
+    - description: "Bedankt aan onze vriendjes die glaslabels maakten ten voordele van AJOK."
+      img: assets/images/sponsors/de_warmste_week.svg
+    - description: "Dankuwel aan basisscholen Sint-Lodewijk in Deerlijk en Sint-Jozefschool in Emblem voor hun bijdragen!"
+      img: assets/images/sponsors/ChequeSintJozef.jpg
+- name: Werkjaar 2017-2018
+  sponsors:
+    - description: "Delhaize"
+      img: assets/images/sponsors/delhaize.jpg
+    - description: "Olympia NV"
+      img: assets/images/sponsors/OlympiaNV.jpg
+    - description: "Van Elven"
+      img: assets/images/sponsors/VanElven.png
+    - description: "Het reizende frituurtje"
+    - description: "Bosteels BVBA"
+      img: assets/images/sponsors/Bosteels.jpg
+    - description: "Pomuni"
+      img: assets/images/sponsors/pomuni.png
+    - description: "Fruitbedrijf Kestergat"
+    - description: "Bruneel-Cox"
+      img: assets/images/sponsors/bruneel.png
+- name: Werkjaar 2016-2017
+  sponsors:
+    - description: "Delhaize"
+      img: assets/images/sponsors/delhaize.jpg
+    - description: "Puratos, voor de verkoop van Vita-plus broden"
+    - description: "Iedereen die onze nootjes gekocht en verkocht heeft"
+    - description: "2 BSO van het Atheneum in Schoten, voor hun inspanningen in kader van de warmste week"
+    - description: "De scouts van Vremde voor de verkoop ten voordele van AJOK op de kerstmarkt van Vremde"
+- name: Werkjaar 2014-2015
+  sponsors:
+    - description: "Iedereen die onze snoepzakjes gekocht en verkocht heeft"
+    - description: "Kegelkluis"
+- name: Werkjaar 2013-2014
+  sponsors:
+    - description: "Iedereen die onze snoepzakjes gekocht en verkocht heeft"
+    - description: "Ritmica Leef-en Trainingscentrum Hove"
+    - description: "Dagcentrum De Zonnebloemen Deurne"
+    - description: "De vriendelijke inwoners van zele die AJOK op de vooravond van 1 mei gul gesteund hebben"
+    - description: "Kepler BVBA"
+    - description: "Mijlstraats Muziekorkest Koninklijke Fanfare De Trouwe Vrienden en Musikverein Lichtenstein Sachsen"
+- name: Werkjaar 2010-2011
+  sponsors:
+    - description: "Iedereen die onze snoepzakjes gekocht en verkocht heeft"
+    - description: "Vrije basisschool Bierbeek"
+    - description: "De Kinderberg"
+    - description: "KHLeuven departement gezondheidszorg en technologie"
+    - description: "Ortec"
+- name: Werkjaar 2009-2010
+  sponsors:
+    - description: "Iedereen die onze snoepzakjes gekocht en verkocht heeft"
+    - description: "Colruyt, Dreamland, ijsboerke en dokter Oetker voor de middelen in natura"
+    - description: "Promatic"
+    - description: "COMAC Gent"
+    - description: "VPPK"
+    - description: "Voorbereidingsprogramma sociale agogiek gent"
+    - description: "A.R.C. BVBA"
+    - description: "Menuiserie Small Concepts"
+    - description: "Belgosoft"
+- name: Werkjaar 2008-2009
+  sponsors:
+    - description: "Fortis foundation"
+    - description: "Leerlingen en leekrachten van de KH Leuven, Departement gezondheidszorg & technologie"
+    - description: "Iedereen die meehielp met de snoepzakjesverkoop"
+    - description: "Radio 2"
+    - description: "Sociale agogiek Universiteit Gent"
+    - description: "Ronde tafel Mechelen"
+    - description: "Leerlingen van het Sint Pieterscollege Leuven voor het organiseren van speelplaatsrock"
+    - description: "VPPK"
+- name: Werkjaar 2007-2008
+  sponsors:
+    - description: "Methanex Europe NV"
+    - description: "KSA-VKSJ"
+    - description: "VPPK"
+    - description: "1e master sociale agogiek Universiteit Gent"
+    - description: "Wereldwinkel jongeren Kortrijk"
+    - description: "Belgosoft"
+    - description: "Iedereen die onze snoepzakjes gekocht en verkocht heeft!"
+- name: Werkjaar 2006-2007
+  sponsors:
+    - description: "Jeugdhuis Alleman"
+    - description: "VPPK"
+    - description: "Methanex Europe NV"
+    - description: "1e master sociale agogiek Universiteit Gent"
+    - description: "Sint-Rembert internaat"
