@@ -112,9 +112,6 @@ meer blije gezichten op onze kampen zien!
     {% for item in site.data.peter_meters %}
         {{ item.naam }}{% if forloop.last == false %} &bull;{% endif %}
     {% endfor %}
-    {% for item in site.data.peter_meters %}
-        {{ item.naam }}{% if forloop.last == false %} &bull;{% endif %}
-    {% endfor %}
 {% endcapture %}
 
 {% include section-img-left.html
