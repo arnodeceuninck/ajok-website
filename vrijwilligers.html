@@ -3,19 +3,38 @@ layout: default
 title: "Vrijwilligers"
 ---
 
+{% capture vrijwilligers_intro %}
+
+<p>
+    Vrijwilligers worden bij AJOK met open armen ontvangen. Er zijn verschillende functies waarin je als
+    vrijwilliger actief kan zijn: van verzorgend personeel tot leidinggevend personeel. Sommige functies vereisen
+    specifieke kennis, andere vragen enkel enthousiasme en betrokkenheid. Interesse? Klik op onderstaande
+    knop en ontdek welke jou op het lijf geschreven is!
+
+    TODO: Hier linkjes naar functies? 
+    TODO: Twijfel je nog? En wil je meer info? -> Aparte pagina, bel Leen of stuur een whatsappje
+
+
+<ul>
+    {% for item in site.data.kampfuncties %}
+        <!-- {% include image-card.html 
+            label=item.naam
+            image=item.img_square  %} -->
+            <!-- TODO: Klikbaar maken -->
+            <li>{{ item.naam }}</li>
+    {% endfor %}
+</ul>
+</p>
+{% endcapture %}
+
 <!-- TODO Inschrijvingsform call to action ink meer vanboven -->
 {% include section.html 
-    title="Word nu vrijwilliger!"
-    text="<p>
-        Vrijwilligers worden bij AJOK met open armen ontvangen. Er zijn verschillende functies waarin je als
-        vrijwilliger actief kan zijn: van verzorgend personeel tot leidinggevend personeel. Sommige functies vereisen
-        specifieke kennis, andere vragen enkel enthousiasme en betrokkenheid. Interesse? Klik op onderstaande
-        knop en ontdek welke jou op het lijf geschreven is!
-   " %}
+    title="Vrijwilliger worden?"
+    text=vrijwilligers_intro %}
 
 
 
-<div class="bg-orange p-5 scroll-animation" id="Vrijwilligerfuncties">
+<!-- <div class="bg-orange p-5 scroll-animation" id="Vrijwilligerfuncties">
         <div class="row justify-content-center">
 
             {% for item in site.data.kampfuncties %}
@@ -24,15 +43,15 @@ title: "Vrijwilligers"
                     image=item.img_square  %}
             {% endfor %}
         </div>
-</div>
+</div> -->
 
 
 {% for item in site.data.kampfuncties %}
 
-    {% assign type = 'right' %}
+    {% assign type = 'left' %}
     {% assign remainder = forloop.index | modulo: 2 %}
     {% if remainder == 0 %}
-        {% assign type = 'left' %}
+        {% assign type = 'right' %}
     {% endif %}
 
     {% if type == 'left' %}
