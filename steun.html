@@ -8,7 +8,7 @@ title: "Steun"
 
 
 {% include section.html
-title="Steun ons!"
+title="Steun ons"
 text="<p>
     Wil jij ons helpen om nog meer fijne vakantiekampen te organiseren? Je kunt op verschillende manieren
     je steentje bijdragen. Klik op de link voor meer informatie.
@@ -20,60 +20,9 @@ text="<p>
     {% include image-row.html %}
 </div>
 
+<!-- Trooper eerst, -->
 
 {% include section-img-right.html
-    title="Word vrijwilliger"
-        text="Ben jij op zoek naar een leuke manier om je te engageren?
-        Word dan vrijwilliger bij AJOK! We staan steeds klaar om extra
-        helpende handen te verwelkomen. Op het
-        inschrijvingsformulier kan je uit meerdere vrijwilligersfuncties
-        kiezen. Ben je flexibel qua periode? Geef die dan zeker
-        helemaal door! Volg de link onderaan om je aan te melden als
-        vrijwilliger voor onze kampen."
-    call_to_action="Meld je aan!"
-    url="steun"
-    img="assets/images/steun-ons/word-vrijwilliger-desktop.webp"
-    img_mobile="assets/images/steun-ons/word-vrijwilliger-mobile.webp" %}
-
-{% capture peter_meter_text %}
-Je kan AJOK ook steunen met een bijdrage van 50
-euro om het eten van een kind op kamp te dekken.
-Dan word je officiël de peter of meter van een
-deelnemer en krijgt je in ruil daarvoor een certificaat,
-een vermelding op onze website (indien gewenst), en
-een kaartje van op kamp.
-
-<h4>Hoe?</h4>
-<ol>
-    <li>Maak het bedrag over op ons rekeningnummer: {{ rekeningnummer }}</li>
-    <li>Vermeld als mededeling 'peter/meter AJOK vzw - naam - e-mailadres'</li>
-    <li>Nadat we het bedrag ontvangen hebben, nemen we contact met u op voor verdere gegevens</li>
-</ol>
-{% endcapture %}
-
-{% include section-img-left.html
-    title="Word peter of meter"
-    text=peter_meter_text
-    img="assets/images/steun-ons/peter-meter.webp"
-    img_mobile="assets/images/steun-ons/peter-meter-mobile.webp" %}
-
-
-{% capture doe_een_gift_text %}
-Je kan ons ook steunen door een gift te doen. Geef jouw
-gewenste bedrag en stort het op ons rekeningnummer {{ rekeningnummer }}.
-<br><br>
-Een gift gedaan? Laat het ons zeker weten, dan vermelden we
-het op onze site. We zorgen ervoor dat we met dit geld nog
-meer blije gezichten op onze kampen zien!
-{% endcapture %}
-
-{% include section-img-right.html
-    title="Doe een gift"
-    text=doe_een_gift_text
-    img="assets/images/steun-ons/gift.webp"
-    img_mobile="assets/images/steun-ons/gift-mobile.webp" %}
-
-{% include section-img-left.html
     title="Trooper"
     text="Wist je dat je AJOK ook kan helpen als je inkopen doet? Als
         je bij Trooper winkelt, schenk je automatisch een klein
@@ -90,6 +39,45 @@ meer blije gezichten op onze kampen zien!
     url="https://www.trooper.be/nl/trooperverenigingen/ajokvzw/"
     img="assets/images/steun-ons/trooper-desktop.webp"
     img_mobile="assets/images/steun-ons/trooper.webp" %}
+
+{% capture doe_een_gift_text %}
+Je kan ons ook steunen door een gift te doen. Geef jouw
+gewenste bedrag en stort het op ons rekeningnummer {{ rekeningnummer }}.
+<br><br>
+Een gift gedaan? Laat het ons zeker weten, dan vermelden we
+het op onze site. We zorgen ervoor dat we met dit geld nog
+meer blije gezichten op onze kampen zien!
+{% endcapture %}
+
+{% include section-img-left.html
+    title="Doe een gift"
+    text=doe_een_gift_text
+    img="assets/images/steun-ons/gift.webp"
+    img_mobile="assets/images/steun-ons/gift-mobile.webp" %}
+
+    
+{% capture peter_meter_text %}
+Je kan AJOK ook steunen met een bijdrage van 50
+euro om het eten van een kind op kamp te dekken.
+Dan word je officiël de peter of meter van een
+deelnemer en krijgt je in ruil daarvoor een certificaat,
+een vermelding op onze website (indien gewenst), en
+een kaartje van op kamp.
+
+<h4>Hoe?</h4>
+<ol>
+    <li>Maak het bedrag over op ons rekeningnummer: {{ rekeningnummer }}</li>
+    <li>Vermeld als mededeling 'peter/meter AJOK vzw - naam - e-mailadres'</li>
+    <li>Nadat we het bedrag ontvangen hebben, nemen we contact met u op voor verdere gegevens</li>
+</ol>
+{% endcapture %}
+
+{% include section-img-right.html
+    title="Word peter of meter"
+    text=peter_meter_text
+    img="assets/images/steun-ons/peter-meter.webp"
+    img_mobile="assets/images/steun-ons/peter-meter-mobile.webp" %}
+
 
 
 {% include section.html
