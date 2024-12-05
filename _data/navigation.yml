@@ -2,8 +2,10 @@
   link: index.html
 - name: Over ons
   link: over-ons.html
-- name: Op kamp
+- name: Onze kampen
   link: op-kamp.html
+- name: Op kamp&#58; Hoe en wat?
+  link: op-kamp-hoe-wat.html
 - name: Word Vrijwilliger
   link: vrijwilligers.html
 - name: Steun
