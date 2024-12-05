@@ -35,7 +35,33 @@ title: "Op Kamp"
 </div>
 
 
-<!-- TODO: Kamphuis sowieso onderaan -->
+
+
+
+{% for item in site.data.kampen %}
+
+    {% assign type = 'left' %}
+    {% assign remainder = forloop.index | modulo: 2 %}
+    {% if remainder == 0 %}
+        {% assign type = 'right' %}
+    {% endif %}
+
+    {% include camp-info.html 
+        title=item.name
+        description=item.description
+        datum = item.datum
+        prijs_thuiswonend = item.prijs_thuiswonend
+        prijs_niet_thuiswonend = item.prijs_niet_thuiswonend
+        leeftijd = item.leeftijd
+        img=item.img
+        img_mobile=item.img_mobile
+        img_list=item.img_list
+        img_list_mobile=item.img_list_mobile
+        type=type  %}
+
+  {% endfor %}
+
+  
 {% include section-img-left.html 
     title="Kamphuis la laiterie"
     id="verblijf"
@@ -55,28 +81,3 @@ title: "Op Kamp"
         zo maar door. Plezier gegarandeerd!
         "
     img="assets/images/kampen/kamphuis-laiterie.webp" %}
-
-
-
-{% for item in site.data.kampen %}
-
-    {% assign type = 'right' %}
-    {% assign remainder = forloop.index | modulo: 2 %}
-    {% if remainder == 0 %}
-        {% assign type = 'left' %}
-    {% endif %}
-
-    {% include camp-info.html 
-        title=item.name
-        description=item.description
-        datum = item.datum
-        prijs_thuiswonend = item.prijs_thuiswonend
-        prijs_niet_thuiswonend = item.prijs_niet_thuiswonend
-        leeftijd = item.leeftijd
-        img=item.img
-        img_mobile=item.img_mobile
-        img_list=item.img_list
-        img_list_mobile=item.img_list_mobile
-        type=type  %}
-
-  {% endfor %}
