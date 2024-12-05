@@ -28,12 +28,12 @@
   link: mailto:info@ajokvzw.be
   footer: true
 
-- name: Telefoon
+- name: Telefoon (bij voorkeur eerst mailen)
   description: +32 496 39 37 76
   color: '#0082ca'
   icon: fa-solid fa-phone
   link: tel:+32496393776
-  footer: true
+  footer: facebook
 
 - name: Adres vzw
   description: Lodewijk Van Berckenlaan 85<br> 2600 Berchem
