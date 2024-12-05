@@ -1,34 +1,3 @@
-- name: Paaskamp
-  description: We dansen, zingen, doen gek
-        en springen op het paaskamp!
-        We lachen hard in de
-        speeltuin van Chevetogne en
-        het Wildpark in Han. Kom
-        naar de kinderboerderij en
-        help ons een feestje te
-        bouwen!
-  datum: 11-15 april 2022
-  prijs_thuiswonend: 70
-  prijs_niet_thuiswonend: 85
-  leeftijd: Kinderen tussen 6 en 9 jaar
-  leeftijd_kort: 6-9 jaar
-  img: assets/images/kampen/paaskamp_desktop.webp
-
-- name: Herfstkamp
-  description: 
-       Terwijl iedereen bang is voor de spoken en heksen,
-       jagen wij ze weg met al ons plezier! Het herfstkamp
-       zorgt dat je er doorheen het jaar weer even tussenuit
-       kan en samen kan spelen op één van de geweldige AJOK-kampen!
-  datum: 28 oktober - 1 november 2024
-  locatie: Sint-Niklaas
-  prijs_thuiswonend: 70
-  prijs_niet_thuiswonend: 85
-  leeftijd: Kinderen tussen 13 en 16 jaar
-  leeftijd_kort: 13-16 jaar
-  img: assets/images/img6_crop.webp
-  img_mobile: assets/images/img6_mobile.webp
-
 - name: PICO
   description: Voor  feestjes  groot  en  klein,  moetje  op  het  PICO-kamp  zijn!  
        Dansen, zingen,  gek  doen  en  springen doen  we  graag!  Wil  jij  Kerstmis vieren,  
@@ -106,3 +75,35 @@
     - assets/images/kampen/op-schok.webp
     - assets/images/kampen/op-schok-1.webp
     - assets/images/kampen/op-schok-2.webp
+
+- name: Herfstkamp
+  description: 
+       Terwijl iedereen bang is voor de spoken en heksen,
+       jagen wij ze weg met al ons plezier! Het herfstkamp
+       zorgt dat je er doorheen het jaar weer even tussenuit
+       kan en samen kan spelen op één van de geweldige AJOK-kampen!
+  datum: 28 oktober - 1 november 2024
+  locatie: Sint-Niklaas
+  prijs_thuiswonend: 70
+  prijs_niet_thuiswonend: 85
+  leeftijd: Kinderen tussen 13 en 16 jaar
+  leeftijd_kort: 13-16 jaar
+  img: assets/images/img6_crop.webp
+  img_mobile: assets/images/img6_mobile.webp
+
+
+- name: Paaskamp
+  description: We dansen, zingen, doen gek
+        en springen op het paaskamp!
+        We lachen hard in de
+        speeltuin van Chevetogne en
+        het Wildpark in Han. Kom
+        naar de kinderboerderij en
+        help ons een feestje te
+        bouwen!
+  datum: 11-15 april 2022
+  prijs_thuiswonend: 70
+  prijs_niet_thuiswonend: 85
+  leeftijd: Kinderen tussen 6 en 9 jaar
+  leeftijd_kort: 6-9 jaar
+  img: assets/images/kampen/paaskamp_desktop.webp
