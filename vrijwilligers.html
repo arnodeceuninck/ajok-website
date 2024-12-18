@@ -16,15 +16,9 @@ title: "Vrijwilligers"
     Onze vrijwilligers vormen het kloppende hart van AJOK en maken het mogelijk om onze kampen te 
     organiseren en de kinderen en jongeren de tijd van hun leven te geven. Er zijn verschillende 
     functies waarin je je als vrijwilliger kan inzetten tijdens onze kampen:
-    <!-- TODO: Twijfel je nog? En wil je meer info? -> Aparte pagina, bel Leen of stuur een whatsappje -->
 <ul>
-    <!-- TODO: Oranje knoppen van maken -->
-    {% for item in site.data.kampfuncties %}
-        <!-- {% include image-card.html 
-            label=item.naam
-            image=item.img_square  %} -->
-            <!-- TODO: Niet meer wit maken -->
-            <li><a href="#{{ item.naam }}">{{ item.naam }}</a></li>
+    {% for item in site.data.kampfuncties %}>
+        <li><a href="#{{ item.naam }}">{{ item.naam }}</a></li>
     {% endfor %}
 </ul> 
 
@@ -34,7 +28,6 @@ verder en samen maken we het verschil!
 </p>
 {% endcapture %}
 
-<!-- TODO Inschrijvingsform call to action ink meer vanboven -->
 {% include section.html 
     title="Vrijwilliger worden?"
     text=vrijwilligers_intro %}
@@ -94,8 +87,6 @@ Ben je jonger dan 18 jaar en heb je toch interesse? Neem dan even coctact met on
     img_mobile="assets/images/vrijwilligers/vrijwilliger-worden-mobile.webp"
     call_to_action="Meld je aan!"
     url=form %}
-
-<!-- TODO: Toon gsm nummer knop, die dan pas het nummer toont (en eventueel ineens kopieert) -->
 
 {% capture twijfel_text %}
 Wil je misschien met ons mee op kamp als vrijwilliger, maar wil je nog wat meer info of uitleg? Dan kan je via Whatsapp een berichtje sturen naar {{ site.data.whatsapp.naam }}, 

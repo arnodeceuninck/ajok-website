@@ -16,7 +16,7 @@
     <ul class="navbar-nav d-flex justify-content-around w-100">
       {% for item in site.data.navigation %}
 
-        <li class="nav-item{% if page.url == item.link %} active{% endif %} text-center"> <!-- todo: page.url might still include the /, while item.link doesn't (because github pages doesn't allow it)-->
+        <li class="nav-item{% if page.url == item.link %} active{% endif %} text-center"> <!-- note: page.url might still include the /, while item.link doesn't (because github pages doesn't allow it)-->
           <a class="nav-link" href="{{ item.link }}">{{ item.name | upcase }}</span></a>
         </li>
 

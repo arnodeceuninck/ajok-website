@@ -2,12 +2,10 @@
 ## Todo's
 
 ### Inhoudelijk
-- [ ] Inhoud van alle teksten moet sowieso nog eens afgecheckt worden, is nu gewoon overgenomen van mockups, maar zitten ook wel dingen tussen waar ik m'n twijfels bij heb
-- [ ] Doe een gift -> geen automatische vermelding op site zou ik denken, is pas voor peter/meter
-- Regels op kamp en evenementen heb ik weggehouden van de vrijwilligerspagina (evenementen staan nu ook nergens, want die info kan heel makkelijk outdated worden). Indien toch gewenst, mss beter iets maken in de stijl van "Houd onze facebook in 't oog voor onze evenementen"
+/
 
 ### Required features
-- [ ] Copyright jaartal onderaan (startjaar, eindjaar updatet al automatisch)
+/
 
 ### Required bugfixes
 /
