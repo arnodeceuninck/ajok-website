@@ -52,7 +52,8 @@
   prijs_niet_thuiswonend: 95
   leeftijd: Kinderen tussen 14 en 16 jaar oud
   leeftijd_kort: 14-16 jaar
-  img: assets/images/kampen/giga.webp
+  img: assets/images/kampen/giga.jpg
+  img_mobile: assets/images/kampen/giga_mobile.jpg
   locatie: laiterie
 
 - name: OP SCHOK
