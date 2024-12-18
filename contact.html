@@ -6,15 +6,15 @@ title: "Contact"
 {% capture main_contact_items %}
 Contacteer ons liefst via mail, want telefonisch zijn we niet altijd bereikbaar. We doen ons best om
 je mail zo snel mogelijk te beantwoorden. <br><br>
-{% include contact-items.html contact_ids="mail,telefoon" %}
+{% include contact-items.html category="main" %}
 
 <br><br>
 <h4>Onze socials</h4>
-{% include contact-items.html contact_ids="facebook,instagram,tiktok" %}
+{% include contact-items.html category="socials" %}
 
 <br><br>
 <h4>Legale info</h4>
-{% include contact-items.html contact_ids="adres,ondernemingsnummer,rekeningnummer" %}
+{% include contact-items.html category="legal" %}
 {% endcapture %}
 
 {% include section-img-right.html

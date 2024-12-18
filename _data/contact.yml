@@ -7,6 +7,7 @@
   icon: fab fa-facebook-f
   link: https://www.facebook.com/ajokvzw/
   footer: true
+  category: socials
 
 - name: Instagram
   id: instagram
@@ -15,6 +16,7 @@
   icon: fab fa-instagram
   link: https://www.instagram.com/ajokvzw/
   footer: true
+  category: socials
 
 - name: Tiktok
   id: tiktok
@@ -23,6 +25,7 @@
   icon: fab fa-tiktok
   link: https://www.tiktok.com/@ajokvzw
   footer: true
+  category: socials
 
 - name: Mail
   id: mail
@@ -31,6 +34,7 @@
   icon: fa-regular fa-envelope
   link: mailto:info@ajokvzw.be
   footer: true
+  category: main
 
 - name: Telefoon
   id: telefoon
@@ -38,6 +42,7 @@
   color: '#0082ca'
   icon: fa-solid fa-phone
   link: tel:+32496393776
+  category: main
 
 - name: Adres vzw
   id: adres
@@ -45,6 +50,7 @@
   color: '#1AA260'
   icon: fa fa-archive
   link: https://maps.app.goo.gl/e1benh1Sir4K5sLh8
+  category: legal
 
 - name: Ondernemingsnummer
   id: ondernemingsnummer
@@ -52,9 +58,11 @@
   color: '#F67A00'
   icon: fa-solid fa-briefcase
   link: https://www.companyweb.be/en/0884932681/alle-jongeren-op-kamp
+  category: legal
 
 - name: Rekeningnummer
   id: rekeningnummer
   description: BE22 8902 3428 5747
   color: '#F67A00'
   icon: fa-solid fa-euro-sign
+  category: legal
