@@ -1,11 +1,7 @@
 {% capture info %}
 {{ include.locatie.description }}<br><br>
 
-
-<i class='fa fa-map-marker'></i> {{ include.locatie.adres }}
-<!-- TODO: Fix adres link niet wit op wit  -->
-<!-- <i class='fa fa-map-marker'></i> <a href="{{include.locatie.maps}}">{{ include.locatie.adres }}</a>  -->
-
+<i class='fa fa-map-marker'></i> <a href="{{include.locatie.maps}}">{{ include.locatie.adres }}</a> 
 
 {% endcapture %}
 
@@ -13,12 +9,14 @@
 {% if include.type == 'left' %}
     {% include section-img-left.html
         title=include.locatie.name
+        id=include.locatie.id
         text=info
         img=include.locatie.img
     %}
 {% else %}
     {% include section-img-right.html
         title=include.locatie.name
+        id=include.locatie.id
         text=info
         img=include.locatie.img
     %}
