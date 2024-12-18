@@ -2,10 +2,10 @@
     {% if include.img_list %}
         {% for item in include.img_list %}
             {% if item %}
-                <img src="{{ item }}" class="fade" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0;">
+                <img src="{{ item }}" class="fade" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0;" loading="lazy">
             {% endif %}
         {% endfor %}
     {% else if include.img %}
-         <img src="{{ include.img }}" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0;">
+         <img src="{{ include.img }}" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0;" loading="lazy">
     {% endif %}
 </div>

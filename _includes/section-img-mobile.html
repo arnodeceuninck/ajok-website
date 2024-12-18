@@ -15,11 +15,11 @@
         {% if img_list %}
             {% for item in img_list %}
                 {% if item %}
-                    <img src="{{ item }}" class="img-fluid fade" style="object-fit: cover; width: 100%; height: 100%;">
+                    <img src="{{ item }}" class="img-fluid fade" style="object-fit: cover; width: 100%; height: 100%;" loading="lazy">
                 {% endif %}
             {% endfor %}
         {% else %}
-            <img src="{{ img }}" class="img-fluid" style="object-fit: cover; width: 100%; height: 100%;">
+            <img src="{{ img }}" class="img-fluid" style="object-fit: cover; width: 100%; height: 100%;" loading="lazy">
         {% endif %}
     </div>
 {% endif %}

@@ -49,3 +49,6 @@ You can check the loading speeds with sites like this one: https://gtmetrix.com/
 
 Before using compressed images: Homepage 1.4s to fully load, 17.5 MB (https://gtmetrix.com/reports/arnodeceuninck.github.io/SdANANEp/)
 After compressing to 100kb and converting to webp: Homepage 0.8s to fully load, 2.53Mb (https://gtmetrix.com/reports/arnodeceuninck.github.io/tAtjmTx8/)
+
+### Lazy loading
+Enable lazy loading for all images by adding `loading="lazy"`. More info: https://gtmetrix.com/defer-offscreen-images.html
