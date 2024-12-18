@@ -47,3 +47,21 @@ title: "Over ons"
     img_mobile="assets/images/over-ons/wie-zijn-we-mobile.webp" %}
 
 {% endcomment %}
+
+{% capture rvb_text %}
+<div class="p-5 scroll-animation" id="Vrijwilligerfuncties">
+        <div class="row justify-content-center">
+
+            {% for item in site.data.rvb %}
+                {% include image-card.html 
+                    label=item.naam
+                    image=item.img  %}
+            {% endfor %}
+        </div>
+</div>
+{% endcapture %}
+
+{% include section.html 
+    title="Onze Raad van Bestuur"
+    text=rvb_text
+%}
