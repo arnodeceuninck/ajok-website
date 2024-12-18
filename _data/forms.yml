@@ -1,6 +1,8 @@
 - name: Inschrijven vrijwilligers
+  id: vrijwilligers
   link: https://docs.google.com/forms/d/e/1FAIpQLSfoIX7EraQq5jrv8_gfI3dHHs20tKy8sEGtA5ta4zF2A5TYDg/viewform
   height: 500
 - name: Inschrijven kamp
+  id: kamp
   link: https://docs.google.com/forms/d/e/1FAIpQLSeezdaCp-2j9Tj56SPh7gFOCM-Kdhx6HdXl4aNlO5PE2Yfb0w/viewform
   height: 2000

@@ -1,5 +1,7 @@
 {% assign locatie_obj = site.data.locaties | where: "id", include.locatie | first %}
 
+{% assign form_item = site.data.forms | where: "id", "kamp" | first %}
+
 {% capture camp_info %}
 <div class='row'>
     <div class='col-md-6'>
@@ -33,7 +35,7 @@
         img_list=include.img_list
         img_list_mobile=include.img_list_mobile
         call_to_action="Schrijf je in!"
-        url="kamp-inschrijven.html" %}
+        url=form_item.link %}
 {% else %}
     {% include section-img-right.html
         title=include.title
@@ -43,5 +45,5 @@
         img_list=include.img_list
         img_list_mobile=include.img_list_mobile
         call_to_action="Schrijf je in!"
-        url="kamp-inschrijven.html" %}
+        url=form_item.link %}
 {% endif %}
