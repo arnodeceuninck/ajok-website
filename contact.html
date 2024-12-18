@@ -3,28 +3,21 @@ layout: default
 title: "Contact"
 ---
 
-TODO: Heb je een vraag? Liefst via mail, anders bellen; georganiseerd. Contact items. Telefoon, socials...
-TODO: Geen uitroeptekens in titels
+{% capture main_contact_items %}
+Contacteer ons gerust via mail! Als je wil, kan je ook bellen via 040000000 <br><br>
+{% include contact-items.html contact_ids="mail,telefoon" %}
 
-Eerst mail, dan telefoon, dan socials. 
+<br><br>
+<h4>Onze socials</h4>
+{% include contact-items.html contact_ids="facebook,instagram,tiktok" %}
 
-Mail
-
-Telefoon 
-
-Postadres -> Moet geupdatet worden (paddenhoek)
-
-Socials (samen)
-
-<!-- Ondernemingsnummer en bankrekening in footer -->
-
-{% capture contact_items %}
-{% include contact-items.html %}
+<br><br>
+<h4>Legale info</h4>
+{% include contact-items.html contact_ids="adres,ondernemingsnummer,rekeningnummer" %}
 {% endcapture %}
 
-
 {% include section-img-right.html
-    title="Neem contact met ons op"
-    text=contact_items
+    title="Heb je een vraag?"
+    text=main_contact_items
     img="assets/images/over-ons/organisatiestructuur-desktop.webp"
     img_mobile="assets/images/over-ons/organisatiestructuur-mobile.webp" %}

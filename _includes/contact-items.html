@@ -1,7 +1,9 @@
 <div class='row'>
     {% for item in site.data.contact %}
-        <div class="col-md-5">
-            {% include contact-item.html item=item %}
-        </div>
+        {% if include.contact_ids == null or include.contact_ids contains item.id %}
+            <div class="col-md-5">
+                {% include contact-item.html item=item %}
+            </div>
+        {% endif %}
     {% endfor %}
 </div>
