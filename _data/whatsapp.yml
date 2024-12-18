@@ -1,0 +1,10 @@
+# Deze info wordt onderaan de vrijwilligers pagina getoond.
+# Het nummer wordt geobfusceerd, zodat web scrapers dit niet automatisch vinden, maar het nummer
+# pas zichtbaar wordt als er op de knop "Toon gsm-nummer" gedrukt wordt. 
+# Om dit mogelijk te maken, moet het nummer wel beginnen met '0' en mag het enkel uit cijfers bestaan
+# (bv. ook geen streepjes of spaties). Als je dit toch zou willen, moet de javascript code op die pagina
+# aangepast worden.
+
+naam: Ellen 
+gsm: 0472090484
+functie: ondervoorzitter

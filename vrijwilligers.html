@@ -89,18 +89,44 @@ verder en samen maken we het verschil!
     url=form %}
 
 <!-- TODO: Toon gsm nummer knop, die dan pas het nummer toont (en eventueel ineens kopieert) -->
+
+{% capture twijfel_text %}
+Wil je misschien met ons mee op kamp als vrijwilliger, maar wil je nog wat meer info of uitleg? Dan kan je via Whatsapp een berichtje sturen naar {{ site.data.whatsapp.naam }}, 
+<span class='phone-number' data-obfuscated-number='{{ site.data.whatsapp.gsm | plus: 9876543210 }}' data-offset='9876543210'>
+    **********
+</span>. Zij is onze {{ site.data.whatsapp.functie }} en beantwoordt graag al je vragen!<br><br>
+<button id='toggle-number' class='btn btn-danger'>Toon gsm-nummer</button>
+{% endcapture %}
+
 {% include section-img-right.html
     title="Twijfel je nog?"
-    text="Wil je misschien met ons mee op kamp als vrijwilliger, maar wil je nog wat meer info of 
-    uitleg? Klik dan op deze knop.
-
-    Dan kan je via Whatsapp een berichtje sturen naar Ellen, 0472090484. Zij is onze 
-    ondervoorzitter en beantwoordt graag al je vragen!"
+    text=twijfel_text
     img="assets/images/img8_crop.webp" %}
 
-{% include section-img-right.html
-    title="Twijfel je nog?"
-    text="Wil je misschien met ons mee op kamp als vrijwilliger, maar wil je nog wat meer info of 
-    uitleg? Dan kan je via Whatsapp een berichtje sturen naar Ellen, 0472090484. Zij is onze 
-    ondervoorzitter en beantwoordt graag al je vragen!"
-    img="assets/images/img8_crop.webp" %}
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const toggleButton = document.getElementById("toggle-number");
+    const phoneNumberElement = document.querySelector(".phone-number");
+
+    toggleButton.addEventListener("click", function () {
+        const obfuscatedNumber = parseInt(phoneNumberElement.dataset.obfuscatedNumber, 10);
+        const offset = parseInt(phoneNumberElement.dataset.offset, 10);
+
+        if (toggleButton.textContent === "Toon gsm-nummer") {
+            // Reveal the full number
+            const fullNumber = obfuscatedNumber - offset; // Calculate the real number
+            phoneNumberElement.innerHTML = `<a href="tel:${fullNumber}" class="phone-link">0${fullNumber}</a>`;
+            toggleButton.textContent = "Kopieer gsm-nummer";
+        } else if (toggleButton.textContent === "Kopieer gsm-nummer") {
+            // Copy the number to the clipboard
+            const fullNumber = phoneNumberElement.textContent;
+            navigator.clipboard.writeText(fullNumber).then(() => {
+                alert(`GSM-nummer ${fullNumber} gekopieerd naar klembord!`);
+            }).catch(err => {
+                console.error("Fout bij het kopiëren naar het klembord: ", err);
+            });
+        }
+    });
+});
+</script>
