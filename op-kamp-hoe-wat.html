@@ -3,6 +3,10 @@ layout: default
 title: "Op Kamp: Hoe en wat?"
 ---
 
+{% assign mail_item = site.data.contact | where: "id", "mail" | first %}
+{% assign mailadres = mail_item.description %}
+{% assign mail = "<a href='mailto:" | append: mailadres | append: "'>" | append: mailadres | append: "</a>" %}
+
 {% include section.html 
      title="Op kamp: Hoe en wat"
      text="
@@ -14,11 +18,8 @@ title: "Op Kamp: Hoe en wat?"
 %}
 
 
-{% include section-img-left.html
-    title="Afspraken"
-    id="afspraken"
-    text="
-          <h4>Inschrijvingsprocedure</h4>
+{% capture afspraken_text %}
+<h4>Inschrijvingsprocedure</h4>
           <p>Wanneer de jongere is ingeschreven, sturen we je via e-mail een 
             bevestiging en een uitnodiging tot betaling. Zodra deze betaling 
             gebeurd is, is de inschrijving officieel. Een paar weken voor het 
@@ -35,13 +36,12 @@ title: "Op Kamp: Hoe en wat?"
              kampteam dit in overleg met de ouder, opvoeder of begeleider. 
             </p>
 
-<!--TODO: Mail dynamisch/klikbaar-->
           <h4>Wat als je toch niet meekan?</h4>
           <p>Heel wat jongeren kijken elke zomer uit naar een toffe vakantie bij 
             AJOK, maar de plaatsen zijn beperkt. Schrijf je een jongere in, dan 
             verwachten we dat hij/zij ook effectief deelneemt. Kan de jongere 
-            onverwacht niet mee, meld dit zo snel mogelijk door ons te mailen via info@ajokvzw.be. Zo kunnen we de 
-            plaats aan iemand anders geven.
+            onverwacht niet mee, meld dit zo snel mogelijk door ons te mailen via {{ mail }}. 
+            Zo kunnen we de plaats aan iemand anders geven.
             </br></br>
             Bij annulering meer dan twee weken voor de start van het kamp 
             betalen we het volledige inschrijvingsgeld terug. Bij annulering 
@@ -52,40 +52,55 @@ title: "Op Kamp: Hoe en wat?"
             </br></br>
             Het inschrijvingsgeld moet betaald zijn voor de start van het kamp
             </p>
-    "
+{% endcapture %}
+
+{% include section-img-left.html
+    title="Afspraken"
+    id="afspraken"
+    text=afspraken_text
     img="assets/images/img6_crop.webp"
     hide_artifacts=true %}
  
  
  
+
+{% capture kosten_text %}
+<p>Elk kamp heeft een prijs voor thuiswonende en niet-thuiswonende 
+  jongeren. Voor wie het inschrijvingsbedrag moeilijk haalbaar is, kunnen we een 
+  betalingsplan op maat voorzien. Neem gerust contact op via {{ mail }}, dan zoeken 
+  we samen een oplossing.</p>
+
+<h4>Terugbetaling via ziekenfondsen</h4>
+<p>Via de meeste ziekenfondsen is het mogelijk een deel van het inschrijvingsbedrag teruggestort te krijgen. Je kan via het ziekenfonds een formulier hiervoor opvragen. Dit kunnen wij voor jou invullen. Contacteer ons gerust mocht je hier vragen over hebben.</p>
+{% endcapture %}
+
  {% include section-img-right.html
     title="Kosten"
     id="kosten"
-    text="<p>Elk kamp heeft een prijs voor thuiswonende en niet-thuiswonende 
-            jongeren. Voor wie het inschrijvingsbedrag moeilijk haalbaar is, kunnen we een 
-            betalingsplan op maat voorzien. Neem gerust contact op via info@ajokvzw.be, dan zoeken 
-            we samen een oplossing.</p>
- 
-          <h4>Terugbetaling via ziekenfondsen</h4>
-          <p>Via de meeste ziekenfondsen is het mogelijk een deel van het inschrijvingsbedrag teruggestort te krijgen. Je kan via het ziekenfonds een formulier hiervoor opvragen. Dit kunnen wij voor jou invullen. Contacteer ons gerust mocht je hier vragen over hebben.</p>
-          "
+    text=kosten_text
     img="assets/images/kampen/hecto-4.webp"
   %}
  
-
- <!-- TODO: Dit een section maken -->
-  <h4 id='vervoer'>Vervoer</h4>
-          <p>Voor de zomerkampen kunnen thuiswonende jongeren van alle leeftijden 
-            en niet-thuiswonende jongeren vanaf 12 jaar onder begeleiding van 
-            AJOK-vrijwilligers met de trein naar het kamphuis reizen. Er zijn
-             twee opstap- en afstapplaatsen: station Gent-Sint-Pieters en station 
-             Leuven. Voor niet-thuiswonende jongeren vanaf 12 jaar wordt €15 extra 
-             aangerekend voor het treinticket. Dit bedrag komt op de factuur, en 
-             AJOK regelt de tickets.
-            </br></br>
-            Voor het herfstkamp spreken we af aan station Sint-Niklaas. Van 
-            daaruit zorgt AJOK voor vervoer naar het kamphuis. 
-            </br></br>
-            Meer info hierover vind je in het kampboekje. Dit ontvang je enkele weken voor de start van het kamp. 
-            </p>
+{% capture vervoer_text %}
+  <p>Voor de zomerkampen kunnen thuiswonende jongeren van alle leeftijden 
+    en niet-thuiswonende jongeren vanaf 12 jaar onder begeleiding van 
+    AJOK-vrijwilligers met de trein naar het kamphuis reizen. Er zijn
+      twee opstap- en afstapplaatsen: station Gent-Sint-Pieters en station 
+      Leuven. Voor niet-thuiswonende jongeren vanaf 12 jaar wordt €15 extra 
+      aangerekend voor het treinticket. Dit bedrag komt op de factuur, en 
+      AJOK regelt de tickets.
+    </br></br>
+    Voor het herfstkamp spreken we af aan station Sint-Niklaas. Van 
+    daaruit zorgt AJOK voor vervoer naar het kamphuis. 
+    </br></br>
+    Meer info hierover vind je in het kampboekje. Dit ontvang je enkele weken voor de start van het kamp. 
+    </p>
+{% endcapture %}
  
+
+{% include section-img-left.html
+  title="Vervoer"
+  id="vervoer"
+  text=vervoer_text
+  img="assets/images/kampen/vervoer.jpg"
+  hide_artifacts=true %}
