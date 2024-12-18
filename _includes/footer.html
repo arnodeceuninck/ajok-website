@@ -1,3 +1,9 @@
+{% assign rekeningnummer_item = site.data.contact | where: "name", "Rekeningnummer" | first %}
+{% assign rekeningnummer = rekeningnummer_item.description %}
+
+{% assign ondernemingsnummer_item = site.data.contact | where: "name", "Ondernemingsnummer" | first %}
+{% assign ondernemingsnummer = ondernemingsnummer_item.description %}
+
 <footer class="bg-body-tertiary text-center bg-orange">
     <!-- Grid container -->
     <div class="container p-4 pb-0">
@@ -16,8 +22,8 @@
     <!-- Grid container -->
   
     <!-- Copyright -->
-    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
-    © 2007 - <script>document.write(new Date().getFullYear());</script> AJOK vzw  - TODO: Rekeningnummer en ondernemingsnummer enzo 
+    <div class="text-center p-3 text-light" style="background-color: rgba(0, 0, 0, 0.05);">
+    © 2007 - <script>document.write(new Date().getFullYear());</script> AJOK vzw  - KBO BE {{ ondernemingsnummer }} - IBAN {{ rekeningnummer }}
     </div>
     <!-- Copyright -->
 </footer>
