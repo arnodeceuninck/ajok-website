@@ -41,7 +41,7 @@
 
 - name: Adres vzw
   id: adres
-  description: Lodewijk Van Berckenlaan 85<br> 2600 Berchem
+  description: Paddenhoek 2 / 201<br> 9000 Gent
   color: '#1AA260'
   icon: fa fa-archive
   link: https://maps.app.goo.gl/e1benh1Sir4K5sLh8
