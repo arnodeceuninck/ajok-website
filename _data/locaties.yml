@@ -1,0 +1,30 @@
+- name: Kamphuis La Laiterie
+  id: laiterie
+  description: La Laiterie is de uitvalsbasis voor de meeste van onze kampen.
+
+     La Laiterie is gelegen in Wiesme en is een volledig uitgerust kamphuis met 
+     100 bedden. Zoals de naam al doet vermoeden, is La Laiterie een oude 
+     melkfabriek en gelegen in een groene omgeving. In de speelweiden en -bossen 
+     kunnen kinderen en jongeren zich helemaal uitleven tijdens de kampen. 
+     Daarnaast zijn er in de nabije omgeving veel recreatiemogelijkheden. Denk 
+     maar aan wandelen, mountainbiken, speleologie, kajakken, zwemmen en nog 
+     zoveel meer. Plezier gegarandeerd!
+  adres: Rue De La Laiterie 13, 5571 Wiesme
+  maps: https://maps.app.goo.gl/TY8Mvy7ZN5YA4gKn8
+  img: assets/images/locaties/kamphuis-laiterie.webp
+
+- name: Kamphuis de Axlandhoeve
+  id: axlandhoeve
+  description: Tijdens sommige kampen verplaatsen we ons naar het mooie Sinaai 
+      in Oost-Vlaanderen. 
+      Het kamphuis “De Axlandhoeve” ligt tussen de mooie groene velden en vormt 
+      een oase van rust vlakbij Sint-Niklaas en Lokeren. Hierdoor vormt dit de 
+      ideale omgeving, met veel ruimte voor spelletjes en een mooie omgeving om 
+      met de fiets te kunnen verkennen.
+      Dit volledig uitgeruste kampverblijf ligt in een mooie oude boerderij en 
+      heeft 50 bedden ter beschikking. Het is omgeven door bossen en velden, waar 
+      onze jongeren zich volledig kunnen uitleven.
+  adres: Stenenmuurstraat 64, Sinaai-Waas, 9112 Sint-Niklaas 
+  maps: https://maps.app.goo.gl/AQxokZsuA7NAwsGo6
+  img: assets/images/locaties/axlandhoeve.png
+

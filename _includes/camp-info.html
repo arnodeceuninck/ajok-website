@@ -1,3 +1,5 @@
+{% assign locatie_obj = site.data.locaties | where: "id", include.locatie | first %}
+
 {% capture camp_info %}
 <div class='row'>
     <div class='col-md-6'>
@@ -14,6 +16,8 @@
             <i class='fa fa-euro-sign'></i> Thuiswonend: €{{ include.prijs_thuiswonend }} / Niet-thuiswonend: €{{ include.prijs_niet_thuiswonend }}
             </br>
             <i class='fa fa-user'></i> {{ include.leeftijd }}
+            </br>
+            <i class='fa fa-map-marker'></i> {{ locatie_obj.name }} <!-- TODO: Klikbaar maken en effectieve naam --> 
         </p>
     </div>
 </div>

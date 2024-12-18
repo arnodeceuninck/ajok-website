@@ -3,16 +3,19 @@ layout: default
 title: "Op Kamp"
 ---
 <!-- TODO: Bij praktische info kamp: Waar? <knop naar kamp> -->
+
+{% capture intro_kampen %}
+AJOK organiseert vakantiekampen voor kinderen en jongeren 
+van 6 tot en met 17 jaar, die om verschillende redenen niet 
+kunnen aansluiten bij het reguliere jeugdwerk. We bieden een 
+herfstkamp, een paaskamp en 5 verschillende zomerkampen aan: 
+voor elk wat wils! Wil je meer weten over onze verschillende 
+kampen? Bekijk hieronder dan zeker ons aanbod!
+{% endcapture %}
+
 {% include section.html 
      title="Onze kampen"
-     text="<p>
-        AJOK organiseert vakantiekampen voor jongeren van 6 tot 17 jaar 
-        die geen aansluiting vinden bij het reguliere jeugdwerk. Dit kan 
-        om verschillende redenen zoals financiële- of gedragsproblemen zijn. 
-        We bieden vier zomerkampen, een herfstkamp en een paaskamp aan. Elk jaar kiezen we 
-        een thema voor ons programma - denk maar aan themas zoals 'Feestdagen', 'Reis rond de wereld' of 'Superhelden'! 
-        Wil je meer weten over onze vakantiemogelijkheden? Bekijk hieronder ons aanbod!
-        </p>"
+     text=intro_kampen
 %}
 
 
@@ -57,27 +60,23 @@ title: "Op Kamp"
         img_mobile=item.img_mobile
         img_list=item.img_list
         img_list_mobile=item.img_list_mobile
+        locatie=item.locatie
         type=type  %}
 
-  {% endfor %}
+{% endfor %}
 
-  
-{% include section-img-right.html 
-    title="Kamphuis la laiterie"
-    id="verblijf"
-    text="Om onze deelnemers een hartelijk verblijf te bieden kiezen
-        we ervoor meeste van onze kampen te houden in het rustige Wiesme,
-        dat dichtbij het bedevaartsoord Beauraing ligt.
-        </br></br>
-        La Laiterie is een volledig uitgerust kamphuis met een
-        capaciteit van 100 personen. Het kamphuis is gevestigd in
-        een oude melkfabriek en ligt in een groene omgeving
-        waarin de deelnemers zich kunnen uitleven. In de
-        speelweiden en -bossen kunnen kinderen en tieners helemaal losgaan. Plaats genoeg!
-        </br></br>
-        Daarnaast zijn er in de nabije omgeving veel
-        recreatiemogelijkheden. Denk maar aan wandelen,
-        mountainbiken, speleologie, kanoën, abseilen, vissen en ga
-        zo maar door. Plezier gegarandeerd!
-        "
-    img="assets/images/kampen/kamphuis-laiterie.webp" %}
+
+
+{% for item in site.data.locaties %}
+
+    {% assign type = 'right' %}
+    {% assign remainder = forloop.index | modulo: 2 %}
+    {% if remainder == 0 %}
+        {% assign type = 'left' %}
+    {% endif %}
+
+    {% include locatie-info.html 
+        locatie=item
+        type=type  %}
+
+{% endfor %}

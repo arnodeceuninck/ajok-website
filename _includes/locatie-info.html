@@ -1,0 +1,25 @@
+{% capture info %}
+{{ include.locatie.description }}<br><br>
+
+
+<i class='fa fa-map-marker'></i> {{ include.locatie.adres }}
+<!-- TODO: Fix adres link niet wit op wit  -->
+<!-- <i class='fa fa-map-marker'></i> <a href="{{include.locatie.maps}}">{{ include.locatie.adres }}</a>  -->
+
+
+{% endcapture %}
+
+<!-- TODO? Nog geen image mobile. Maps link en adres wordt ook nog niet gebruikt -->
+{% if include.type == 'left' %}
+    {% include section-img-left.html
+        title=include.locatie.name
+        text=info
+        img=include.locatie.img
+    %}
+{% else %}
+    {% include section-img-right.html
+        title=include.locatie.name
+        text=info
+        img=include.locatie.img
+    %}
+{% endif %}
