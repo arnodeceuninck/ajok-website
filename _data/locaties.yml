@@ -1,14 +1,11 @@
 - name: Kamphuis La Laiterie
   id: laiterie
-  description: La Laiterie is de uitvalsbasis voor de meeste van onze kampen.
-
-     La Laiterie is gelegen in Wiesme en is een volledig uitgerust kamphuis met 
-     100 bedden. Zoals de naam al doet vermoeden, is La Laiterie een oude 
-     melkfabriek en gelegen in een groene omgeving. In de speelweiden en -bossen 
-     kunnen kinderen en jongeren zich helemaal uitleven tijdens de kampen. 
-     Daarnaast zijn er in de nabije omgeving veel recreatiemogelijkheden. Denk 
-     maar aan wandelen, mountainbiken, speleologie, kajakken, zwemmen en nog 
-     zoveel meer. Plezier gegarandeerd!
+  description: La Laiterie is de uitvalsbasis voor een groot deel van onze kampen (paaskamp en de 
+     zomerkampen). Dit grote, volledig uitgeruste kamphuis heeft maar liefst 100 bedden. Het is een 
+     oude melkfabriek die in het hartje van de groene omgeving Wiesme ligt. In de speelweiden en -bossen 4
+    kunnen de kinderen en jongeren zich helemaal uitleven tijdens de kampen. Daarnaast zijn er in de 
+    nabije omgeving veel mogelijkheden voor ontspanning en activiteiten! Denk maar aan wandelen, 
+    fietsen, speleologie, kajakken, zwemmen en nog zoveel meer. Plezier gegarandeerd!
   adres: Rue De La Laiterie 13, 5571 Wiesme
   maps: https://maps.app.goo.gl/TY8Mvy7ZN5YA4gKn8
   img: assets/images/locaties/kamphuis-laiterie.webp
