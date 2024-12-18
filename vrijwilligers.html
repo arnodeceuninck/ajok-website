@@ -17,7 +17,7 @@ title: "Vrijwilligers"
     organiseren en de kinderen en jongeren de tijd van hun leven te geven. Er zijn verschillende 
     functies waarin je je als vrijwilliger kan inzetten tijdens onze kampen:
 <ul>
-    {% for item in site.data.kampfuncties %}>
+    {% for item in site.data.kampfuncties %}
         <li><a href="#{{ item.naam }}">{{ item.naam }}</a></li>
     {% endfor %}
 </ul> 
@@ -31,19 +31,6 @@ verder en samen maken we het verschil!
 {% include section.html 
     title="Vrijwilliger worden?"
     text=vrijwilligers_intro %}
-
-
-
-<!-- <div class="bg-orange p-5 scroll-animation" id="Vrijwilligerfuncties">
-        <div class="row justify-content-center">
-
-            {% for item in site.data.kampfuncties %}
-                {% include image-card.html 
-                    label=item.naam
-                    image=item.img_square  %}
-            {% endfor %}
-        </div>
-</div> -->
 
 
 {% for item in site.data.kampfuncties %}
