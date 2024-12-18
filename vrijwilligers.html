@@ -6,6 +6,10 @@ title: "Vrijwilligers"
 {% assign form_item = site.data.forms | where: "name", "Inschrijven vrijwilligers" | first %}
 {% assign form=form_item.link %}
 
+{% assign mail_item = site.data.contact | where: "id", "mail" | first %}
+{% assign mailadres = mail_item.description %}
+{% assign mail = "<a href='mailto:" | append: mailadres | append: "'>" | append: mailadres | append: "</a>" %}
+
 {% capture vrijwilligers_intro %}
 
 <p>
@@ -74,15 +78,18 @@ verder en samen maken we het verschil!
   {% endfor %}
 
 
+{% capture hoe_text %}
+Ben je overtuigd door een van de bovenstaande functies, ben je minimaal 18 jaar oud en kan 
+je niet wachten om samen met ons en de kinderen op kamp te vertrekken? Schrijf je dan snel in 
+via de onderstaande link en maak samen met ons het verschil!
+</br></br>
+Ben je jonger dan 18 jaar en heb je toch interesse? Neem dan even coctact met ons op via 
+{{ mail }}.
+{% endcapture %}
 
 {% include section-img-left.html
     title="Hoe word ik vrijwilliger?"
-    text="Ben je overtuigd door een van de bovenstaande functies, ben je minimaal 18 jaar oud en kan 
-      je niet wachten om samen met ons en de kinderen op kamp te vertrekken? Schrijf je dan snel in 
-      via de onderstaande link en maak samen met ons het verschil!
-      </br></br>
-      Ben je jonger dan 18 jaar en heb je toch interesse? Neem dan even coctact met ons op via 
-      info@ajokvzw.be."
+    text=hoe_text
     img="assets/images/vrijwilligers/vrijwilliger-worden-desktop.webp"
     img_mobile="assets/images/vrijwilligers/vrijwilliger-worden-mobile.webp"
     call_to_action="Meld je aan!"
