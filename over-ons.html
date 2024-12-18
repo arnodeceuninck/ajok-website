@@ -55,7 +55,8 @@ title: "Over ons"
             {% for item in site.data.rvb %}
                 {% include image-card.html 
                     label=item.naam
-                    image=item.img  %}
+                    image=item.img
+                    sublabel=item.functie  %}
             {% endfor %}
         </div>
 </div>
