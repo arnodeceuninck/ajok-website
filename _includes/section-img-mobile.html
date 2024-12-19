@@ -1,4 +1,6 @@
-{% if include.img_mobile %}
+{% if include.img_mobile == "no" %}
+    {% assign img = None %}
+{% else if include.img_mobile %}
     {% assign img = include.img_mobile %}
 {% else %}
     {% assign img = include.img %}
