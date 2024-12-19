@@ -7,13 +7,14 @@ title: "Contact"
 Contacteer ons liefst via mail, want telefonisch zijn we niet altijd bereikbaar. We doen ons best om
 je mail zo snel mogelijk te beantwoorden. <br><br>
 {% include contact-items.html category="main" %}
+{% endcapture %}
 
-<br><br>
-<h4>Onze socials</h4>
+
+{% capture socials %}
 {% include contact-items.html category="socials" %}
+{% endcapture %}
 
-<br><br>
-<h4>Legale info</h4>
+{% capture legal %}
 {% include contact-items.html category="legal" %}
 {% endcapture %}
 
@@ -22,3 +23,15 @@ je mail zo snel mogelijk te beantwoorden. <br><br>
     text=main_contact_items
     img="assets/images/over-ons/organisatiestructuur-desktop.webp"
     img_mobile="assets/images/over-ons/organisatiestructuur-mobile.webp" %}
+
+{% include section-img-left.html
+    title="Onze socials"
+    text=socials
+    img="assets/images/home/onze-vrijwilligers-desktop.jpeg"
+    img_mobile="assets/images/home/onze-vrijwilligers-mobile.jpeg" %}
+
+{% include section-img-right.html
+    title="Legale info"
+    text=legal    
+    img="assets\images\vrijwilligers\ellen.jpeg"
+    img_mobile="no" %}
