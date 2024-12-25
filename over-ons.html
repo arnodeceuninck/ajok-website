@@ -3,6 +3,10 @@ layout: default
 title: "Over ons"
 ---
 
+{% assign mail_item = site.data.contact | where: "id", "mail" | first %}
+{% assign mailadres = mail_item.description %}
+{% assign mail = "<a href='mailto:" | append: mailadres | append: "'>" | append: mailadres | append: "</a>" %}
+
 
  {% include section-img-right.html
     title="Onze Missie"
@@ -32,32 +36,38 @@ title: "Over ons"
 
 {% include section-img-right.html
     title="Onze Vrijwilligers"
-    text="Onze kampen zouden niet mogelijk zijn zonder onze gemotiveerde vrijwilligers! Zij zetten
-       zich tijdens de kampen en met alle doorheen het jaar in om jongeren een geweldige
-       vakantie te geven."
+    text="Zonder vrijwilligers, geen AJOK! Wij draaien 100% op vrijwilligers, 
+      en daar zijn we enorm trots op. Jaarlijks rekenen wij op zo'n 50 enthousiaste 
+      vrijwilligers die zich met hart en ziel inzetten voor onze kampen. Of het nu 
+      gaat om verpleging op kamp, helpen in de keuken of het animeren van de kinderen - 
+      we hebben altijd handen nodig. 
+    Zin om ook de handen uit de mouwen te steken? Kijk dan snel bij het tabje 'Word vrijwilliger’!
+    "
     img="assets\images\over-ons\onze-vrijwilligers-desktop.jpeg"
-    img_mobile="assets\images\over-ons\onze-vrijwilligers-mobile.jpeg" %}
+    img_mobile="assets\images\over-ons\onze-vrijwilligers-mobile.jpeg"
+    call_to_action="Word Vrijwilliger"
+    url="vrijwilligers" %}
 
-{% comment %}
-
-{% include section-img-left.html
-    title="Onze Raad Van Bestuur"
-    text="TODO"
-    img="assets/images/over-ons/wie-zijn-we-desktop.webp"
-    img_mobile="assets/images/over-ons/wie-zijn-we-mobile.webp" %}
-
-{% endcomment %}
+<div class="bg-orange pt-1 pb-1"> 
+    {% include image-row.html %}
+</div>
 
 {% capture rvb_text %}
+Onze vzw draait het hele jaar door dankzij de inzet van onze fantastische raad van bestuur! Deze 
+groep gemotiveerde vrijwilligers speelt een cruciale rol in de groei en het succes van AJOK. 
+Samen zorgen we ervoor dat onze missie en visie werkelijkheid worden. <br><br>
+Heb jij passie voor onze organisatie en wil je meehelpen om AJOK naar een hoger niveau te tillen? 
+Stuur een e-mail naar {{ mail }} en sluit je aan bij onze raad van bestuur!
+
 <div class="p-5 scroll-animation" id="Vrijwilligerfuncties">
         <div class="row justify-content-center">
-
             {% for item in site.data.rvb %}
-                {% include image-card.html 
-                    label=item.naam
-                    image=item.img
-                    sublabel=item.functie  %}
-            {% endfor %}
+            {% assign image = item.img | default: "assets/images/rvb/unknown.jpg" %}
+            {% include image-card.html 
+                label=item.naam
+                image=image
+                sublabel=item.functie %}
+              {% endfor %}
         </div>
 </div>
 {% endcapture %}
