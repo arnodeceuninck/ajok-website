@@ -97,5 +97,6 @@
   prijs_niet_thuiswonend: 85
   leeftijd: Kinderen tussen 6 en 9 jaar
   leeftijd_kort: 6-9 jaar
-  img: assets/images/kampen/paaskamp_desktop.webp
+  img: assets/images/kampen/paaskamp2_desktop.jpg
+  img_mobile: assets/images/kampen/paaskamp2_mobile.jpg
   locatie: laiterie
