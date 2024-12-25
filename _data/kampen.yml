@@ -9,10 +9,9 @@
   leeftijd: Kinderen tussen 6 en 8 jaar oud
   leeftijd_kort: 6-8 jaar
   img_list:
+    - assets/images/kampen/pico-5-desktop.jpeg
     - assets/images/kampen/pico.webp
-    - assets/images/kampen/pico-2.webp
     - assets/images/kampen/pico-3.webp
-    - assets/images/kampen/pico-4.webp
   locatie: laiterie
 
 - name: NANO
