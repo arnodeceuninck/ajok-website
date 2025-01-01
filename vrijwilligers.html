@@ -4,13 +4,13 @@ title: "Vrijwilligers"
 ---
 
 {% assign form_item_zomer = site.data.forms | where: "id", "vrijwilligers_zomer" | first %}
-{% assign form_zomer=form_item.link %}
+{% assign form_zomer=form_item_zomer.link %}
 
 {% assign form_item_pasen = site.data.forms | where: "id", "vrijwilligers_pasen" | first %}
-{% assign form_pasen=form_item.link %}
+{% assign form_pasen=form_item_pasen.link %}
 
 {% assign form_item_herfst = site.data.forms | where: "id", "vrijwilligers_herfst" | first %}
-{% assign form_herfst=form_item.link %}
+{% assign form_herfst=form_item_herfst.link %}
 
 {% assign mail_item = site.data.contact | where: "id", "mail" | first %}
 {% assign mailadres = mail_item.description %}
