@@ -21,7 +21,7 @@
   datum: 16-23 april 2023
   prijs_thuiswonend: 90
   prijs_niet_thuiswonend: 110
-  leeftijd: Kinderen tussen 9 en 10 jaar oud
+  leeftijd: Kinderen tussen 9 en 11 jaar oud
   leeftijd_kort: 9-10 jaar
   img: assets/images/kampen/nano.jpeg
   locatie: laiterie
@@ -60,11 +60,11 @@
      slapen we met onze tenten op een andere plaats! We verplaatsen ons al 
      wandelend, fietsend of met de kajak, van kampplaats tot kampplaats. Naast 
      onze trektocht, staan er ook nog andere leuke activiteiten op de planning. 
-     Het zal een week vol spanning en avontuur zijn!
+     Het zal een vierdaagse vol spanning en avontuur zijn!
   datum: 24-28 juli 2023
   prijs_thuiswonend: 75
   prijs_niet_thuiswonend: 95
-  leeftijd: Kinderen tussen 16 en 17 jaar oud
+  leeftijd: Kinderen tussen 16 en 18 jaar oud
   leeftijd_kort: 16-17 jaar
   img_list:
     - assets/images/kampen/op-schok.webp
@@ -74,8 +74,8 @@
 
 - name: Herfstkamp
   description: Ook na de zomer organiseren we nog een plezant kamp! We gaan in de herfstvakantie in 
-     de Axlandhoeve dieren verzorgen, een leuke fietstocht doen en genieten van veel actieve en leuke 
-     spelen, zowel zalig buiten als lekker warm binnen.
+      de Axlandhoeve dieren verzorgen, een leuke fietstocht doen en genieten van veel actieve en 
+      leuke spelen, zowel zalig buiten als lekker warm binnen.
   datum: 28 oktober - 1 november 2024
   locatie: Sint-Niklaas
   prijs_thuiswonend: 70
