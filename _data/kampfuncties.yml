@@ -1,3 +1,13 @@
+- naam: Monitor
+  text: Als monitor ben je verantwoordelijk voor het begeleiden van de kinderen en jongeren tijdens 
+    de kampen. Je beschikt over een grote portie enthousiasme en geduld. Voor het kamp begint, help je mee met het verzinnen en uitwerken van de 
+    activiteiten. Tijdens het kamp sta je in voor de begeleiding en verzorging van de deelnemers. 
+    Het is jouw taak om de jongeren en kinderen te ondersteunen en te begeleiden. Je helpt mee voor 
+    het creëren van een veilige en fijne sfeer en zorgt ervoor dat de jongeren een fijne tijd hebben 
+    op kamp.
+  img: assets/images/kampfuncties/monitor-desktop.jpeg
+  img_mobile: assets/images/kampfuncties/monitor-mobile.jpeg
+
 - naam: Verpleger
   text: Als verpleger sta je in voor de dagelijkse verzorging en begeleiding van de kinderen en 
     jongeren. Dit betekent dat je een hart voor het verzorgen van kinderen hebt en beschikt over 
@@ -22,14 +32,4 @@
 
   img: assets/images/kampfuncties/manus-desktop.jpeg
   img_mobile: assets/images/kampfuncties/manus-mobile.jpeg
-
-- naam: Monitor
-  text: Als monitor ben je verantwoordelijk voor het begeleiden van de kinderen en jongeren tijdens 
-    de kampen. Je beschikt over een grote portie enthousiasme en geduld. Voor het kamp begint, help je mee met het verzinnen en uitwerken van de 
-    activiteiten. Tijdens het kamp sta je in voor de begeleiding en verzorging van de deelnemers. 
-    Het is jouw taak om de jongeren en kinderen te ondersteunen en te begeleiden. Je helpt mee voor 
-    het creëren van een veilige en fijne sfeer en zorgt ervoor dat de jongeren een fijne tijd hebben 
-    op kamp.
-  img: assets/images/kampfuncties/monitor-desktop.jpeg
-  img_mobile: assets/images/kampfuncties/monitor-mobile.jpeg
   
