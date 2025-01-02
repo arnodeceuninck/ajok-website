@@ -3,7 +3,7 @@
     voor een week vol plezier! De week zit helemaal vol met leuke 
     activiteiten, van knutselen en spelen in het speelbos tot leuke 
     uitstappen en waterspelletjes!
-  datum: 10-16 april 2023
+  datum: 03-09 juni 2025
   prijs_thuiswonend: 80
   prijs_niet_thuiswonend: 100
   leeftijd: Kinderen tussen 6 en 8 jaar oud
@@ -18,11 +18,11 @@
   description: Op NANO amuseren we ons met knutselen, baseball, zwemmen en nog 
      zoveel meer! We genieten van lekkere menu's aan tafel en sluiten de kampweek 
      af met een free podium!
-  datum: 16-23 april 2023
+  datum: 16-23 juni 2025
   prijs_thuiswonend: 90
   prijs_niet_thuiswonend: 110
   leeftijd: Kinderen tussen 9 en 11 jaar oud
-  leeftijd_kort: 9-10 jaar
+  leeftijd_kort: 9-11 jaar
   img: assets/images/kampen/nano.jpeg
   locatie: laiterie
 
@@ -30,7 +30,7 @@
   description: Klaar voor avontuur tijdens ons onvergetelijke HECTO-kamp? Naast 
       een dosis sport en spel, maken we ook kennis met de natuur… zo gaan we op 
       tweedaagse en kajakken we door de rivieren. Een kamp voor echte avonturiers!
-  datum: 03-10 juli 2023
+  datum: 09-16 juni 2025
   prijs_thuiswonend: 90
   prijs_niet_thuiswonend: 110
   leeftijd: Kinderen tussen 12 en 13 jaar oud
@@ -46,7 +46,7 @@
   description: Zijn sportieve spelletjes helemaal jouw ding? Heb je altijd al 
      eens willen gaan kajakken, zwemmen of kamperen? Schrijf je dan zeker in voor 
      het GIGA kamp en maak er samen met ons een geweldige week van!
-  datum: 23-30 april 2023
+  datum: 23-30 juni 2025
   prijs_thuiswonend: 75
   prijs_niet_thuiswonend: 95
   leeftijd: Kinderen tussen 14 en 16 jaar oud
@@ -61,22 +61,33 @@
      wandelend, fietsend of met de kajak, van kampplaats tot kampplaats. Naast 
      onze trektocht, staan er ook nog andere leuke activiteiten op de planning. 
      Het zal een vierdaagse vol spanning en avontuur zijn!
-  datum: 24-28 juli 2023
+  datum: TBA
   prijs_thuiswonend: 75
   prijs_niet_thuiswonend: 95
   leeftijd: Kinderen tussen 16 en 18 jaar oud
-  leeftijd_kort: 16-17 jaar
+  leeftijd_kort: 16-18 jaar
   img_list:
     - assets/images/kampen/op-schok.webp
     - assets/images/kampen/op-schok-1.webp
     - assets/images/kampen/op-schok-2.webp
   locatie: laiterie
 
+- name: Fietskamp
+  description: Voor de sportievelingen onder ons, komt er dit jaar ook een fietstocht! Meer informatie volgt nog.
+  datum: 01-08 augustus 2025
+  prijs_thuiswonend: TBA
+  prijs_niet_thuiswonend: TBA
+  leeftijd: Kinderen tussen 14 en 16 jaar oud
+  leeftijd_kort: 14-16 jaar
+  img_list:
+    - assets/images/kampen/op-schok-2.webp
+  locatie: TBA
+
 - name: Herfstkamp
   description: Ook na de zomer organiseren we nog een plezant kamp! We gaan in de herfstvakantie in 
       de Axlandhoeve dieren verzorgen, een leuke fietstocht doen en genieten van veel actieve en 
       leuke spelen, zowel zalig buiten als lekker warm binnen.
-  datum: 28 oktober - 1 november 2024
+  datum: 27-31 oktober 2025
   locatie: Sint-Niklaas
   prijs_thuiswonend: 70
   prijs_niet_thuiswonend: 85
@@ -91,7 +102,7 @@
   description: Het paaskamp zorgt voor de nodige ontspanning tijdens het jaar 
      bij de jongste kinderen van AJOK. Zo kunnen zij zich een week uitleven met 
      gezellige spelletjes, leuke knutselactiviteiten en een toffe uitstap!
-  datum: 11-15 april 2022
+  datum: 07-12 april 2025
   prijs_thuiswonend: 70
   prijs_niet_thuiswonend: 85
   leeftijd: Kinderen tussen 6 en 9 jaar
