@@ -86,6 +86,26 @@ Ben je jonger dan 18 jaar en heb je toch interesse? Neem dan even coctact met on
     img_mobile="assets/images/vrijwilligers/vrijwilliger-worden-mobile.webp"
  %}
 
+
+{% capture twijfel_text %}
+Als vrijwilligers beginnen we al iets eerder aan het kamp, dat we de nodige dingen nog kunnen voorbereiden
+of in elkaar knutselen. Dit zijn de kampdata voor de vrijwilligers:
+
+<ul>
+{% for item in site.data.kampen %}
+    <li>{{ item.name }}: {{ item.datum_vrijwilligers }}</li>
+{% endfor %}
+</ul>
+{% endcapture %}
+
+{% include section-img-right.html
+    title="Kampdata voor vrijwilligers"
+    text=twijfel_text
+    img="assets\images\vrijwilligers\kampdata-desktop.jpg"
+    img_mobile="assets\images\vrijwilligers\kampdata-mobile.jpg" %}
+ 
+
+
 {% capture twijfel_text %}
 Wil je misschien met ons mee op kamp als vrijwilliger, maar wil je nog wat meer info of uitleg? Dan kan je via Whatsapp een berichtje sturen naar {{ site.data.whatsapp.naam }}, 
 <span class='phone-number' data-obfuscated-number='{{ site.data.whatsapp.gsm | plus: 9876543210 }}' data-offset='9876543210'>
@@ -94,7 +114,7 @@ Wil je misschien met ons mee op kamp als vrijwilliger, maar wil je nog wat meer 
 <button id='toggle-number' class='btn btn-danger'>Toon gsm-nummer</button>
 {% endcapture %}
 
-{% include section-img-right.html
+{% include section-img-left.html
     title="Twijfel je nog?"
     text=twijfel_text
     img="assets\images\vrijwilligers\twijfel-je-nog.jpeg"
