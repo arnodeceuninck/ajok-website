@@ -4,6 +4,7 @@
     activiteiten, van knutselen en spelen in het speelbos tot leuke 
     uitstappen en waterspelletjes!
   datum: 03-09 juli 2025
+  datum_vrijwilligers: 01-10 juli 2025
   prijs_thuiswonend: 80
   prijs_niet_thuiswonend: 100
   leeftijd: Kinderen tussen 6 en 8 jaar oud
@@ -19,6 +20,7 @@
      zoveel meer! We genieten van lekkere menu's aan tafel en sluiten de kampweek 
      af met een free podium!
   datum: 16-23 juli 2025
+  datum_vrijwilligers: 14-24 juli 2025
   prijs_thuiswonend: 90
   prijs_niet_thuiswonend: 110
   leeftijd: Kinderen tussen 9 en 11 jaar oud
@@ -31,6 +33,7 @@
       een dosis sport en spel, maken we ook kennis met de natuur… zo gaan we op 
       tweedaagse en kajakken we door de rivieren. Een kamp voor echte avonturiers!
   datum: 09-16 juli 2025
+  datum_vrijwilligers: 07-17 juli 2025
   prijs_thuiswonend: 90
   prijs_niet_thuiswonend: 110
   leeftijd: Kinderen tussen 12 en 13 jaar oud
@@ -47,6 +50,7 @@
      eens willen gaan kajakken, zwemmen of kamperen? Schrijf je dan zeker in voor 
      het GIGA kamp en maak er samen met ons een geweldige week van!
   datum: 23-30 juli 2025
+  datum_vrijwilligers: 21-31 juli 2025
   prijs_thuiswonend: 75
   prijs_niet_thuiswonend: 95
   leeftijd: Kinderen tussen 14 en 16 jaar oud
@@ -62,6 +66,7 @@
      onze trektocht, staan er ook nog andere leuke activiteiten op de planning. 
      Het zal een vierdaagse vol spanning en avontuur zijn!
   datum: TBA
+  datum_vrijwilligers: TBA
   prijs_thuiswonend: 75
   prijs_niet_thuiswonend: 95
   leeftijd: Kinderen tussen 16 en 18 jaar oud
@@ -74,7 +79,8 @@
 
 - name: Fietskamp
   description: Voor de sportievelingen onder ons, komt er dit jaar ook een fietstocht! Meer informatie volgt nog.
-  datum: 01-08 augustus 2025
+  datum: 02-09 augustus 2025
+  datum_vrijwilligers: 01-10 augustus 2025
   prijs_thuiswonend: TBA
   prijs_niet_thuiswonend: TBA
   leeftijd: Kinderen tussen 14 en 16 jaar oud
@@ -88,6 +94,7 @@
       de Axlandhoeve dieren verzorgen, een leuke fietstocht doen en genieten van veel actieve en 
       leuke spelen, zowel zalig buiten als lekker warm binnen.
   datum: 27-31 oktober 2025
+  datum_vrijwilligers: 26 oktober - 01 november 2025
   locatie: Sint-Niklaas
   prijs_thuiswonend: 70
   prijs_niet_thuiswonend: 85
@@ -103,6 +110,7 @@
      bij de jongste kinderen van AJOK. Zo kunnen zij zich een week uitleven met 
      gezellige spelletjes, leuke knutselactiviteiten en een toffe uitstap!
   datum: 07-12 april 2025
+  datum_vrijwilligers: 06-13 april 2025
   prijs_thuiswonend: 70
   prijs_niet_thuiswonend: 85
   leeftijd: Kinderen tussen 6 en 9 jaar
