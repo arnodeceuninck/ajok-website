@@ -58,7 +58,6 @@
   img_list:
     - assets/images/kampen/hecto-2.webp
     - assets/images/kampen/hecto-3.webp
-    - assets/images/kampen/hecto-4.webp
   locatie: laiterie
   form_id: kamp_zomer
     
