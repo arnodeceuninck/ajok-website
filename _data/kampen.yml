@@ -93,7 +93,7 @@
   img_list:
     - assets/images/kampen/op-schok-2.webp
   locatie: TBA
-  form_id: kamp_zomer
+  form_id: kamp_fiets
 
 - name: Herfstkamp
   description: Ook na de zomer organiseren we nog een plezant kamp! We gaan in de herfstvakantie in 

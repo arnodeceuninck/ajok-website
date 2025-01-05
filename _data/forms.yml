@@ -1,21 +1,21 @@
 - name: Inschrijven vrijwilligers paaskamp
   id: vrijwilligers_pasen
-  link: https://docs.google.com/forms/d/e/1FAIpQLSfoIX7EraQq5jrv8_gfI3dHHs20tKy8sEGtA5ta4zF2A5TYDg/viewform
-  height: 500
+  link: https://forms.gle/GgzMgBszAwZjzQci8
 - name: Inschrijven vrijwilligers zomer
   id: vrijwilligers_zomer
-  link: https://docs.google.com/forms/d/e/1FAIpQLSfoIX7EraQq5jrv8_gfI3dHHs20tKy8sEGtA5ta4zF2A5TYDg/viewform
-  height: 500
+  link: https://forms.gle/ZidYCHXudJF4vi6x9
 - name: Inschrijven vrijwilligers herfstkamp
   id: vrijwilligers_herfst
-  link: # https://docs.google.com/forms/d/e/1FAIpQLSfoIX7EraQq5jrv8_gfI3dHHs20tKy8sEGtA5ta4zF2A5TYDg/viewform
-  height: 500
-- name: Inschrijven kamp
+  link:
+- name: Inschrijven zomerkamp jongeren
   id: kamp_zomer
-  link: # https://docs.google.com/forms/d/e/1FAIpQLSeezdaCp-2j9Tj56SPh7gFOCM-Kdhx6HdXl4aNlO5PE2Yfb0w/viewform
-- name: Inschrijven kamp
+  link: https://forms.gle/KFRECN9zQf5Te4KR7
+- name: Inschrijven herfstkamp jongeren
   id: kamp_herfst
-  link: https://docs.google.com/forms/d/e/1FAIpQLSeezdaCp-2j9Tj56SPh7gFOCM-Kdhx6HdXl4aNlO5PE2Yfb0w/viewform
-- name: Inschrijven kamp
+  link:
+- name: Inschrijven paaskamp jongeren
   id: kamp_pasen
-  link: # https://docs.google.com/forms/d/e/1FAIpQLSeezdaCp-2j9Tj56SPh7gFOCM-Kdhx6HdXl4aNlO5PE2Yfb0w/viewform
+  link: https://forms.gle/2pobBGEeZcGm6Cy89
+- name: Inschrijven fietskamp jongeren
+  id: kamp_fiets
+  link:
