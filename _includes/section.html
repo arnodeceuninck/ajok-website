@@ -2,8 +2,10 @@
     
     <h2 class="text-uppercase font-italic black-line-below">{{ include.title }}</h2>
     
+    {% if include.hide_artifacts != true %}
     <img id="clouds" src="assets/images/artifacts/wolkjes.webp" class="opacity-sm-80"
             style="position: absolute; height: 120px; width: auto; right: -30px; z-index: -1;" loading="lazy" />
+    {% endif %}
 
     <p>{{ include.text }}</p>
 
