@@ -2,6 +2,11 @@
           {% if include.text_mode == 'dark' %}black-line-below{% else %}white-line-below{% endif %}
           ">{{ include.title }}</h2>
 <p style="padding-right: 20%;">{{ include.text }}</p>
-{% if include.call_to_action %}
-<a href="{{ include.url }}" class="btn btn-success">{{ include.call_to_action }}</a>
+
+{% if include.url %}
+  <!-- Active button -->
+  <a href="{{ include.url }}" class="btn btn-success">{{ include.call_to_action }}</a>
+{% elsif include.call_to_action_disabled %}
+  <!-- Disabled button -->
+  <button class="btn btn-secondary" disabled>{{ include.call_to_action_disabled }}</button>
 {% endif %}

@@ -1,6 +1,6 @@
 {% assign locatie_obj = site.data.locaties | where: "id", include.locatie | first %}
 
-{% assign form_item = site.data.forms | where: "id", "kamp" | first %}
+{% assign form_item = site.data.forms | where: "id", include.form_id | first %}
 
 {% capture camp_info %}
 <div class='row'>
@@ -37,6 +37,7 @@
         img_list=include.img_list
         img_list_mobile=include.img_list_mobile
         call_to_action="Schrijf je in!"
+        call_to_action_disabled="Inschrijvingen nog gesloten"
         url=form_item.link %}
 {% else %}
     {% include section-img-right.html
@@ -47,5 +48,6 @@
         img_list=include.img_list
         img_list_mobile=include.img_list_mobile
         call_to_action="Schrijf je in!"
+        call_to_action_disabled="Inschrijvingen nog gesloten"
         url=form_item.link %}
 {% endif %}

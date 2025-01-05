@@ -14,6 +14,7 @@
     - assets/images/kampen/pico.webp
     - assets/images/kampen/pico-3.webp
   locatie: laiterie
+  form_id: kamp_zomer
 
 - name: NANO
   description: Op NANO amuseren we ons met knutselen, baseball, zwemmen en nog 
@@ -27,6 +28,7 @@
   leeftijd_kort: 9-11 jaar
   img: assets/images/kampen/nano.jpeg
   locatie: laiterie
+  form_id: kamp_zomer
 
 - name: HECTO
   description: Klaar voor avontuur tijdens ons onvergetelijke HECTO-kamp? Naast 
@@ -43,6 +45,7 @@
     - assets/images/kampen/hecto-3.webp
     - assets/images/kampen/hecto-4.webp
   locatie: laiterie
+  form_id: kamp_zomer
     
 
 - name: GIGA
@@ -58,6 +61,7 @@
   img: assets/images/kampen/giga.jpg
   img_mobile: assets/images/kampen/giga_mobile.jpg
   locatie: laiterie
+  form_id: kamp_zomer
 
 - name: OP SCHOK
   description: Op Schok staat helemaal in het thema van avontuur&colon; elke dag 
@@ -76,6 +80,7 @@
     - assets/images/kampen/op-schok-1.webp
     - assets/images/kampen/op-schok-2.webp
   locatie: laiterie
+  form_id: kamp_zomer
 
 - name: Fietskamp
   description: Voor de sportievelingen onder ons, komt er dit jaar ook een fietstocht! Meer informatie volgt nog.
@@ -88,6 +93,7 @@
   img_list:
     - assets/images/kampen/op-schok-2.webp
   locatie: TBA
+  form_id: kamp_zomer
 
 - name: Herfstkamp
   description: Ook na de zomer organiseren we nog een plezant kamp! We gaan in de herfstvakantie in 
@@ -103,6 +109,7 @@
   img: assets/images/kampen/herfstkamp.jpg
   img_mobile: assets/images/kampen/herfstkamp-mobile.jpg
   locatie: axlandhoeve
+  form_id: kamp_herfst
 
 
 - name: Paaskamp
@@ -118,3 +125,4 @@
   img: assets/images/kampen/paaskamp2_desktop.jpg
   img_mobile: assets/images/kampen/paaskamp2_mobile.jpg
   locatie: laiterie
+  form_id: kamp_pasen
