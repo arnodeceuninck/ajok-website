@@ -45,10 +45,6 @@ title: "Over ons"
     call_to_action="Word Vrijwilliger"
     url="vrijwilligers" %}
 
-<div class="bg-orange pt-1 pb-1"> 
-    {% include image-row.html %}
-</div>
-
 {% capture rvb_text %}
 Onze vzw draait het hele jaar door dankzij de inzet van onze fantastische raad van bestuur! Deze 
 groep gemotiveerde vrijwilligers speelt een cruciale rol in de groei en het succes van AJOK. 
@@ -69,7 +65,9 @@ Stuur een e-mail naar {{ mail }} en sluit je aan bij onze raad van bestuur!
 </div>
 {% endcapture %}
 
+<div class="bg-primary pt-1 pb-1">
 {% include section.html 
     title="Onze Raad van Bestuur"
     text=rvb_text
 %}
+</div>
