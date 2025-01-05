@@ -1,3 +1,18 @@
+- name: Paaskamp
+  description: Het paaskamp zorgt voor de nodige ontspanning tijdens het jaar 
+     bij de jongste kinderen van AJOK. Zo kunnen zij zich een week uitleven met 
+     gezellige spelletjes, leuke knutselactiviteiten en een toffe uitstap!
+  datum: 07-12 april 2025
+  datum_vrijwilligers: 06-13 april 2025
+  prijs_thuiswonend: 70
+  prijs_niet_thuiswonend: 85
+  leeftijd: Kinderen tussen 6 en 9 jaar
+  leeftijd_kort: 6-9 jaar
+  img: assets/images/kampen/paaskamp2_desktop.jpg
+  img_mobile: assets/images/kampen/paaskamp2_mobile.jpg
+  locatie: laiterie
+  form_id: kamp_pasen
+
 - name: PICO
   description: Kom mee op PICO kamp deze zomer en maak je klaar 
     voor een week vol plezier! De week zit helemaal vol met leuke 
@@ -110,19 +125,3 @@
   img_mobile: assets/images/kampen/herfstkamp-mobile.jpg
   locatie: axlandhoeve
   form_id: kamp_herfst
-
-
-- name: Paaskamp
-  description: Het paaskamp zorgt voor de nodige ontspanning tijdens het jaar 
-     bij de jongste kinderen van AJOK. Zo kunnen zij zich een week uitleven met 
-     gezellige spelletjes, leuke knutselactiviteiten en een toffe uitstap!
-  datum: 07-12 april 2025
-  datum_vrijwilligers: 06-13 april 2025
-  prijs_thuiswonend: 70
-  prijs_niet_thuiswonend: 85
-  leeftijd: Kinderen tussen 6 en 9 jaar
-  leeftijd_kort: 6-9 jaar
-  img: assets/images/kampen/paaskamp2_desktop.jpg
-  img_mobile: assets/images/kampen/paaskamp2_mobile.jpg
-  locatie: laiterie
-  form_id: kamp_pasen
