@@ -74,9 +74,29 @@ via de onderstaande link en maak samen met ons het verschil!
 Ben je jonger dan 18 jaar en heb je toch interesse? Neem dan even coctact met ons op via 
 {{ mail }}.
 </br></br>
-<a href='{{ form_pasen }}' class='btn btn-success'>Meld je aan voor het paaskamp!</a></br>
-<a href='{{ form_zomer }}' class='btn btn-success'>Meld je aan voor een zomerkamp!</a></br>
-<a href='{{ form_herfst }}' class='btn btn-success'>Meld je aan voor het herfstkamp!</a>
+<!-- Active buttons -->
+{% if form_pasen %}
+  <a href="{{ form_pasen }}" class="btn btn-success">Meld je aan voor het paaskamp!</a><br>
+{% endif %}
+{% if form_zomer %}
+  <a href="{{ form_zomer }}" class="btn btn-success">Meld je aan voor een zomerkamp!</a><br>
+{% endif %}
+{% if form_herfst %}
+  <a href="{{ form_herfst }}" class="btn btn-success">Meld je aan voor het herfstkamp!</a><br>
+{% endif %}
+
+<!-- Disabled buttons -->
+{% unless form_pasen %}
+  <button class="btn btn-secondary" disabled>Inschrijvingen voor Paaskamp nog gesloten</button><br>
+{% endunless %}
+{% unless form_zomer %}
+  <button class="btn btn-secondary" disabled>Inschrijvingen voor Zomerkamp nog gesloten</button><br>
+{% endunless %}
+{% unless form_herfst %}
+  <button class="btn btn-secondary" disabled>Inschrijvingen voor Herfstkamp nog gesloten</button><br>
+{% endunless %}
+
+
 {% endcapture %}
 
 {% include section-img-left.html
