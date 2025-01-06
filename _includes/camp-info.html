@@ -21,7 +21,7 @@
             </br>
             <i class='fa fa-user'></i> {{ include.leeftijd }}
             </br>
-            <i class='fa fa-map-marker'></i> <a href="#{{ include.locatie }}">{{ locatie_obj.name }}</a> <!-- TODO: Klikbaar maken en effectieve naam --> 
+            <i class='fa fa-map-marker'></i> {% if locatie_obj.name %}<a href="#{{ include.locatie }}">{{ locatie_obj.name }}</a>{% else %}{{ include.locatie }}{% endif %}
         </p>
     </div>
 </div>
