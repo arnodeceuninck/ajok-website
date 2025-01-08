@@ -69,3 +69,53 @@ Stuur een e-mail naar {{ mail }} en sluit je aan bij onze raad van bestuur!
     hide_artifacts=true
 %}
 </div>
+
+
+
+{% include section-img-right.html
+    title="Erkenning"
+    text="Sinds 2010 wordt AJOK door het Steunpunt Vakantieparticipatie officieel erkend als 
+        sociaal-toeristische vereniging in het kader van Toerisme voor allen. Het erkennigsdocument 
+        vind je <a href='assets/docs/erkenning.jpg'>hier</a>.<br><br>
+
+        De erkenning blijft geldig zolang aan deze erkenningsvoorwaarden en aan de bepalingen van 
+        het decreet en de uitvoeringsbesluiten ervan wordt voldaan."
+    img="assets/images/img1.jpg" %}
+
+
+{% capture privacy_text %}
+AJOK vzw hecht veel belang aan de bescherming van jouw persoonsgegevens en privacy. In deze 
+privacyverklaring willen we heldere en transparante informatie geven over welke gegevens we 
+verzamelen en hoe deze verwerkt worden.<br><br>
+
+AJOK vzw verzamelt persoonlijke gegevens die relevant zijn voor onze werking en gebruikt deze 
+ook om jou op de hoogte te houden van onze activiteiten. Je kan op elk moment de persoonlijke 
+gegevens die AJOK vzw over jou verwerkt inzien, laten verbeteren of verwijderen. Je hebt het 
+recht 'vergeten' te worden. Mocht je nog vragen of een klacht hebben over de verwerking van jouw 
+persoonsgegevens dan kan je steeds met ons contact opnemen via {{ mail }}. <br><br>
+
+Je hebt altijd het recht een klacht in te dienen bij de Privacycommissie indien je van mening 
+bent dat jouw gegevens foutief worden behandeld.<br><br>
+
+Onze volledige privacyverklaring voor vrijwilligers lees je <a href="assets/docs/PrivacyVrijwilligers.pdf">hier</a>.<br><br>
+
+Onze volledige privacyverklaring voor diensten en jongeren lees je <a href="assets/docs/PrivacyJongeren.pdf">hier</a>.
+{% endcapture %}
+
+{% include section-img-left.html
+    title="Privacyverklaring van AJOK vzw"
+    text=privacy_text
+    img="assets/images/img8_crop.webp"
+    img_mobile="assets/images/over-ons/img8_mobile.webp" %}
+
+
+{% capture insurance_text %}
+AJOK is verzekerd bij AG Insurance.
+Voor meer info, stuur een mailtje naar: {{ mail }}.
+{% endcapture %}
+
+{% include section-img-right.html
+    title="Verzekering"
+    text=insurance_text
+    img="assets/images/vrijwilligers/kampdata-desktop-2.jpg"
+    img_mobile="assets/images/vrijwilligers/kampdata-mobile-2.jpg" %}
