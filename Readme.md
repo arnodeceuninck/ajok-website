@@ -2,6 +2,8 @@
 
 ## Aanpassingen maken
 
+[Klik hier](https://www.youtube.com/watch?v=QJXtWoqfDSU&list=PLWCUHLJwOfQaGwZz7ynJWnXey5gZwPfw5&ab_channel=ArnoDeceuninck) voor een playlist met de videos die hieronder vermeld staan.
+
 ### Github Account
 Om de website te kunnen aanpassen, moet je [een account op GitHub aanmaken](https://github.com/signup). 
 
