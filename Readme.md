@@ -1,32 +1,60 @@
 # ajok-website
-## Todo's
 
-### Inhoudelijk
-/
+## Aanpassingen maken
 
-### Required features
-/
+### Github Account
+Om de website te kunnen aanpassen, moet je [een account op GitHub aanmaken](https://github.com/signup). 
 
-### Required bugfixes
-/
+Eens dit gebeurd is, kan je je gebruikersnaam en email doorgeven, zodat je toegevoegd kan worden aan de bewerkers van de site.
 
-### Nice to have bugfixes
-- [ ] tekst overlapt soms boompjes in  de achtergrond
-- [ ] Huidige heuveltjes afbeelding is een te lage resolutie, beter ergens een svg vinden
+### Waar aanpassingen maken
+Dingen die typisch vaak veranderen, staan in de `_data` folder. 
+Bv:
+- `_data/kampen.yml` om info over kampen te updaten (datum, beschrijving...)
+- `_data/peter_meters.yml` om peters en meters te updaten
+- `_data/forms.yml` om inschrijvingsformulieren te updaten
 
-### Nice to haves
-- [ ] Meer variatie in secties, dat het niet altijd exact dezelfde boompjes en heuveltjes zijn
-- [ ] QR code voor peter/meter betaling?
+Wil je algemene tekst op de site updaten? Afhankelijk van de pagina, kan je dan `index.html`, `over-ons.html`, ... updaten.
+De makkelijkste manier om te weten waar je iets moet aanpassen is door een stukje van de bestaande tekst die je wil aanpassen
+op te zoeken via de zoekbalk bovenaan. 
 
-## Aanpassingen
 
-### Tekst
-Wil je info over kampen updaten? Pas dan het bestand `_data/kampen.yml` aan. 
+#### Foto's
+Op dezelfde plaatsen waar je tekst kan updaten, kan je ook de foto's updaten. Upload hiervoor eerst de afbeelding onder `assets/images`. Meeste foto's moeten in twee formaten geupload worden: verticaal (bv. 4:5, voor op desktop) en horizontaal (bv. 16:9, voor de gsm layout).
 
-Wil je algemene tekst op de site updaten? Afhankelijk van de pagina, kan je dan `index.html`, `over-ons.html`, ... updaten (in de hoofd folder).  
+### Hoe aanpassen via GitHub website
+Via de GitHub website kan je op het edit potloodje drukken, je tekst/datum/form/... aanpassen, op Commit changes drukken
+en een Pull Request openen. Deze link kan je dan naar iemand anders doorsturen om je aanpassingen na te kijken. 
 
-### Foto's
-Op dezelfde plaatsen waar je tekst kan updaten, kan je ook de foto's updaten. Upload hiervoor eerst de afbeelding onder `assets/images`. Meeste foto's moeten in twee formaten geupload worden: verticaal (bv. 4:5, voor op desktop) en horizontaal (bv. 16:9, voor de gsm layout). 
+### Lokaal
+Je kan ook de code op je eigen computer zetten om aanpassingen te maken en bv. te testen hoe je wijzigingen eruit gaan
+zien. Hiervoor zijn er wel wat dingen die je moet doen:
+
+- Github Desktop downloaden (of gewoon Git)
+    - https://desktop.github.com/download/
+- Visual Studio Code downloaden
+    - https://code.visualstudio.com/
+- Code lokaal krijgen
+    - `Clone Git repository...` in Visual Studio Code selecteren
+- Jekyll downloaden
+    - https://jekyllrb.com/docs/installation/windows/
+- Website lokaal starten
+    - `bundle install`
+    - `bundle exec jekyll serve`
+
+Eens dit in orde is, kan je lokaal aanpassingen maken en die (via een branch die niet 'main' is) terug
+committen en naar de server brengen, zodat die via een pull request in de 'main' branch kunnen komen 
+en dus op de website verschijnen. 
+
+#### Branching
+De code die je standaard op GitHub ziet is de 'main' branch. De code die hierop staat, komt overeen met de website. Daarom kan je niet rechstreeks daar wijzigingen toevoegen. Als je een nieuwe wijziging wil maken, maak je een nieuwe branch aan (gaat door bv. linksonder op 'main' te klikken en dan "Create new branch"). 
+
+Hierop kan je je wijzigingen doen en testen. Eens dit klaar is, kan je je wijzigingen 'committen' (samenbundelen) en 'pushen' (van je lokale versie naar de GitHub server brengen). 
+
+### Pull Request
+Om je code op de 'main' branch te krijgen, en dus live te zetten op de website, open je een Pull Request. Eens dit gebeurt is kan iemand anders je update nakijken en goedkeuren. Als dit gebeurt is, kan je de code naar de 'main'  branch brengen. Dan loopt er een actie die na enkele minuten je wijzigen effectief op de site zet. 
+
+ 
 
 ## Development
 Not familiar with jekyll, but already familiar with html/css/js? Here is a small step-by-step tutorial to get started with jekyll. https://jekyllrb.com/docs/step-by-step/01-setup/
