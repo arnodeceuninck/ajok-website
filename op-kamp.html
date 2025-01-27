@@ -76,9 +76,9 @@ kampen? Bekijk hieronder dan zeker ons aanbod!
 
 {% for item in site.data.locaties %}
 
-    {% assign type = 'right' %}
-    {% assign remainder = forloop.index | modulo: 2 %}
-    {% if remainder == 1 %}
+    {% if type == 'left' %}
+        {% assign type = 'right' %}
+    {% else %}
         {% assign type = 'left' %}
     {% endif %}
 
