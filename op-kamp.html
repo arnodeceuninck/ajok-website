@@ -27,6 +27,7 @@ kampen? Bekijk hieronder dan zeker ons aanbod!
             {% include camp-card.html 
                 naam=item.name
                 leeftijd=item.leeftijd_kort
+                disabled=item.disabled
                 prijs=prijs%}
         {% endfor %}
     </div>
@@ -39,13 +40,18 @@ kampen? Bekijk hieronder dan zeker ons aanbod!
 
 
 
+{% assign type = 'right' %}
 
 {% for item in site.data.kampen %}
 
-    {% assign type = 'left' %}
-    {% assign remainder = forloop.index | modulo: 2 %}
-    {% if remainder == 0 %}
+    {% if item.disabled %}
+        {% continue %}
+    {% endif %}
+
+    {% if type == 'left' %}
         {% assign type = 'right' %}
+    {% else %}
+        {% assign type = 'left' %}
     {% endif %}
 
     {% include camp-info.html 
