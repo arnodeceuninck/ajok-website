@@ -45,21 +45,21 @@
   locatie: laiterie
   form_id: kamp_zomer
 
-- name: HECTO
-  description: Klaar voor avontuur tijdens ons onvergetelijke HECTO-kamp? Naast 
-      een dosis sport en spel, maken we ook kennis met de natuur… zo gaan we op 
-      tweedaagse en kajakken we door de rivieren. Een kamp voor echte avonturiers!
-  datum: 09-16 juli 2025
-  datum_vrijwilligers: 07-17 juli 2025
-  prijs_thuiswonend: 90
-  prijs_niet_thuiswonend: 110
-  leeftijd: Kinderen tussen 12 en 13 jaar oud
-  leeftijd_kort: 12-13 jaar
-  img_list:
-    - assets/images/kampen/hecto-2.webp
-    - assets/images/kampen/hecto-3.webp
-  locatie: laiterie
-  form_id: kamp_zomer
+#- name: HECTO
+#  description: Klaar voor avontuur tijdens ons onvergetelijke HECTO-kamp? Naast 
+#      een dosis sport en spel, maken we ook kennis met de natuur… zo gaan we op 
+#      tweedaagse en kajakken we door de rivieren. Een kamp voor echte avonturiers!
+#  datum: 09-16 juli 2025
+#  datum_vrijwilligers: 07-17 juli 2025
+#  prijs_thuiswonend: 90
+#  prijs_niet_thuiswonend: 110
+#  leeftijd: Kinderen tussen 12 en 13 jaar oud
+#  leeftijd_kort: 12-13 jaar
+#  img_list:
+#    - assets/images/kampen/hecto-2.webp
+#    - assets/images/kampen/hecto-3.webp
+#  locatie: laiterie
+#  form_id: kamp_zomer
     
 
 - name: GIGA
@@ -77,33 +77,34 @@
   locatie: laiterie
   form_id: kamp_zomer
 
-- name: OP SCHOK
-  description: Op Schok staat helemaal in het thema van avontuur&colon; elke dag 
-     slapen we met onze tenten op een andere plaats! We verplaatsen ons al 
-     wandelend, fietsend of met de kajak, van kampplaats tot kampplaats. Naast 
-     onze trektocht, staan er ook nog andere leuke activiteiten op de planning. 
-     Het zal een vierdaagse vol spanning en avontuur zijn!
-  datum: TBA
-  datum_vrijwilligers: TBA
-  prijs_thuiswonend: TBA
-  prijs_niet_thuiswonend: TBA
+#- name: OP SCHOK
+# description: Op Schok staat helemaal in het thema van avontuur&colon; elke dag 
+#     slapen we met onze tenten op een andere plaats! We verplaatsen ons al 
+#    wandelend, fietsend of met de kajak, van kampplaats tot kampplaats. Naast 
+#     onze trektocht, staan er ook nog andere leuke activiteiten op de planning. 
+#    Het zal een vierdaagse vol spanning en avontuur zijn!
+#  datum: TBA
+#  datum_vrijwilligers: TBA
+#  prijs_thuiswonend: TBA
+#  prijs_niet_thuiswonend: TBA
+#  leeftijd: Kinderen tussen 16 en 18 jaar oud
+#  leeftijd_kort: 16-18 jaar
+#  img_list:
+#    - assets/images/kampen/op-schok.webp
+#    - assets/images/kampen/op-schok-1.webp
+#    - assets/images/kampen/op-schok-2.webp
+#  locatie: laiterie
+#  form_id: kamp_zomer
+
+- name: MEGA - op de fiets
+  description: Voor de sportievelingen onder ons, komt er dit jaar ook een avontuurlijk kamp in het mooie Heuvelland! 
+    Doorheen de week zal onze fiets als rode draad dienen voor leuke uitstappen in de omgeving.
+  datum: 03-10 augustus 2025
+  datum_vrijwilligers: 01-11 augustus 2025
+  prijs_thuiswonend: €90
+  prijs_niet_thuiswonend: €110
   leeftijd: Kinderen tussen 16 en 18 jaar oud
   leeftijd_kort: 16-18 jaar
-  img_list:
-    - assets/images/kampen/op-schok.webp
-    - assets/images/kampen/op-schok-1.webp
-    - assets/images/kampen/op-schok-2.webp
-  locatie: laiterie
-  form_id: kamp_zomer
-
-- name: Fietskamp
-  description: Voor de sportievelingen onder ons, komt er dit jaar ook een fietstocht! Meer informatie volgt nog.
-  datum: 02-09 augustus 2025
-  datum_vrijwilligers: 01-10 augustus 2025
-  prijs_thuiswonend: TBA
-  prijs_niet_thuiswonend: TBA
-  leeftijd: Kinderen tussen 14 en 16 jaar oud
-  leeftijd_kort: 14-16 jaar
   img_list:
     - assets/images/kampen/op-schok-2.webp
   locatie: Vakantiehoeve Rode Berg, Heuvelland, West-Vlaanderen
