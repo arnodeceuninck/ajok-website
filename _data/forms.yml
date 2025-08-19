@@ -1,21 +1,21 @@
 - name: Inschrijven vrijwilligers paaskamp
   id: vrijwilligers_pasen
-  link: https://forms.gle/GgzMgBszAwZjzQci8
+  link: 
 - name: Inschrijven vrijwilligers zomer
   id: vrijwilligers_zomer
-  link: https://forms.gle/ZidYCHXudJF4vi6x9
+  link: 
 - name: Inschrijven vrijwilligers herfstkamp
   id: vrijwilligers_herfst
-  link:
+  link: https://forms.gle/Gy2naBrnuNAUAiSm6
 - name: Inschrijven zomerkamp jongeren
   id: kamp_zomer
-  link: https://forms.gle/KFRECN9zQf5Te4KR7
+  link:
 - name: Inschrijven herfstkamp jongeren
   id: kamp_herfst
-  link:
+  link: https://forms.gle/c3HGkar6vRNjC2yEA
 - name: Inschrijven paaskamp jongeren
   id: kamp_pasen
   link: 
 - name: Inschrijven fietskamp jongeren
   id: kamp_fiets
-  link: https://forms.gle/QszS11QB4cqBoAKA6
+  link:
