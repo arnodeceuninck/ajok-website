@@ -64,8 +64,8 @@
   form_button_text: 
 
 
-- name: MEGA - op de fiets
-  disabled: true
+  # - name: MEGA - op de fiets
+  # disabled: true
   # description: Voor de sportievelingen onder ons, komt er dit jaar ook een avontuurlijk kamp in het mooie Heuvelland! 
   #   Doorheen de week zal onze fiets als rode draad dienen voor leuke uitstappen in de omgeving.
   # datum: 03-10 augustus 2025
