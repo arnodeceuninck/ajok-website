@@ -43,8 +43,8 @@
   leeftijd_kort: 9-12 jaar
   img: assets/images/kampen/nano.jpeg
   locatie: laiterie
-  form_id: # kamp_zomer
-  form_button_text: Kamp volzet
+  form_id: kamp_zomer
+  form_button_text:
     
 
 - name: GIGA
@@ -60,8 +60,8 @@
   img: assets/images/kampen/giga.jpg
   img_mobile: assets/images/kampen/giga_mobile.jpg
   locatie: laiterie
-  form_id: # kamp_zomer
-  form_button_text: Kamp volzet
+  form_id: kamp_zomer
+  form_button_text: 
 
 
 - name: MEGA - op de fiets
