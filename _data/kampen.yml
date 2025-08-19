@@ -65,7 +65,7 @@
 
 
   # - name: MEGA - op de fiets
-  # disabled: true
+  # cancelled: true
   # description: Voor de sportievelingen onder ons, komt er dit jaar ook een avontuurlijk kamp in het mooie Heuvelland! 
   #   Doorheen de week zal onze fiets als rode draad dienen voor leuke uitstappen in de omgeving.
   # datum: 03-10 augustus 2025
@@ -96,7 +96,7 @@
   form_id: kamp_herfst
 
 - name: OP SCHOK
-  disabled: true
+  cancelled: true
   leeftijd: Kinderen tussen 16 en 18 jaar oud
   leeftijd_kort: 16-18 jaar
 # description: Op Schok staat helemaal in het thema van avontuur&colon; elke dag 
@@ -117,7 +117,7 @@
 
 
 - name: HECTO
-  disabled: true
+  cancelled: true
   leeftijd: Kinderen tussen 12 en 13 jaar oud
   leeftijd_kort: 12-13 jaar
 #  description: Klaar voor avontuur tijdens ons onvergetelijke HECTO-kamp? Naast 
