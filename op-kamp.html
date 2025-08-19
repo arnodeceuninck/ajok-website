@@ -27,7 +27,7 @@ kampen? Bekijk hieronder dan zeker ons aanbod!
             {% include camp-card.html 
                 naam=item.name
                 leeftijd=item.leeftijd_kort
-                disabled=item.disabled
+                cancelled=item.cancelled
                 prijs=prijs%}
         {% endfor %}
     </div>
@@ -44,7 +44,7 @@ kampen? Bekijk hieronder dan zeker ons aanbod!
 
 {% for item in site.data.kampen %}
 
-    {% if item.disabled %}
+    {% if item.cancelled %}
         {% continue %}
     {% endif %}
 

@@ -1,10 +1,10 @@
 <div class="col-md-4">
-    <div class="{% if include.disabled %}disabled-camp-card{% else %}camp-card{% endif %}" 
-         {% unless include.disabled %}onclick="location.href='#{{ include.naam }}'"{% endunless %}>
+    <div class="{% if include.cancelled %}disabled-camp-card{% else %}camp-card{% endif %}" 
+         {% unless include.cancelled %}onclick="location.href='#{{ include.naam }}'"{% endunless %}>
         <h5>{{ include.naam }}</h5>
         <p>{{ include.leeftijd }}</p>
         <p>{{ include.datum }}</p>
-        {% if include.disabled %}
+        {% if include.cancelled %}
         <p>Geannuleerd voor dit jaar</p>
         {% endif %}
     </div>

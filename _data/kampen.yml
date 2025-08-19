@@ -1,3 +1,19 @@
+- name: Herfstkamp
+  description: Ook na de zomer organiseren we nog een plezant kamp! We gaan in de herfstvakantie in 
+      de Axlandhoeve dieren verzorgen, een leuke fietstocht doen en genieten van veel actieve en 
+      leuke spelen, zowel zalig buiten als lekker warm binnen.
+  datum: 27-31 oktober 2025
+  datum_vrijwilligers: 26 oktober - 01 november 2025
+  locatie: Sint-Niklaas
+  prijs_thuiswonend: 70
+  prijs_niet_thuiswonend: 85
+  leeftijd: Kinderen tussen 13 en 16 jaar
+  leeftijd_kort: 13-16 jaar
+  img: assets/images/kampen/herfstkamp.jpg
+  img_mobile: assets/images/kampen/herfstkamp-mobile.jpg
+  locatie: axlandhoeve
+  form_id: kamp_herfst
+
 - name: Paaskamp
   description: Het paaskamp zorgt voor de nodige ontspanning tijdens het jaar 
      bij de jongste kinderen van AJOK. Zo kunnen zij zich een week uitleven met 
@@ -64,8 +80,8 @@
   form_button_text: 
 
 
-- name: MEGA - op de fiets
-  disabled: true
+  # - name: MEGA - op de fiets
+  # cancelled: true
   # description: Voor de sportievelingen onder ons, komt er dit jaar ook een avontuurlijk kamp in het mooie Heuvelland! 
   #   Doorheen de week zal onze fiets als rode draad dienen voor leuke uitstappen in de omgeving.
   # datum: 03-10 augustus 2025
@@ -79,24 +95,8 @@
   # locatie: Vakantiehoeve Rode Berg, Heuvelland, West-Vlaanderen
   # form_id: kamp_fiets
 
-- name: Herfstkamp
-  description: Ook na de zomer organiseren we nog een plezant kamp! We gaan in de herfstvakantie in 
-      de Axlandhoeve dieren verzorgen, een leuke fietstocht doen en genieten van veel actieve en 
-      leuke spelen, zowel zalig buiten als lekker warm binnen.
-  datum: 27-31 oktober 2025
-  datum_vrijwilligers: 26 oktober - 01 november 2025
-  locatie: Sint-Niklaas
-  prijs_thuiswonend: 70
-  prijs_niet_thuiswonend: 85
-  leeftijd: Kinderen tussen 13 en 16 jaar
-  leeftijd_kort: 13-16 jaar
-  img: assets/images/kampen/herfstkamp.jpg
-  img_mobile: assets/images/kampen/herfstkamp-mobile.jpg
-  locatie: axlandhoeve
-  form_id: kamp_herfst
-
 - name: OP SCHOK
-  disabled: true
+  cancelled: true
   leeftijd: Kinderen tussen 16 en 18 jaar oud
   leeftijd_kort: 16-18 jaar
 # description: Op Schok staat helemaal in het thema van avontuur&colon; elke dag 
@@ -117,7 +117,7 @@
 
 
 - name: HECTO
-  disabled: true
+  cancelled: true
   leeftijd: Kinderen tussen 12 en 13 jaar oud
   leeftijd_kort: 12-13 jaar
 #  description: Klaar voor avontuur tijdens ons onvergetelijke HECTO-kamp? Naast 
