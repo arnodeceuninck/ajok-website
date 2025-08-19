@@ -1,3 +1,19 @@
+- name: Herfstkamp
+  description: Ook na de zomer organiseren we nog een plezant kamp! We gaan in de herfstvakantie in 
+      de Axlandhoeve dieren verzorgen, een leuke fietstocht doen en genieten van veel actieve en 
+      leuke spelen, zowel zalig buiten als lekker warm binnen.
+  datum: 27-31 oktober 2025
+  datum_vrijwilligers: 26 oktober - 01 november 2025
+  locatie: Sint-Niklaas
+  prijs_thuiswonend: 70
+  prijs_niet_thuiswonend: 85
+  leeftijd: Kinderen tussen 13 en 16 jaar
+  leeftijd_kort: 13-16 jaar
+  img: assets/images/kampen/herfstkamp.jpg
+  img_mobile: assets/images/kampen/herfstkamp-mobile.jpg
+  locatie: axlandhoeve
+  form_id: kamp_herfst
+
 - name: Paaskamp
   description: Het paaskamp zorgt voor de nodige ontspanning tijdens het jaar 
      bij de jongste kinderen van AJOK. Zo kunnen zij zich een week uitleven met 
@@ -78,22 +94,6 @@
   #  - assets/images/kampen/op-schok-2.webp
   # locatie: Vakantiehoeve Rode Berg, Heuvelland, West-Vlaanderen
   # form_id: kamp_fiets
-
-- name: Herfstkamp
-  description: Ook na de zomer organiseren we nog een plezant kamp! We gaan in de herfstvakantie in 
-      de Axlandhoeve dieren verzorgen, een leuke fietstocht doen en genieten van veel actieve en 
-      leuke spelen, zowel zalig buiten als lekker warm binnen.
-  datum: 27-31 oktober 2025
-  datum_vrijwilligers: 26 oktober - 01 november 2025
-  locatie: Sint-Niklaas
-  prijs_thuiswonend: 70
-  prijs_niet_thuiswonend: 85
-  leeftijd: Kinderen tussen 13 en 16 jaar
-  leeftijd_kort: 13-16 jaar
-  img: assets/images/kampen/herfstkamp.jpg
-  img_mobile: assets/images/kampen/herfstkamp-mobile.jpg
-  locatie: axlandhoeve
-  form_id: kamp_herfst
 
 - name: OP SCHOK
   cancelled: true
