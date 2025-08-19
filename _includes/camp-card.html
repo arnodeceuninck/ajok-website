@@ -1,5 +1,5 @@
 <div class="col-md-4">
-    <div class="{% if include.cancelled %}cancelled-camp-card{% else %}camp-card{% endif %}" 
+    <div class="{% if include.cancelled %}disabled-camp-card{% else %}camp-card{% endif %}" 
          {% unless include.cancelled %}onclick="location.href='#{{ include.naam }}'"{% endunless %}>
         <h5>{{ include.naam }}</h5>
         <p>{{ include.leeftijd }}</p>
