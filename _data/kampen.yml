@@ -18,8 +18,8 @@
   description: Het paaskamp zorgt voor de nodige ontspanning tijdens het jaar 
      bij de jongste kinderen van AJOK. Zo kunnen zij zich een week uitleven met 
      gezellige spelletjes, leuke knutselactiviteiten en een toffe uitstap!
-  datum: TBA
-  datum_vrijwilligers: TBA
+  datum: 6-11 april 2026
+  datum_vrijwilligers: 5-12 april 2026
   prijs_thuiswonend: 75
   prijs_niet_thuiswonend: 90
   leeftijd: Kinderen tussen 6 en 9 jaar
@@ -80,19 +80,17 @@
   form_button_text: 
 
 
-  # - name: MEGA - op de fiets
-  # cancelled: true
-  # description: Voor de sportievelingen onder ons, komt er dit jaar ook een avontuurlijk kamp in het mooie Heuvelland! 
-  #   Doorheen de week zal onze fiets als rode draad dienen voor leuke uitstappen in de omgeving.
-  # datum: 03-10 augustus 2025
-  # datum_vrijwilligers: 01-11 augustus 2025
-  # prijs_thuiswonend: 90
-  # prijs_niet_thuiswonend: 110
-  # leeftijd: Kinderen tussen 16 en 18 jaar oud
-  # leeftijd_kort: 16-18 jaar
-  # img_list:
-  #  - assets/images/kampen/op-schok-2.webp
-  # locatie: Vakantiehoeve Rode Berg, Heuvelland, West-Vlaanderen
+  - name: MEGA - op de fiets
+  description: Voor de sportievelingen onder ons, komt er dit jaar ook een avontuurlijk kamp in het mooie Heuvelland! 
+     Doorheen de week zal onze fiets als rode draad dienen voor leuke uitstappen in de omgeving.
+  datum: TBA
+  datum_vrijwilligers: TBA
+  prijs_thuiswonend: 90
+  prijs_niet_thuiswonend: 110
+  leeftijd: Kinderen tussen 16 en 18 jaar oud
+  leeftijd_kort: 16-18 jaar
+  img: assets/images/kampen/op-schok-2.webp
+  locatie: TBA
   # form_id: kamp_fiets
 
 - name: OP SCHOK
