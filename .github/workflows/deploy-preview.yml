@@ -39,4 +39,4 @@ jobs:
           message: |
             🚀 Preview deployed!
 
-            🌍 [View Preview](test-pr-${{ github.event.pull_request.number }}.ajok-website.pages.dev)
+            🌍 [View Preview](https://test-pr-${{ github.event.pull_request.number }}.ajok-website.pages.dev)
