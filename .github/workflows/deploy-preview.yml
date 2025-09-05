@@ -3,9 +3,6 @@ name: Deploy Preview
 on:
   pull_request:
     types: [opened, synchronize, reopened]
-  push:
-    branches:
-        - deploy-preview
 
 jobs:
   deploy:
@@ -14,6 +11,7 @@ jobs:
     permissions:
       contents: read
       deployments: write
+      pull-requests: write
 
     steps:
       - uses: actions/checkout@v4
@@ -32,5 +30,13 @@ jobs:
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy ./_site --project-name=ajok-website --branch=deploy-preview
-            #--branch=pr-${{ github.event.pull_request.number }}
+          command: pages deploy ./_site --project-name=ajok-website --branch=test-pr-${{ github.event.pull_request.number }}
+
+      - name: Comment PR with Preview URL
+        uses: marocchino/sticky-pull-request-comment@v2
+        with:
+          header: cloudflare-preview
+          message: |
+            🚀 Preview deployed!
+
+            🌍 [View Preview](test-pr-${{ github.event.pull_request.number }}.ajok-website.pages.dev)
