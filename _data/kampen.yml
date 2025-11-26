@@ -27,7 +27,7 @@
   img: assets/images/kampen/paaskamp2_desktop.jpg
   img_mobile: assets/images/kampen/paaskamp2_mobile.jpg
   locatie: laiterie
-  form_id: kamp_zomer
+  form_id: kamp_pasen
 
 - name: PICO
   description: Kom mee op PICO kamp deze zomer en maak je klaar 
