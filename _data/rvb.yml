@@ -1,25 +1,28 @@
-- naam: Janice
-  img: "assets/images/rvb/janice.jpeg"
-  functie: team fondsenwerving & inschrijvingen jongeren
-- naam: Pieter
-  img: "assets/images/rvb/pieter.jpeg"
-  functie: team finance 
 - naam: Leen
   img: "assets/images/rvb/leen.jpeg"
   functie: voorzitter
+- naam: Erin
+  img: "assets/images/rvb/erin.jpeg"
+  functie: voorzitter & team finance
+- naam: Jasmine
+  img: "assets/images/rvb/jasmine.jpeg"
+  functie: voorzitter & team promo
+- naam: Ellen
+  img: "assets/images/rvb/ellen.jpeg"
+  functie: ondersteuning
+- naam: Janice
+  img: "assets/images/rvb/janice.jpeg"
+  functie: inschrijvingen jongeren
+- naam: Pieter
+  img: "assets/images/rvb/pieter.jpeg"
+  functie: team finance 
 - naam: Astrid
   img: "assets/images/rvb/astrid.jpeg"
   functie:  inschrijvingen vrijwilligers
 - naam: Elke
   img: "assets/images/rvb/elke.jpeg"
   functie: inschrijvingen jongeren  
-- naam: Erin
-  img: "assets/images/rvb/erin.jpeg"
-  functie: team finance
-- naam: Ellen
-  img: "assets/images/rvb/ellen.jpeg"
-  functie: ondervoorzitter
-- naam: Jasmine
-  img: "assets/images/rvb/jasmine.jpeg"
-  functie: team promo
-
+- naam: Camille 
+  img: 
+  functie: werving vrijwilligers
+  
