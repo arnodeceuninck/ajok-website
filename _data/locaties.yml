@@ -25,3 +25,19 @@
   adres: Stenenmuurstraat 64, Sinaai-Waas, 9112 Sint-Niklaas 
   maps: https://maps.app.goo.gl/AQxokZsuA7NAwsGo6
   img: assets/images/locaties/axlandhoeve.png
+
+  - name: Kamphuis Paviljoen
+  id: hoogveld
+  description: Tijdens het MEGA kamp verplaatsen we ons naar het mooie Zedelgem 
+      in West-Vlaanderen.<br>
+      Het kamphuis “Paviljoen” ligt vlak aan het natuurdomein Hoogveld. De mooie boomgaard, de gezellige dreef 
+      en de groene velden en vormen een oase van rust. 
+      Hierdoor vormt dit de ideale omgeving, met veel ruimte voor spelletjes 
+      en een mooie omgeving om met de fiets te kunnen verkennen.
+      Dit volledig uitgeruste kampverblijf heeft 40 bedden ter beschikking. 
+      Het beschikt ook over enkele gezellige picknick-banken en ligt vlak naast een 
+      speelvled met klimtoren, waar
+      onze jongeren zich volledig kunnen uitleven.
+  adres: Hoogveld 4, 8210 Zedelgem 
+  maps: https://www.google.com/maps/place/Hoogveld+4,+8210+Zedelgem/@51.1105619,3.1756042,438m/data=!3m2!1e3!4b1!4m6!3m5!1s0x47c34e41f3871ea1:0x2d1853f4b800601b!8m2!3d51.1105586!4d3.1781791!16s%2Fg%2F11fj0t7576?entry=ttu&g_ep=EgoyMDI2MDEwNy4wIKXMDSoKLDEwMDc5MjA3M0gBUAM%3D
+  img: assets/images/locaties/hoogveld.png
