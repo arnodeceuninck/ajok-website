@@ -26,7 +26,7 @@
   maps: https://maps.app.goo.gl/AQxokZsuA7NAwsGo6
   img: assets/images/locaties/axlandhoeve.png
 
-  - name: Kamphuis Paviljoen
+- name: Kamphuis Paviljoen
   id: hoogveld
   description: Tijdens het MEGA kamp verplaatsen we ons naar het mooie Zedelgem 
       in West-Vlaanderen.<br>
