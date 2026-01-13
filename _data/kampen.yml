@@ -74,7 +74,7 @@
   leeftijd: Kinderen tussen 15 en 18 jaar oud
   leeftijd_kort: 15-18 jaar
   img: assets/images/kampen/op-schok-2.webp
-  locatie: Hoogveld
+  locatie: hoogveld
   form_id: kamp_fiets
 
 - name: Herfstkamp
