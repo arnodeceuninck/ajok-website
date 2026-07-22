@@ -1,4 +1,4 @@
-<div class="row align-items-stretch mb-0 bg-primary  text-light" style="position: relative;"
+<div class="row align-items-stretch mb-0 bg-primary text-light position-relative"
     id="{{ include.id | default: include.title | strip }}">
 
     {% include section-img-mobile.html
@@ -13,10 +13,10 @@
         img=include.img %}
     
 
-    <div class="col-md-8 d-flex flex-column justify-content-center scroll-animation" style="padding: 50px; z-index: 1;">
+    <div class="col-md-8 d-flex flex-column justify-content-center scroll-animation section-content">
         
         <!-- This empty div adds extra padding on desktop -->
-        <div class="d-none d-md-block" style="height: 100px;"></div>
+        <div class="d-none d-md-block section-spacer"></div>
 
         {% include section-img-content.html
             title=include.title
@@ -26,13 +26,12 @@
             url=include.url %}
 
         <!-- This empty div adds extra padding on desktop -->
-        <div class="d-none d-md-block" style="height: 100px;"></div>
+        <div class="d-none d-md-block section-spacer"></div>
 
     </div>
 
     {% if include.hide_artifacts != true %}
-        <img id="tree" src="assets/images/artifacts/boompjes.webp" class="img-tree" loading="lazy"
-            style="position: absolute;right: -50px; z-index: 0; bottom: 0;" />
+        <img id="tree" src="assets/images/artifacts/boompjes.webp" class="img-tree artifact-tree" loading="lazy" />
     {% endif %}
 
 </div>

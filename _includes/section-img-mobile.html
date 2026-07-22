@@ -13,15 +13,15 @@
 {% endif %}
 
 {% if img or img_list %}
-    <div class="col-12 d-md-none h-imgh-mobile {% if img_list %}slideshow-container{% endif %}" style="width: 100%;">
+    <div class="col-12 d-md-none h-imgh-mobile w-100 {% if img_list %}slideshow-container{% endif %}">
         {% if img_list %}
             {% for item in img_list %}
                 {% if item %}
-                    <img src="{{ item }}" class="img-fluid fade" style="object-fit: cover; width: 100%; height: 100%;" loading="lazy">
+                    <img src="{{ item }}" class="img-fluid fade section-img-mobile-fill" loading="lazy">
                 {% endif %}
             {% endfor %}
         {% else %}
-            <img src="{{ img }}" class="img-fluid" style="object-fit: cover; width: 100%; height: 100%;" loading="lazy">
+            <img src="{{ img }}" class="img-fluid section-img-mobile-fill" loading="lazy">
         {% endif %}
     </div>
 {% endif %}

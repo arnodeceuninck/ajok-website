@@ -6,12 +6,12 @@
         img_mobile=include.img_mobile
         img_list_mobile=include.img_list_mobile %}
 
-    <div class="col-md-8 scroll-animation" style="position: relative;"> 
-        <div class="row" style="height: fit-content;">
-            <div style="padding: 50px;">
+    <div class="col-md-8 scroll-animation position-relative"> 
+        <div class="row row-fit-height">
+            <div class="section-content">
 
                 <!-- This empty div adds extra padding on desktop -->
-                <div class="d-none d-md-block" style="height: 50px;"></div>
+                <div class="d-none d-md-block section-spacer-sm"></div>
 
 
                 {% include section-img-content.html
@@ -24,12 +24,12 @@
         
 
                 <!-- This empty div adds extra padding on desktop -->
-                <div class="d-none d-md-block" style="height: 50px;"></div>
+                <div class="d-none d-md-block section-spacer-sm"></div>
                 
             </div>
         </div>
         <div class="row mt-auto">
-            <img id="hills" src="assets/images/artifacts/heuveltjes.webp" style="padding: 0; width: 100%;" loading="lazy" />
+            <img id="hills" src="assets/images/artifacts/heuveltjes.webp" class="artifact-hills" loading="lazy" />
         </div>
     </div>
 
