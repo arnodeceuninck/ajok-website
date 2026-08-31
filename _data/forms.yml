@@ -6,15 +6,13 @@
   link: 
 - name: Inschrijven vrijwilligers herfstkamp
   id: vrijwilligers_herfst
-  #link: https://forms.gle/JYAEuVKMgwaPQt8g9
-  link: 
+  link: https://forms.gle/JYAEuVKMgwaPQt8g9
 - name: Inschrijven zomerkamp jongeren
   id: kamp_zomer
   link: 
 - name: Inschrijven herfstkamp jongeren
   id: kamp_herfst
-  link: 
-  #link: https://forms.gle/JvifU1PAgb8uuuxX8
+  link: https://forms.gle/JvifU1PAgb8uuuxX8
 - name: Inschrijven paaskamp jongeren
   id: kamp_pasen
   link:
