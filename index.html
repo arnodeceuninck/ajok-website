@@ -4,14 +4,7 @@ layout: default
 title: "Alle Jongeren Op Kamp"
 ---
 
-<!-- <style>
-    body {
-        background-color: #E2F5FF;
-    }
-</style> -->
-
-{% include homepage-banner.html %}
-
+<!-- HOME INTRO -->
 <div class="container p-2">
     <div class="row">
         <div class="col-12">
@@ -20,61 +13,32 @@ title: "Alle Jongeren Op Kamp"
             <img id="clouds" src="assets/images/artifacts/wolkjes.webp" loading="lazy"
             style="position: absolute; height: 120px; width: auto; right: -30px; z-index: -1;" />
 
-            <p>Elk kind heeft recht op vakantie en ontspanning. Helaas kunnen veel kinderen niet van 
-                een zorgeloze vakantie genieten. AJOK neemt als vzw grote stappen om hier verandering 
-                in te brengen!</p>
+            <p>{{ site.data.home.intro.description }}</p>
         
         </div>
     </div>
 </div>
 
-
-{% include image-row.html %}
-
-
-{% include section-img-left.html 
-    title="AJOK staat voor: <br>Alle Jongeren Op Kamp!" 
-    text="AJOK biedt kinderen en jongeren, die om financiële, gedragsmatige of andere problemen 
-       moeilijker kunnen aansluiten bij het regulier jeugdwerk, de mogelijkheid om toch een 
-       fantastische vakantie te beleven. Daar zetten wij, als team AJOK, ons dagelijks voor in."
-    call_to_action="Over ons"
-    url="over-ons"
-    img="assets/images/home/ajok-staat-voor-desktop.jpeg"
-    img_mobile="no"  %}
-
-{% include section-img-right.html
-    title="Onze kampen"
-    text="Samen met een gemotiveerde groep vrijwilligers organiseren we vakantiekampen op maat. 
-       Momenteel bestaat ons aanbod uit vijf zomerkampen, een paaskamp en een herfstkamp. Wil je 
-       meer weten? Volg de link onderaan om hier alles over te lezen."
-    call_to_action="Op Kamp"
-    url="op-kamp" 
-    img="assets/images/home/onze-kampen2-desktop.jpeg"
-    img_mobile="assets/images/home/onze-kampen2-mobile.jpeg" %}
-
-{% include section-img-left.html 
-    title="Onze vrijwilligers" 
-    text="Onze vrijwilligers zijn het kloppende hart van AJOK! 
-          Dankzij hun inzet, niet alleen tijdens de vakanties 
-          maar het hele jaar door, maken we een wereld van verschil.
-          Zin om je handen uit de mouwen te steken en deel uit 
-          te maken van ons enthousiaste team? We verwelkomen je
-          met open armen! Of je nu een talent hebt als kok, verpleger, 
-          monitor of manus, we hebben altijd plek voor jou. Klik op 
-          de knop hieronder en ontdek welke rol het beste bij jou 
-          past. Samen maken we het verschil!"
-    call_to_action="Word Vrijwilliger"
-    url="vrijwilligers"
-    img="assets/images/home/onze-vrijwilligers-desktop.jpeg"
-    img_mobile="assets/images/home/onze-vrijwilligers-mobile.jpeg"  %}
-
-{% include section-img-right.html
-    title="Steun ons"
-    text="Wil je je steentje bijdragen op een andere manier? Dat kan! AJOK steunen is namelijk mogelijk op allerlei manieren. Ontdek ze allemaal door op de volgende link te klikken."
-    call_to_action="Steun"
-    url="steun" 
-    img="assets\images\home\steun-ons.jpeg"
-    img_mobile="assets\images\home\steun-ons-mobile.jpeg" %}
-
-
-
+<!-- DYNAMIC SECTIONS (sorted by order) -->
+{% assign sections = site.data.sections.home | sort: "order" %}
+{% for section in sections %}
+  {% if section.type == "image-row" %}
+    {% include image-row.html %}
+  {% elsif section.type == "text-image-left" %}
+    {% include section-img-left.html 
+        title=section.title
+        text=section.text
+        call_to_action=section.call_to_action
+        url=section.url
+        img=section.img
+        img_mobile=section.img_mobile %}
+  {% elsif section.type == "text-image-right" %}
+    {% include section-img-right.html
+        title=section.title
+        text=section.text
+        call_to_action=section.call_to_action
+        url=section.url
+        img=section.img
+        img_mobile=section.img_mobile %}
+  {% endif %}
+{% endfor %}

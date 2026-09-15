@@ -16,88 +16,76 @@ title: "Vrijwilligers"
 {% assign mailadres = mail_item.description %}
 {% assign mail = "<a href='mailto:" | append: mailadres | append: "'>" | append: mailadres | append: "</a>" %}
 
-{% capture vrijwilligers_intro %}
+<!-- DYNAMIC SECTIONS (sorted by order) -->
+{% assign sections = site.data.sections.volunteers | sort: "order" %}
+{% for section in sections %}
 
-<p>
-    Onze vrijwilligers vormen het kloppende hart van AJOK en maken het mogelijk om onze kampen te 
-    organiseren en de kinderen en jongeren de tijd van hun leven te geven. Ervaring of een 
-    animatordiploma zijn niet vereist. Enthousiasme, een hart voor kinderen en een open blik vinden 
-    we des te belangrijker! Er zijn verschillende functies waarin je je als vrijwilliger kan inzetten 
-    tijdens onze kampen:
-<ul>
+  {% if section.type == "volunteer-functions" %}
+    {% capture vrijwilligers_intro %}
+    {{ site.data.volunteers.intro.text }}
+    {% endcapture %}
+    
+    {% include section.html 
+        title="Vrijwilliger worden?"
+        text=vrijwilligers_intro %}
+
     {% for item in site.data.kampfuncties %}
-        <li><a href="#{{ item.naam }}">{{ item.naam }}</a></li>
+        {% assign type = 'left' %}
+        {% assign remainder = forloop.index | modulo: 2 %}
+        {% if remainder == 0 %}
+            {% assign type = 'right' %}
+        {% endif %}
+
+        {% if type == 'left' %}
+            {% include section-img-left.html
+                title=item.naam
+                text=item.text
+                img=item.img
+                img_mobile=item.img_mobile %}
+        {% else %}
+            {% include section-img-right.html
+                title=item.naam
+                text=item.text
+                img=item.img
+                img_mobile=item.img_mobile %}
+        {% endif %}
     {% endfor %}
-</ul> 
 
-Benieuwd welke functie jou op het lijf geschreven is?  Zin en tijd om je handen uit de mouwen te 
-steken en samen te werken met onze andere enthousiaste vrijwilligers? Lees hieronder dan zeker 
-verder. Samen maken we het verschil! 
-</p>
-{% endcapture %}
-
-{% include section.html 
-    title="Vrijwilliger worden?"
-    text=vrijwilligers_intro %}
-
-
-{% for item in site.data.kampfuncties %}
-
-    {% assign type = 'left' %}
-    {% assign remainder = forloop.index | modulo: 2 %}
-    {% if remainder == 0 %}
-        {% assign type = 'right' %}
+  {% elsif section.type == "volunteer-signup" %}
+    {% capture hoe_text %}
+    {{ site.data.volunteers.signup.text }}
+    </br></br>
+    <!-- Active buttons -->
+    {% if form_pasen %}
+      <a href="{{ form_pasen }}" class="btn btn-success">Meld je aan voor het paaskamp!</a><br>
+    {% endif %}
+    {% if form_zomer %}
+      <a href="{{ form_zomer }}" class="btn btn-success">Meld je aan voor een zomerkamp!</a><br>
+    {% endif %}
+    {% if form_herfst %}
+      <a href="{{ form_herfst }}" class="btn btn-success">Meld je aan voor het herfstkamp!</a><br>
     {% endif %}
 
-    {% if type == 'left' %}
-        {% include section-img-left.html
-            title=item.naam
-            text=item.text
-            img=item.img
-            img_mobile=item.img_mobile %}
-    {% else %}
-        {% include section-img-right.html
-            title=item.naam
-            text=item.text
-            img=item.img
-            img_mobile=item.img_mobile %}
-    {% endif %}
+    <!-- Disabled buttons -->
+    {% unless form_pasen %}
+      <button class="btn btn-secondary" disabled>Inschrijvingen voor Paaskamp nog gesloten</button><br>
+    {% endunless %}
+    {% unless form_zomer %}
+      <button class="btn btn-secondary" disabled>Inschrijvingen voor Zomerkamp nog gesloten</button><br>
+    {% endunless %}
+    {% unless form_herfst %}
+      <button class="btn btn-secondary" disabled>Inschrijvingen voor Herfstkamp nog gesloten</button><br>
+    {% endunless %}
+    {% endcapture %}
 
-  {% endfor %}
+    {% include section.html 
+        title="Hoe schrijf je je in?"
+        text=hoe_text %}
 
+  {% endif %}
 
-{% capture hoe_text %}
-Ben je overtuigd door een van de bovenstaande functies, ben je minimaal 18 jaar oud en kan 
-je niet wachten om samen met ons en de kinderen op kamp te vertrekken? Schrijf je dan snel in 
-via de onderstaande link en maak samen met ons het verschil!
-</br></br>
-Ben je jonger dan 18 jaar en heb je toch interesse? Neem dan even coctact met ons op via 
-{{ mail }}.
-</br></br>
-<!-- Active buttons -->
-{% if form_pasen %}
-  <a href="{{ form_pasen }}" class="btn btn-success">Meld je aan voor het paaskamp!</a><br>
-{% endif %}
-{% if form_zomer %}
-  <a href="{{ form_zomer }}" class="btn btn-success">Meld je aan voor een zomerkamp!</a><br>
-{% endif %}
-{% if form_herfst %}
-  <a href="{{ form_herfst }}" class="btn btn-success">Meld je aan voor het herfstkamp!</a><br>
-{% endif %}
+{% endfor %}
 
-<!-- Disabled buttons -->
-{% unless form_pasen %}
-  <button class="btn btn-secondary" disabled>Inschrijvingen voor Paaskamp nog gesloten</button><br>
-{% endunless %}
-{% unless form_zomer %}
-  <button class="btn btn-secondary" disabled>Inschrijvingen voor Zomerkamp nog gesloten</button><br>
-{% endunless %}
-{% unless form_herfst %}
-  <button class="btn btn-secondary" disabled>Inschrijvingen voor Herfstkamp nog gesloten</button><br>
-{% endunless %}
-
-
-{% endcapture %}
 
 {% include section-img-left.html
     title="Hoe word ik vrijwilliger?"

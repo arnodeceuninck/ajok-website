@@ -1,0 +1,368 @@
+backend:
+  name: github
+  repo: arnodeceuninck/ajok-website
+  branch: main
+  site_domain: ajok-website.netlify.app
+  auth_endpoint: api/auth
+  commit_messages:
+    create: "Create {{collection}} "{{slug}}""
+    update: "Update {{collection}} "{{slug}}""
+    delete: "Delete {{collection}} "{{slug}}""
+    uploadMedia: "[skip ci] Upload "{{path}}""
+    deleteMedia: "[skip ci] Delete "{{path}}""
+
+publish_mode: editorial_workflow
+media_folder: assets/images
+public_folder: /assets/images
+
+i18n:
+  structure: suffix
+  locales: [nl]
+  default_locale: nl
+
+collections:
+  # PAGES
+  - name: pages
+    label: Pagina's
+    folder: _pages
+    create: true
+    format: frontmatter
+    slug: "{{slug}}"
+    fields:
+      - { label: "Layout", name: "layout", widget: "hidden", default: "default" }
+      - { label: "Titel", name: "title", widget: "string" }
+      - { label: "Inhoud", name: "body", widget: "markdown" }
+
+  # HOME PAGE SECTIONS - DYNAMIC
+  - name: home_intro
+    label: HomePage - Introductie
+    files:
+      - name: home_intro
+        label: Hoofdintro
+        file: _data/home/intro.yml
+        fields:
+          - { label: "Titel", name: "title", widget: "string", default: "Alle Jongeren Op Kamp" }
+          - { label: "Beschrijving", name: "description", widget: "text", default: "Elk kind heeft recht op vakantie en ontspanning. Helaas kunnen veel kinderen niet van een zorgeloze vakantie genieten. AJOK neemt als vzw grote stappen om hier verandering in te brengen!" }
+
+  - name: home_sections_dynamic
+    label: HomePage - Secties (Dynamisch)
+    folder: _data/sections/home
+    create: true
+    format: frontmatter
+    slug: "{{order}}-{{slug}}"
+    fields:
+      - { label: "Volgorde", name: "order", widget: "number", min: 1, max: 999 }
+      - { label: "Sectie Type", name: "type", widget: "select", options: ["image-row", "text-image-left", "text-image-right"] }
+      - { label: "Titel (optioneel)", name: "title", widget: "string", required: false }
+      - { label: "Tekst/Beschrijving (optioneel)", name: "text", widget: "markdown", required: false }
+      - { label: "Call to Action (optioneel)", name: "call_to_action", widget: "string", required: false }
+      - { label: "Link (optioneel)", name: "url", widget: "string", required: false }
+      - { label: "Desktop Afbeelding (optioneel)", name: "img", widget: "image", required: false }
+      - { label: "Mobiel Afbeelding (optioneel)", name: "img_mobile", widget: "image", required: false }
+
+  # ABOUT PAGE - DYNAMIC SECTIONS
+  - name: about_sections_dynamic
+    label: Over Ons Pagina - Secties (Dynamisch)
+    folder: _data/sections/about
+    create: true
+    format: frontmatter
+    slug: "{{order}}-{{slug}}"
+    fields:
+      - { label: "Volgorde", name: "order", widget: "number", min: 1, max: 999 }
+      - { label: "Sectie Type", name: "type", widget: "select", options: ["text-image-left", "text-image-right", "rvb-cards"] }
+      - { label: "Titel (optioneel)", name: "title", widget: "string", required: false }
+      - { label: "Tekst/Beschrijving (optioneel)", name: "text", widget: "markdown", required: false }
+      - { label: "Call to Action (optioneel)", name: "call_to_action", widget: "string", required: false }
+      - { label: "Link (optioneel)", name: "url", widget: "string", required: false }
+      - { label: "Desktop Afbeelding (optioneel)", name: "img", widget: "image", required: false }
+      - { label: "Mobiel Afbeelding (optioneel)", name: "img_mobile", widget: "image", required: false }
+
+  # CAMPS PAGE - DYNAMIC SECTIONS
+  - name: camps_sections_dynamic
+    label: Kampen Pagina - Secties (Dynamisch)
+    folder: _data/sections/camps
+    create: true
+    format: frontmatter
+    slug: "{{order}}-{{slug}}"
+    fields:
+      - { label: "Volgorde", name: "order", widget: "number", min: 1, max: 999 }
+      - { label: "Sectie Type", name: "type", widget: "select", options: ["image-row", "camps-list", "camps-details", "locations-list"] }
+      - { label: "Afbeelding type (voor image-row)", name: "img_type", widget: "select", options: ["clouds", "hills"], required: false }
+
+  # VOLUNTEERS PAGE - DYNAMIC SECTIONS
+  - name: volunteers_sections_dynamic
+    label: Vrijwilligers Pagina - Secties (Dynamisch)
+    folder: _data/sections/volunteers
+    create: true
+    format: frontmatter
+    slug: "{{order}}-{{slug}}"
+    fields:
+      - { label: "Volgorde", name: "order", widget: "number", min: 1, max: 999 }
+      - { label: "Sectie Type", name: "type", widget: "select", options: ["volunteer-functions", "volunteer-signup"] }
+
+  # CONTACT PAGE - DYNAMIC SECTIONS
+  - name: contact_sections_dynamic
+    label: Contact Pagina - Secties (Dynamisch)
+    folder: _data/sections/contact
+    create: true
+    format: frontmatter
+    slug: "{{order}}-{{slug}}"
+    fields:
+      - { label: "Volgorde", name: "order", widget: "number", min: 1, max: 999 }
+      - { label: "Sectie Type", name: "type", widget: "select", options: ["contact-main", "contact-socials", "contact-legal"] }
+
+  # SUPPORT PAGE - DYNAMIC SECTIONS
+  - name: support_sections_dynamic
+    label: Steun Ons Pagina - Secties (Dynamisch)
+    folder: _data/sections/support
+    create: true
+    format: frontmatter
+    slug: "{{order}}-{{slug}}"
+    fields:
+      - { label: "Volgorde", name: "order", widget: "number", min: 1, max: 999 }
+      - { label: "Sectie Type", name: "type", widget: "select", options: ["image-row", "text-image-left", "text-image-right"] }
+      - { label: "Titel (optioneel)", name: "title", widget: "string", required: false }
+      - { label: "Tekst/Beschrijving (optioneel)", name: "text", widget: "markdown", required: false }
+      - { label: "Call to Action (optioneel)", name: "call_to_action", widget: "string", required: false }
+      - { label: "Link (optioneel)", name: "url", widget: "string", required: false }
+      - { label: "Desktop Afbeelding (optioneel)", name: "img", widget: "image", required: false }
+      - { label: "Mobiel Afbeelding (optioneel)", name: "img_mobile", widget: "image", required: false }
+
+  # DATA COLLECTIONS
+  - name: navigation
+    label: Navigatie
+    folder: _data
+    files:
+      - name: navigation
+        label: Navigatiemenu
+        file: _data/navigation.yml
+        fields:
+          - { label: Navigatieitems, name: items, widget: list, fields: [
+              { label: "Naam", name: "name", widget: "string" },
+              { label: "Link", name: "link", widget: "string" }
+            ]}
+
+  - name: camps
+    label: Kampen
+    folder: _data
+    files:
+      - name: camps
+        label: Alle Kampen
+        file: _data/kampen.yml
+        description: Beheer alle vakantiekampen
+        fields:
+          - {
+              label: "Kampen",
+              name: "camps_list",
+              widget: "list",
+              fields: [
+                { label: "Naam", name: "name", widget: "string" },
+                { label: "Beschrijving", name: "description", widget: "markdown" },
+                { label: "Datum (voor jongeren)", name: "datum", widget: "string", hint: "bv. 14 juli - 20 juli" },
+                { label: "Datum (voor vrijwilligers)", name: "datum_vrijwilligers", widget: "string", hint: "bv. 12 juli - 20 juli", required: false },
+                { label: "Prijs thuiswonend (€)", name: "prijs_thuiswonend", widget: "number" },
+                { label: "Prijs niet-thuiswonend (€)", name: "prijs_niet_thuiswonend", widget: "number" },
+                { label: "Leeftijd", name: "leeftijd", widget: "string", hint: "bv. Kinderen tussen 6 en 8 jaar oud" },
+                { label: "Leeftijd (kort)", name: "leeftijd_kort", widget: "string", hint: "bv. 6-8 jaar" },
+                { label: "Afbeelding", name: "img", widget: "image", required: false },
+                { label: "Mobiel Afbeelding", name: "img_mobile", widget: "image", required: false },
+                { label: "Locatie ID", name: "locatie", widget: "string", hint: "bv. laiterie" },
+                { label: "Inschrijving formulier ID", name: "form_id", widget: "string", required: false },
+                { label: "Geannuleerd?", name: "cancelled", widget: "boolean", default: false, required: false }
+              ]
+            }
+
+  - name: locations
+    label: Locaties
+    folder: _data
+    files:
+      - name: locations
+        label: Kamplocaties
+        file: _data/locaties.yml
+        fields:
+          - {
+              label: "Locaties",
+              name: "locations_list",
+              widget: "list",
+              fields: [
+                { label: "Naam", name: "name", widget: "string" },
+                { label: "Beschrijving", name: "description", widget: "markdown" },
+                { label: "Afbeelding", name: "img", widget: "image", required: false },
+                { label: "Mobiel Afbeelding", name: "img_mobile", widget: "image", required: false }
+              ]
+            }
+
+  - name: contact_info
+    label: Contactgegevens
+    folder: _data
+    files:
+      - name: contact
+        label: Contactgegevens
+        file: _data/contact.yml
+        fields:
+          - {
+              label: "Contactgegevens",
+              name: "contact_list",
+              widget: "list",
+              fields: [
+                { label: "Naam", name: "name", widget: "string" },
+                { label: "ID", name: "id", widget: "string", hint: "bv. mail, facebook, instagram" },
+                { label: "Beschrijving", name: "description", widget: "string", hint: "email adres, social link, etc" },
+                { label: "Kleur (optioneel)", name: "color", widget: "color", required: false },
+                { label: "Icon (optioneel)", name: "icon", widget: "string", required: false, hint: "FontAwesome class bv. fab fa-facebook-f" },
+                { label: "Link", name: "link", widget: "string", required: false },
+                { label: "In footer?", name: "footer", widget: "boolean", default: false },
+                { label: "Categorie", name: "category", widget: "select", options: ["main", "socials", "legal"] }
+              ]
+            }
+
+  - name: forms
+    label: Inschrijvingsformulieren
+    folder: _data
+    files:
+      - name: forms
+        label: Formulieren
+        file: _data/forms.yml
+        fields:
+          - {
+              label: "Formulieren",
+              name: "forms_list",
+              widget: "list",
+              fields: [
+                { label: "Naam", name: "name", widget: "string" },
+                { label: "ID", name: "id", widget: "string", hint: "bv. kamp_zomer, vrijwilligers_pasen" },
+                { label: "Link", name: "link", widget: "string", hint: "Google Forms link of leeg als gesloten" }
+              ]
+            }
+
+  - name: volunteer_functions
+    label: Vrijwilligerfuncties
+    folder: _data
+    files:
+      - name: kampfuncties
+        label: Kampfuncties
+        file: _data/kampfuncties.yml
+        fields:
+          - {
+              label: "Functies",
+              name: "functions_list",
+              widget: "list",
+              fields: [
+                { label: "Naam", name: "naam", widget: "string" },
+                { label: "Beschrijving", name: "text", widget: "markdown" },
+                { label: "Afbeelding", name: "img", widget: "image" },
+                { label: "Mobiel Afbeelding", name: "img_mobile", widget: "image" }
+              ]
+            }
+
+  - name: rvb_members
+    label: Raad van Bestuur Leden
+    folder: _data
+    files:
+      - name: rvb
+        label: Leden
+        file: _data/rvb.yml
+        fields:
+          - {
+              label: "Leden",
+              name: "members_list",
+              widget: "list",
+              fields: [
+                { label: "Naam", name: "naam", widget: "string" },
+                { label: "Functie", name: "functie", widget: "string" },
+                { label: "Afbeelding", name: "img", widget: "image", required: false }
+              ]
+            }
+
+  - name: sponsors
+    label: Sponsors
+    folder: _data
+    files:
+      - name: sponsors
+        label: Sponsors per Jaar
+        file: _data/sponsors_bedrijven.yml
+        fields:
+          - {
+              label: "Sponsorjaren",
+              name: "sponsors_list",
+              widget: "list",
+              fields: [
+                { label: "Werkjaar", name: "name", widget: "string", hint: "bv. Werkjaar 2022-2023" },
+                {
+                  label: "Sponsors",
+                  name: "sponsors",
+                  widget: "list",
+                  fields: [
+                    { label: "Beschrijving", name: "description", widget: "markdown" },
+                    { label: "Logo/Afbeelding", name: "img", widget: "image" }
+                  ]
+                }
+              ]
+            }
+
+  - name: testimonials
+    label: Getuigenissen Vrijwilligers
+    folder: _data
+    files:
+      - name: testimonials
+        label: Getuigenissen
+        file: _data/vrijwilliger_getuigenissen.yml
+        fields:
+          - {
+              label: "Getuigenissen",
+              name: "testimonials_list",
+              widget: "list",
+              fields: [
+                { label: "Naam", name: "naam", widget: "string" },
+                { label: "Functie", name: "functie", widget: "string" },
+                { label: "Getuigenis", name: "text", widget: "markdown" },
+                { label: "Afbeelding", name: "img", widget: "image", required: false }
+              ]
+            }
+
+  - name: peters_meters
+    label: Peters en Meters
+    folder: _data
+    files:
+      - name: peters_meters
+        label: Lijst
+        file: _data/peter_meters.yml
+        fields:
+          - {
+              label: "Peters en Meters",
+              name: "peters_meters_list",
+              widget: "list",
+              fields: [
+                { label: "Naam", name: "naam", widget: "string" },
+                { label: "Functie/Rol", name: "functie", widget: "string", required: false }
+              ]
+            }
+
+  - name: whatsapp_groups
+    label: WhatsApp Groepen
+    folder: _data
+    files:
+      - name: whatsapp
+        label: Links
+        file: _data/whatsapp.yml
+        fields:
+          - {
+              label: "WhatsApp Groepen",
+              name: "whatsapp_list",
+              widget: "list",
+              fields: [
+                { label: "Naam", name: "name", widget: "string" },
+                { label: "Link", name: "link", widget: "string" }
+              ]
+            }
+
+  - name: forms_content
+    label: Formulier Inschrijven Pagina's
+    folder: _pages
+    create: true
+    slug: "{{slug}}"
+    format: frontmatter
+    fields:
+      - { label: "Layout", name: "layout", widget: "hidden", default: "default" }
+      - { label: "Titel", name: "title", widget: "string" }
+      - { label: "Inhoud", name: "body", widget: "markdown" }

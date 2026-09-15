@@ -10,121 +10,42 @@ title: "Steun"
 {% assign mailadres = mail_item.description %}
 {% assign mail = "<a href='mailto:" | append: mailadres | append: "'>" | append: mailadres | append: "</a>" %}
 
-
 {% include section.html
-title="Steun ons"
-text="Wil jij ons helpen de kinderen een fijn kamp te bezorgen? Je kan op verschillende manieren je steentje bijdragen."
+title=site.data.support.intro.title
+text=site.data.support.intro.text
  %}
 
+<!-- DYNAMIC SECTIONS (sorted by order) -->
+{% assign sections = site.data.sections.support | sort: "order" %}
+{% for section in sections %}
 
-<div class="bg-orange pt-1 pb-1"> 
-    {% include image-row.html %}
-</div>
+  {% if section.type == "image-row" %}
+    <div class="bg-orange pt-1 pb-1"> 
+        {% include image-row.html %}
+    </div>
 
-{% include section-img-right.html
-    title="Trooper"
-    text="Als je online koopt, kan je ons steunen zonder dat je zelf meer moet betalen. Als je winkelt via Trooper, schenk je een klein bedrag aan ons - en dat zonder extra kosten! 
-        Hieronder leggen we even uit hoe je dat kan doen:
-    
-        <ol>
-            <li>Ga naar <a href='https://www.trooper.be/nl/trooperverenigingen/ajokvzw/'>www.trooper.be</a> of klik op de knop
-                onderaan</li>
-            <li>Zoek naar onze vereniging: AJOK vzw</li>
-            <li>Kies de webshop waar je je inkopen wil doen</li>
-            <li>Voor iedere aankoop die je doet, gaat er nu een deel van het bedrag naar AJOK vzw</li>
-        </ol>"
-    call_to_action="Trooper"
-    url="https://www.trooper.be/nl/trooperverenigingen/ajokvzw/"
-    img="assets/images/steun-ons/trooper.jpeg" %}
+  {% elsif section.type == "text-image-right" %}
+    {% include section-img-right.html
+        title=section.title
+        text=section.text
+        call_to_action=section.call_to_action
+        url=section.url
+        img=section.img
+        img_mobile=section.img_mobile %}
 
-{% capture doe_een_gift_text %}
-Je kan ons ook steunen door een gift te doen. Geef jouw gewenste bedrag en stort het op ons 
-rekeningnummer {{ rekeningnummer }}. Vermeld als mededeling <i>'gift - naam'</i>.
-</br></br>
-Heb je dit jaar 40 euro of meer aan AJOK gegeven? AJOK is erkend om fiscale attesten uit te reiken 
-voor giften vanaf 40 euro, waarmee je recht hebt op een belastingvermindering van 45%. Daarvoor 
-hebben we enkele gegevens van je nodig en moet je ons dus zeker even mailen via {{ mail }} met 
-als onderwerp <i>'aanvraag fiscaal attest'</i>.
-</br></br>
-Al jouw geld gaat naar blije gezichten op kamp!
-</br></br>
-Natuurlijk hebben we niet enkel geld nodig. Je kan ook altijd sponsoren in natura. Dingen die we 
-kunnen gebruiken op kamp zijn bv. droge voeding, drinken, kampeermateriaal, spelmateriaal,... 
-Gelieve hiervoor contact op te nemen via {{ mail }}. 
-{% endcapture %}
+  {% elsif section.type == "text-image-left" %}
+    {% include section-img-left.html
+        title=section.title
+        text=section.text
+        call_to_action=section.call_to_action
+        url=section.url
+        img=section.img
+        img_mobile=section.img_mobile %}
 
-{% include section-img-left.html
-    title="Doe een gift"
-    id="doe-een-gift"
-    text=doe_een_gift_text
-    img="assets\images\steun-ons\doe-een-gift-desktop.jpeg"
-    img_mobile="assets\images\steun-ons\doe-een-gift-mobile.jpeg" %}
+  {% endif %}
 
-    
-{% capture peter_meter_text %}
-Je kan AJOK ook steunen door peter of meter te worden. Door 67 euro te steunen, maak je het 
-financieel mogelijk voor AJOK om één kind mee op kamp te nemen. In ruil daarvoor krijg je een 
-certificaat en een vermelding op onze website (indien gewenst). 
+{% endfor %}
 
-<h4>Hoe doe je dit?</h4>
-Maak 67 euro over aan AJOK vzw via ons rekeningnummer {{ rekeningnummer }}. Vermeld als mededeling 
-<i>'peter/meter - naam'</i>. Stuur ons vervolgens een mail via {{ mail }} met als onderwerp 
-<i>'peter-/meterschap'</i> zodat we je een certificaat kunnen bezorgen.
-<br><br>
-Ook hiervoor kan je een fiscaal attest ontvangen (zie uitleg bij <a href="#doe-een-gift">'Doe een gift'</a>).
-<br><br>
-Al jouw geld gaat naar blije gezichten op kamp! Alvast heel erg bedankt daarvoor!
-
-{% endcapture %}
-
-{% include section-img-right.html
-    title="Word peter of meter"
-    text=peter_meter_text
-    img="assets/images/steun-ons/peter-meter-original.jpg" %}
-
-
-{% capture word_sponsor_text %}
-Wil je AJOK sponsoren met een actie of via je vereniging of onderneming? Neem dan contact met ons op via {{ mail }}. 
-{% endcapture %}
-
-{% include section-img-left.html
-    title="Word sponsor"
-    text=word_sponsor_text
-    img="assets/images/steun-ons/word-sponsor.jpeg"
-    img_mobile="assets/images/steun-ons/word-sponsor-mobile.jpeg" %}
-
-
-
-
-{% capture peter_meter_text %}
-Dankzij de steun van onze meters en peters kunnen heel wat jongeren dit jaar weer een geweldig kamp beleven!
-<br><br>
-    {% for item in site.data.peter_meters %}
-        {{ item.naam }}{% if forloop.last == false %} &bull;{% endif %}
-    {% endfor %}
-{% endcapture %}
-
-{% include section-img-right.html
-        title="Dank je wel, meters en peters"
-        text=peter_meter_text
-        id="dankje-peter-meter"
-        img="assets/images/kampen/pico.webp"
-        img_mobile="assets/images/kampen/pico_mobile.webp" %}
-
-
-{% capture sponsor_bedrijven_text %}
-<ul>
-    {% for item in site.data.sponsors_bedrijven %}
-    <li>{{ item.naam }}</li>
-    {% endfor %}
-</ul>
-{% endcapture %}
-
-{% include section-img-left.html
-    title="Dank je wel, bedrijven en organisaties"
-    text=sponsor_bedrijven_text
-    img="assets/images/steun-ons/bedrijven-original.jpeg"
-    img_mobile="assets/images/steun-ons/bedrijven-mobile.jpeg" %}
 
 
 

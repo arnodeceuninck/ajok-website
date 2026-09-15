@@ -1,0 +1,10 @@
+---
+order: 5
+type: text-image-right
+title: Steun ons
+text: "Wil je je steentje bijdragen op een andere manier? Dat kan! AJOK steunen is namelijk mogelijk op allerlei manieren. Ontdek ze allemaal door op de volgende link te klikken."
+call_to_action: Steun
+url: steun
+img: assets/images/home/steun-ons.jpeg
+img_mobile: assets/images/home/steun-ons-mobile.jpeg
+---

@@ -4,7 +4,58 @@
 
 [Klik hier](https://www.youtube.com/watch?v=QJXtWoqfDSU&list=PLWCUHLJwOfQaGwZz7ynJWnXey5gZwPfw5&ab_channel=ArnoDeceuninck) voor een playlist met de videos die hieronder vermeld staan.
 
-### Github Account
+### CMS Interface (Nieuw - Gemakkelijker!)
+
+**Voor raadsleden die de website willen beheren:**
+
+De website heeft nu een gebruiksvriendelijke CMS interface! Je kunt alle tekstinhoud, afbeeldingen, data bewerken zonder code te hoeven schrijven.
+
+#### Hoe te gebruiken:
+
+1. Ga naar `https://your-domain.com/admin` (vervang your-domain met je website)
+2. Log in met je GitHub account
+3. Je ziet alle bewerkbare content georganiseerd in categorieën:
+   - **Pagina's**: Tekst en afbeeldingen op homepagina, over-ons, etc.
+   - **Kampen**: Kampgegevens, prijzen, data
+   - **Vrijwilligers**: Vrijwilligersfuncties, contactinfo
+   - **Contact**: Contactgegevens, socials
+   - En veel meer...
+4. Klik op een item om te bewerken
+5. Klik "Publish" om je wijzigingen live te zetten
+
+#### Setup van Decap CMS (Voor beheerder):
+
+Als dit je eerste keer is dat je Decap CMS instelt, volg deze stappen:
+
+1. **Zorg dat deze bestanden in het project zitten** (ze staan al in `/admin/`):
+   - `/admin/index.html` - De CMS interface
+   - `/admin/config.yml` - CMS configuratie
+
+2. **Update de config.yml backend instellingen:**
+   - Open `/admin/config.yml`
+   - Vervang `username/ajok-website` met je GitHub username en repo naam
+   - Vervang `ajok-website.netlify.app` met je eigen domein
+
+3. **Kies een authenticatie methode:**
+   
+   **Optie A: GitHub OAuth (aanbevolen)**
+   - Ga naar GitHub Settings > Developer settings > OAuth Apps > New OAuth App
+   - Application name: AJOK Website
+   - Homepage URL: `https://your-domain.com`
+   - Authorization callback URL: `https://api.netlify.com/auth/done`
+   - Kopieer je Client ID en Client Secret
+   - Voeg deze toe aan je Netlify environment variables (zie optie B)
+
+   **Optie B: Netlify (simpelste)**
+   - Deploy je site naar Netlify (gratis)
+   - Netlify zal automatisch GitHub OAuth instellen
+   - Je CMS zal werken op `https://your-netlify-domain.com/admin`
+
+4. **Voeg gebruikers toe:**
+   - Voeg raadsleden toe als collaborators op je GitHub repo
+   - Ze kunnen dan gebruikmakend van hun GitHub account inloggen op /admin
+
+### GitHub Account
 Om de website te kunnen aanpassen, moet je [een account op GitHub aanmaken](https://github.com/signup). 
 
 [Video: Github Account Aaanmaken](https://youtu.be/QJXtWoqfDSU)
@@ -15,8 +66,9 @@ Eens dit gebeurd is, kan je je gebruikersnaam en email doorgeven, zodat je toege
 
 _Note: bij deze videos had ik nog niet door dat mijn microfoon uitstond, maar ik ben ervan overtuigd dat je deze stappen kan zonder uitleg_
 
-### Waar aanpassingen maken
-Dingen die typisch vaak veranderen, staan in de `_data` folder. 
+### Traditionele methode: Direct bewerken via GitHub website
+
+Je kunt ook nog steeds rechtstreeks bestanden bewerken via GitHub website zonder CMS te gebruiken: 
 Bv:
 - `_data/kampen.yml` om info over kampen te updaten (datum, beschrijving...)
 - `_data/peter_meters.yml` om peters en meters te updaten

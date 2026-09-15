@@ -3,35 +3,37 @@ layout: default
 title: "Contact"
 ---
 
-{% capture main_contact_items %}
-Contacteer ons liefst via mail, want telefonisch zijn we niet altijd bereikbaar. We doen ons best om
-je mail zo snel mogelijk te beantwoorden. <br><br>
-{% include contact-items.html category="main" %}
-{% endcapture %}
-
-
-{% capture socials %}
-{% include contact-items.html category="socials" %}
-{% endcapture %}
-
-{% capture legal %}
-{% include contact-items.html category="legal" %}
-{% endcapture %}
-
-{% include section-img-right.html
-    title="Heb je een vraag?"
-    text=main_contact_items
-    img="assets/images/over-ons/organisatiestructuur-desktop.webp"
-    img_mobile="assets/images/over-ons/organisatiestructuur-mobile.webp" %}
-
-{% include section-img-left.html
-    title="Onze socials"
-    text=socials
-    img="assets\images\contact\socials.jpeg"
-    img_mobile="assets\images\contact\socials-mobile.jpeg" %}
-
-{% include section-img-right.html
-    title="Legale info"
-    text=legal    
-    img="assets\images\vrijwilligers\ellen.jpeg"
-    img_mobile="no" %}
+<!-- DYNAMIC SECTIONS (sorted by order) -->
+{% assign sections = site.data.sections.contact | sort: "order" %}
+{% for section in sections %}
+  {% if section.type == "contact-main" %}
+    {% capture main_contact_items %}
+    {{ site.data.contact.main_section.intro_text }}
+    <br><br>
+    {% include contact-items.html category="main" %}
+    {% endcapture %}
+    {% include section-img-right.html
+        title=site.data.contact.main_section.title
+        text=main_contact_items
+        img=site.data.contact.main_section.img
+        img_mobile=site.data.contact.main_section.img_mobile %}
+  {% elsif section.type == "contact-socials" %}
+    {% capture socials %}
+    {% include contact-items.html category="socials" %}
+    {% endcapture %}
+    {% include section-img-left.html
+        title=site.data.contact.socials_section.title
+        text=socials
+        img=site.data.contact.socials_section.img
+        img_mobile=site.data.contact.socials_section.img_mobile %}
+  {% elsif section.type == "contact-legal" %}
+    {% capture legal %}
+    {% include contact-items.html category="legal" %}
+    {% endcapture %}
+    {% include section-img-right.html
+        title=site.data.contact.legal_section.title
+        text=legal    
+        img=site.data.contact.legal_section.img
+        img_mobile=site.data.contact.legal_section.img_mobile %}
+  {% endif %}
+{% endfor %}

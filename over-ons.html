@@ -7,79 +7,48 @@ title: "Over ons"
 {% assign mailadres = mail_item.description %}
 {% assign mail = "<a href='mailto:" | append: mailadres | append: "'>" | append: mailadres | append: "</a>" %}
 
+<!-- DYNAMIC SECTIONS (sorted by order) -->
+{% assign sections = site.data.sections.about | sort: "order" %}
+{% for section in sections %}
+  {% if section.type == "text-image-left" %}
+    {% include section-img-left.html 
+        title=section.title
+        text=section.text
+        call_to_action=section.call_to_action
+        url=section.url
+        img=section.img
+        img_mobile=section.img_mobile %}
+  {% elsif section.type == "text-image-right" %}
+    {% include section-img-right.html
+        title=section.title
+        text=section.text
+        call_to_action=section.call_to_action
+        url=section.url
+        img=section.img
+        img_mobile=section.img_mobile %}
+  {% elsif section.type == "rvb-cards" %}
+    {% capture rvb_text %}{{ section.text }}{% endcapture %}
+    <div class="p-5 scroll-animation" id="Vrijwilligerfuncties">
+      <div class="row justify-content-center">
+          {% for item in site.data.rvb %}
+          {% assign image = item.img | default: "assets/images/rvb/unknown.jpg" %}
+          {% include image-card.html 
+              label=item.naam
+              image=image
+              sublabel=item.functie %}
+            {% endfor %}
+      </div>
+    </div>
+    <div class="bg-primary pt-1 pb-1">
+    {% include section.html 
+        title=section.title
+        text=rvb_text
+        hide_artifacts=true
+    %}
+    </div>
+  {% endif %}
+{% endfor %}
 
- {% include section-img-right.html
-    title="Onze Missie"
-    text="Bij AJOK bieden we kinderen en jongeren uit maatschappelijk kwetsbare situaties een toegankelijke en waardevolle vakantie. We creëren een veilige en positieve omgeving waarin ze kunnen groeien door samen te ontdekken en te beleven.
-    <br><br>
-    Veiligheid en welkom zijn staan centraal. Dit geeft kinderen de ruimte om te groeien. We werken met heldere afspraken en een duidelijke structuur. Daarnaast moedigen we jongeren aan om initiatief te nemen, ideeën te delen en creatief te zijn.
-    "
-    img="assets/images/over-ons/missie-desktop.jpeg"
-    img_mobile="assets/images/over-ons/missie-mobile.jpeg" %}
-
-
-{% include section-img-left.html
-    title="Onze Visie"
-    text="AJOK zet zich in om kinderen en jongeren in maatschappelijk kwetsbare 
-        situaties welkom te heten op onze vakantiekampen. We trachten onze kampen 
-        zo toegankelijk mogelijk te maken, door ze financieel, inhoudelijk en 
-        organisatorisch af te stemmen op hun specifieke noden en behoeften. "
-    img="assets/images/over-ons/visie-desktop.webp"
-    img_mobile="assets/images/over-ons/visie-mobile.webp" %}
-
-
-{% include section-img-right.html
-    title="Onze Vrijwilligers"
-    text="Zonder vrijwilligers, geen AJOK! Wij draaien 100% op vrijwilligers 
-      en daar zijn we enorm trots op. Jaarlijks rekenen wij op zo'n 50 enthousiaste 
-      vrijwilligers die zich met hart en ziel inzetten voor onze kampen. Of het nu 
-      gaat om verpleging op kamp, helpen in de keuken of het animeren van de kinderen - 
-      we hebben altijd handen nodig. 
-    Zin om ook de handen uit de mouwen te steken? Kijk dan snel bij het tabje 'Word vrijwilliger’!
-    "
-    img="assets\images\over-ons\onze-vrijwilligers-desktop.jpeg"
-    img_mobile="assets\images\over-ons\onze-vrijwilligers-mobile.jpeg"
-    call_to_action="Word Vrijwilliger"
-    url="vrijwilligers" %}
-
-{% capture rvb_text %}
-Onze vzw draait het hele jaar door dankzij de inzet van onze fantastische raad van bestuur! Deze 
-groep gemotiveerde vrijwilligers speelt een cruciale rol in de groei en het succes van AJOK. 
-Samen zorgen we ervoor dat onze missie en visie werkelijkheid worden. <br><br>
-Heb jij een passie voor onze organisatie en wil je meehelpen om AJOK naar een hoger niveau te tillen? 
-Stuur een e-mail naar {{ mail }} en sluit je aan bij onze raad van bestuur!
-
-<div class="p-5 scroll-animation" id="Vrijwilligerfuncties">
-        <div class="row justify-content-center">
-            {% for item in site.data.rvb %}
-            {% assign image = item.img | default: "assets/images/rvb/unknown.jpg" %}
-            {% include image-card.html 
-                label=item.naam
-                image=image
-                sublabel=item.functie %}
-              {% endfor %}
-        </div>
-</div>
-{% endcapture %}
-
-<div class="bg-primary pt-1 pb-1">
-{% include section.html 
-    title="Onze Raad van Bestuur"
-    text=rvb_text
-    hide_artifacts=true
-%}
-</div>
-
-
-
-{% include section-img-right.html
-    title="Erkenning"
-    text="Sinds 2010 wordt AJOK door het Steunpunt Vakantieparticipatie officieel erkend als 
-        sociaal-toeristische vereniging in het kader van Toerisme voor allen. Het erkennigsdocument 
-        vind je <a href='assets/docs/erkenning.jpg'>hier</a>.<br><br>
-
-        De erkenning blijft geldig zolang aan deze erkenningsvoorwaarden en aan de bepalingen van 
-        het decreet en de uitvoeringsbesluiten ervan wordt voldaan."
     img="assets/images/img1.jpg" %}
 
 
