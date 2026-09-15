@@ -16,7 +16,7 @@ media_folder: assets/images
 public_folder: /assets/images
 
 i18n:
-  structure: suffix
+  structure: single_file
   locales: [nl]
   default_locale: nl
 
