@@ -20,8 +20,9 @@ title: "Alle Jongeren Op Kamp"
 </div>
 
 <!-- DYNAMIC SECTIONS (sorted by order) -->
-{% assign sections = site.data.sections.home | sort: "order" %}
-{% for section in sections %}
+{% assign section_keys = site.data.sections.home | keys | sort_natural %}
+{% for key in section_keys %}
+  {% assign section = site.data.sections.home[key] %}
   {% if section.type == "image-row" %}
     {% include image-row.html %}
   {% elsif section.type == "text-image-left" %}

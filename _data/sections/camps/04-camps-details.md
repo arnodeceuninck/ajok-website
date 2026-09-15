@@ -1,4 +1,0 @@
----
-order: 4
-type: camps-details
----

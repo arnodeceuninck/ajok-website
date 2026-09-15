@@ -1,8 +1,0 @@
----
-order: 5
-type: text-image-right
-title: Erkenning
-text: "Sinds 2010 wordt AJOK door het Steunpunt Vakantieparticipatie officieel erkend als sociaal-toeristische vereniging in het kader van Toerisme voor allen. Het erkennigsdocument vind je [hier](assets/docs/erkenning.jpg).\n\nDe erkenning blijft geldig zolang aan deze erkenningsvoorwaarden en aan de bepalingen van het decreet en de uitvoeringsbesluiten ervan wordt voldaan."
-img: assets/images/over-ons/erkenning-desktop.jpeg
-img_mobile: assets/images/over-ons/erkenning-mobile.jpeg
----

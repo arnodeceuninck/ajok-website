@@ -1,4 +1,3 @@
----
 order: 5
 type: text-image-right
 title: Steun ons
@@ -7,4 +6,3 @@ call_to_action: Steun
 url: steun
 img: assets/images/home/steun-ons.jpeg
 img_mobile: assets/images/home/steun-ons-mobile.jpeg
----

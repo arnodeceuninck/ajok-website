@@ -1,8 +1,0 @@
----
-order: 5
-type: text-image-right
-title: Word sponsor
-text: "Wil je AJOK sponsoren met een actie of via je vereniging of onderneming? Neem dan contact met ons op!"
-img: assets/images/steun-ons/word-sponsor.jpeg
-img_mobile: assets/images/steun-ons/word-sponsor-mobile.jpeg
----

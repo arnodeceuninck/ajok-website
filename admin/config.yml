@@ -48,7 +48,8 @@ collections:
     label: HomePage - Secties (Dynamisch)
     folder: _data/sections/home
     create: true
-    format: frontmatter
+    format: yaml
+    extension: yml
     slug: "{{order}}-{{slug}}"
     fields:
       - { label: "Volgorde", name: "order", widget: "number", min: 1, max: 999 }
@@ -65,7 +66,8 @@ collections:
     label: Over Ons Pagina - Secties (Dynamisch)
     folder: _data/sections/about
     create: true
-    format: frontmatter
+    format: yaml
+    extension: yml
     slug: "{{order}}-{{slug}}"
     fields:
       - { label: "Volgorde", name: "order", widget: "number", min: 1, max: 999 }
@@ -82,7 +84,8 @@ collections:
     label: Kampen Pagina - Secties (Dynamisch)
     folder: _data/sections/camps
     create: true
-    format: frontmatter
+    format: yaml
+    extension: yml
     slug: "{{order}}-{{slug}}"
     fields:
       - { label: "Volgorde", name: "order", widget: "number", min: 1, max: 999 }
@@ -94,7 +97,8 @@ collections:
     label: Vrijwilligers Pagina - Secties (Dynamisch)
     folder: _data/sections/volunteers
     create: true
-    format: frontmatter
+    format: yaml
+    extension: yml
     slug: "{{order}}-{{slug}}"
     fields:
       - { label: "Volgorde", name: "order", widget: "number", min: 1, max: 999 }
@@ -105,7 +109,8 @@ collections:
     label: Contact Pagina - Secties (Dynamisch)
     folder: _data/sections/contact
     create: true
-    format: frontmatter
+    format: yaml
+    extension: yml
     slug: "{{order}}-{{slug}}"
     fields:
       - { label: "Volgorde", name: "order", widget: "number", min: 1, max: 999 }
@@ -116,7 +121,8 @@ collections:
     label: Steun Ons Pagina - Secties (Dynamisch)
     folder: _data/sections/support
     create: true
-    format: frontmatter
+    format: yaml
+    extension: yml
     slug: "{{order}}-{{slug}}"
     fields:
       - { label: "Volgorde", name: "order", widget: "number", min: 1, max: 999 }

@@ -8,8 +8,9 @@ title: "Over ons"
 {% assign mail = "<a href='mailto:" | append: mailadres | append: "'>" | append: mailadres | append: "</a>" %}
 
 <!-- DYNAMIC SECTIONS (sorted by order) -->
-{% assign sections = site.data.sections.about | sort: "order" %}
-{% for section in sections %}
+{% assign section_keys = site.data.sections.about | keys | sort_natural %}
+{% for key in section_keys %}
+  {% assign section = site.data.sections.about[key] %}
   {% if section.type == "text-image-left" %}
     {% include section-img-left.html 
         title=section.title

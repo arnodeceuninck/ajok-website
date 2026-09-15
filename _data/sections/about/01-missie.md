@@ -1,8 +1,0 @@
----
-order: 1
-type: text-image-right
-title: Onze Missie
-text: "Bij AJOK bieden we kinderen en jongeren uit maatschappelijk kwetstige situaties een toegankelijke en waardevolle vakantie. We creëren een veilige en positieve omgeving waarin ze kunnen groeien door samen te ontdekken en te beleven.\n\nVeiligheid en welkom zijn staan centraal. Dit geeft kinderen de ruimte om te groeien. We werken met heldere afspraken en een duidelijke structuur. Daarnaast moedigen we jongeren aan om initiatief te nemen, ideeën te delen en creatief te zijn."
-img: assets/images/over-ons/missie-desktop.jpeg
-img_mobile: assets/images/over-ons/missie-mobile.jpeg
----

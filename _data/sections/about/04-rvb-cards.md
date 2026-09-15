@@ -1,5 +1,0 @@
----
-order: 4
-type: rvb-cards
-title: Onze Raad van Bestuur
----

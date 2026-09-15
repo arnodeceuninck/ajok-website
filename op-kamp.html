@@ -4,8 +4,9 @@ title: "Op Kamp"
 ---
 
 <!-- DYNAMIC SECTIONS (sorted by order) -->
-{% assign sections = site.data.sections.camps | sort: "order" %}
-{% for section in sections %}
+{% assign section_keys = site.data.sections.camps | keys | sort_natural %}
+{% for key in section_keys %}
+  {% assign section = site.data.sections.camps[key] %}
 
   {% if section.type == "image-row" %}
     {% if section.img_type == "hills" %}

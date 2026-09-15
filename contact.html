@@ -4,8 +4,9 @@ title: "Contact"
 ---
 
 <!-- DYNAMIC SECTIONS (sorted by order) -->
-{% assign sections = site.data.sections.contact | sort: "order" %}
-{% for section in sections %}
+{% assign section_keys = site.data.sections.contact | keys | sort_natural %}
+{% for key in section_keys %}
+  {% assign section = site.data.sections.contact[key] %}
   {% if section.type == "contact-main" %}
     {% capture main_contact_items %}
     {{ site.data.contact.main_section.intro_text }}

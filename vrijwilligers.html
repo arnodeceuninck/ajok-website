@@ -17,8 +17,9 @@ title: "Vrijwilligers"
 {% assign mail = "<a href='mailto:" | append: mailadres | append: "'>" | append: mailadres | append: "</a>" %}
 
 <!-- DYNAMIC SECTIONS (sorted by order) -->
-{% assign sections = site.data.sections.volunteers | sort: "order" %}
-{% for section in sections %}
+{% assign section_keys = site.data.sections.volunteers | keys | sort_natural %}
+{% for key in section_keys %}
+  {% assign section = site.data.sections.volunteers[key] %}
 
   {% if section.type == "volunteer-functions" %}
     {% capture vrijwilligers_intro %}
