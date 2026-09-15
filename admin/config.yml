@@ -5,11 +5,11 @@ backend:
   site_domain: ajok-website.netlify.app
   auth_endpoint: api/auth
   commit_messages:
-    create: "Create {{collection}} "{{slug}}""
-    update: "Update {{collection}} "{{slug}}""
-    delete: "Delete {{collection}} "{{slug}}""
-    uploadMedia: "[skip ci] Upload "{{path}}""
-    deleteMedia: "[skip ci] Delete "{{path}}""
+    create: "Create {{collection}} \"{{slug}}\""
+    update: "Update {{collection}} \"{{slug}}\""
+    delete: "Delete {{collection}} \"{{slug}}\""
+    uploadMedia: "[skip ci] Upload \"{{path}}\""
+    deleteMedia: "[skip ci] Delete \"{{path}}\""
 
 publish_mode: editorial_workflow
 media_folder: assets/images
