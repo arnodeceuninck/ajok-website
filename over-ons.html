@@ -7,10 +7,9 @@ title: "Over ons"
 {% assign mailadres = mail_item.description %}
 {% assign mail = "<a href='mailto:" | append: mailadres | append: "'>" | append: mailadres | append: "</a>" %}
 
-<!-- DYNAMIC SECTIONS (sorted by order) -->
-{% assign section_keys = site.data.sections.about | keys | sort_natural %}
-{% for key in section_keys %}
-  {% assign section = site.data.sections.about[key] %}
+<!-- DYNAMIC SECTIONS -->
+{% for item in site.data.sections.about %}
+  {% assign section = item[1] %}
   {% if section.type == "text-image-left" %}
     {% include section-img-left.html 
         title=section.title

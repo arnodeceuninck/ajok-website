@@ -15,10 +15,9 @@ title=site.data.support.intro.title
 text=site.data.support.intro.text
  %}
 
-<!-- DYNAMIC SECTIONS (sorted by order) -->
-{% assign section_keys = site.data.sections.support | keys | sort_natural %}
-{% for key in section_keys %}
-  {% assign section = site.data.sections.support[key] %}
+<!-- DYNAMIC SECTIONS -->
+{% for item in site.data.sections.support %}
+  {% assign section = item[1] %}
 
   {% if section.type == "image-row" %}
     <div class="bg-orange pt-1 pb-1"> 

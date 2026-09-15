@@ -19,10 +19,13 @@ title: "Alle Jongeren Op Kamp"
     </div>
 </div>
 
-<!-- DYNAMIC SECTIONS (sorted by order) -->
-{% assign section_keys = site.data.sections.home | keys | sort_natural %}
-{% for key in section_keys %}
-  {% assign section = site.data.sections.home[key] %}
+<!-- DEBUG: Check if sections data exists -->
+<!-- site.data.sections.home exists: {% if site.data.sections.home %}YES{% else %}NO{% endif %} -->
+<!-- site.data.sections.home keys: {{ site.data.sections.home | keys | join: ", " }} -->
+
+<!-- DYNAMIC SECTIONS -->
+{% for item in site.data.sections.home %}
+  {% assign section = item[1] %}
   {% if section.type == "image-row" %}
     {% include image-row.html %}
   {% elsif section.type == "text-image-left" %}
