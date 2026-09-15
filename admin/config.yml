@@ -2,8 +2,8 @@ backend:
   name: github
   repo: arnodeceuninck/ajok-website
   branch: main
-  site_domain: ajok-website.netlify.app
-  auth_endpoint: api/auth
+  site_domain: beautiful-sunburst-ee1989.netlify.app
+  auth_endpoint: auth
   commit_messages:
     create: "Create {{collection}} \"{{slug}}\""
     update: "Update {{collection}} \"{{slug}}\""
