@@ -11,6 +11,20 @@
   img: assets/images/locaties/kamphuis-laiterie-2.jpg
   img_mobile: assets/images/locaties/kamphuis-laiterie-mobile-2.jpg
 
+  - name: Kamphuis De Oesterput
+    id: Oesterput
+    description: Tijdens het herfstkamp trekken we dit jaar naar de Oesterput. 
+    Dit gezellige kamphuis aan zee, ligt in het bruisende Oostende op 
+    wandelafstand van speelpleinen en het strand. Het kamphuis is volledig uitgerust 
+    en heeft 50 bedden ter beschikking. Naast strand en zee, is er ook veel groen in 
+    de omgeving. Zo is er een speelweide voorzien, ideaal voor sport en spel, 
+    waar onze jongeren zich volledig kunnen uitleven!
+  adres: schietbaanstraat 86, 8400 Oostende
+  maps: https://maps.app.goo.gl/AJTSwonR6PiQkWfz9
+  img: oesterput.jpg
+    
+    
+
 #- name: Kamphuis de Axlandhoeve
 #  id: axlandhoeve
 #  description: Tijdens het herfstkamp verplaatsen we ons naar het mooie Sinaai 
