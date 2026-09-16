@@ -92,7 +92,6 @@
   leeftijd_kort: 13-16 jaar
   img: assets/images/kampen/herfstkamp.jpg
   img_mobile: assets/images/kampen/herfstkamp-mobile.jpg
-  locatie: 
   form_id: kamp_herfst
 
 - name: OP SCHOK
