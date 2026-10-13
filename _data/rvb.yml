@@ -10,19 +10,31 @@
 - naam: Ellen
   img: "assets/images/rvb/ellen.jpeg"
   functie: ondersteuning
-- naam: Janice
-  img: "assets/images/rvb/janice.jpeg"
-  functie: inschrijvingen jongeren
 - naam: Pieter
   img: "assets/images/rvb/pieter.jpeg"
   functie: team finance 
 - naam: Astrid
-  img: "assets/images/rvb/astrid.jpeg"
-  functie:  inschrijvingen vrijwilligers
+  img: "assets/images/rvb/astrid.png"
+  functie:  inschrijvingen vrijwilligers & materiaalmeester
 - naam: Elke
   img: "assets/images/rvb/elke.jpeg"
   functie: inschrijvingen jongeren  
 - naam: Camille 
-  img: 
+  img: "assets/images/rvb/camille.png"
   functie: werving vrijwilligers
+- naam: Shauni 
+  img: "assets/images/rvb/shauni.png"
+  functie: werving vrijwilligers
+- naam: Danika 
+  img: "assets/images/rvb/danika.png"
+  functie: werving vrijwilligers
+- naam: Corneel 
+  img:
+  functie: werving vrijwilligers
+- naam: Katrien 
+  img:
+  functie: werving vrijwilligers
+- naam: Louise
+  img: 
+  functie: ondersteuning
   
