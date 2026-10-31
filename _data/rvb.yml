@@ -3,38 +3,33 @@
   functie: voorzitter
 - naam: Erin
   img: "assets/images/rvb/erin.jpeg"
-  functie: voorzitter & team finance
+  functie: voorzitter
 - naam: Jasmine
   img: "assets/images/rvb/jasmine.jpeg"
-  functie: voorzitter & team promo
-- naam: Ellen
-  img: "assets/images/rvb/ellen.jpeg"
-  functie: ondersteuning
+  functie: voorzitter
 - naam: Pieter
   img: "assets/images/rvb/pieter.jpeg"
-  functie: team finance 
+  functie: RVB-lid
 - naam: Astrid
   img: "assets/images/rvb/astrid.png"
-  functie:  inschrijvingen vrijwilligers & materiaalmeester
+  functie: RVB-lid
 - naam: Elke
   img: "assets/images/rvb/elke.jpeg"
-  functie: inschrijvingen jongeren  
+  functie: RVB-lid
 - naam: Camille 
   img: "assets/images/rvb/camille.png"
-  functie: werving vrijwilligers
+  functie: RVB-lid
 - naam: Shauni 
   img: "assets/images/rvb/shauni.png"
-  functie: werving vrijwilligers
+  functie: RVB-lid
 - naam: Danika 
   img: "assets/images/rvb/danika.png"
-  functie: werving vrijwilligers
+  functie: RVB-lid
 - naam: Corneel 
   img:
-  functie: werving vrijwilligers
+  functie: RVB-lid
 - naam: Katrien 
   img:
-  functie: werving vrijwilligers
-- naam: Louise
-  img: 
-  functie: ondersteuning
+  functie: RVB-lid
+  
   
