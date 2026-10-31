@@ -473,6 +473,13 @@ a {
   background: linear-gradient(110deg, #123f32 0%, #176447 64%, #9b3028 100%);
 }
 
+.kerstrun-hero > .kerstrun-banner__garland {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+
 .kerstrun-hero::after {
   position: absolute;
   right: 0;
