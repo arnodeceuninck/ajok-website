@@ -256,6 +256,194 @@ a {
   margin-bottom: 20px;
 }
 
+.kerstrun-banner {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 8px 24px;
+  margin: 0 auto 36px;
+  padding: 24px clamp(20px, 5vw, 56px);
+  max-width: 1140px;
+  color: #fff;
+  background: #174d3b;
+  border-left: 8px solid #df6316;
+  text-decoration: none;
+  transition: background-color 160ms ease;
+}
+
+.kerstrun-banner:hover,
+.kerstrun-banner:focus-visible {
+  color: #fff;
+  background: #103c2e;
+  text-decoration: none;
+}
+
+.kerstrun-banner__eyebrow,
+.kerstrun-banner__title,
+.kerstrun-banner__count,
+.kerstrun-banner__link {
+  grid-column: 1;
+}
+
+.kerstrun-banner__eyebrow,
+.kerstrun-eyebrow {
+  margin: 0 0 6px;
+  color: #f7b52c;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.kerstrun-banner__title {
+  font-size: clamp(1.3rem, 3vw, 2rem);
+  font-weight: 800;
+}
+
+.kerstrun-banner__count {
+  font-size: 1rem;
+}
+
+.kerstrun-banner__count strong {
+  color: #f7b52c;
+  font-size: 1.5rem;
+}
+
+.kerstrun-banner__link {
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.kerstrun-page {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 48px 24px 72px;
+}
+
+.kerstrun-hero {
+  padding: clamp(28px, 6vw, 64px);
+  color: #fff;
+  background: #174d3b;
+  border-bottom: 8px solid #df6316;
+}
+
+.kerstrun-hero h1 {
+  margin-bottom: 12px;
+  font-size: clamp(2.2rem, 6vw, 4rem);
+  font-weight: 800;
+}
+
+.kerstrun-intro {
+  max-width: 700px;
+  font-size: 1.1rem;
+}
+
+.kerstrun-facts {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 36px;
+}
+
+.kerstrun-facts div {
+  display: grid;
+  gap: 4px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.45);
+}
+
+.kerstrun-facts span {
+  color: #f7b52c;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.kerstrun-progress {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin: 32px 0 48px;
+  padding: 24px 0;
+  border-bottom: 2px solid #174d3b;
+}
+
+.kerstrun-progress h2,
+.kerstrun-option h2 {
+  margin: 0;
+  font-size: clamp(1.5rem, 4vw, 2.2rem);
+  font-style: normal;
+  text-transform: none;
+}
+
+.kerstrun-total {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.kerstrun-total strong {
+  color: #174d3b;
+  font-size: 3rem;
+  line-height: 1;
+}
+
+.kerstrun-options {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 32px;
+}
+
+.kerstrun-option {
+  min-width: 0;
+  padding: 28px;
+  background: rgba(255, 255, 255, 0.55);
+  border-top: 5px solid #174d3b;
+}
+
+.kerstrun-option > p:not(.kerstrun-eyebrow):not(.kerstrun-form-placeholder) {
+  min-height: 3em;
+}
+
+.kerstrun-form {
+  display: block;
+  width: 100%;
+  min-height: 700px;
+  border: 0;
+}
+
+.kerstrun-form-placeholder {
+  margin: 24px 0 0;
+  padding: 16px;
+  background: #fff;
+  border-left: 4px solid #df6316;
+}
+
+@media (max-width: 767px) {
+  .kerstrun-banner {
+    grid-template-columns: 1fr;
+    margin: 0 12px 28px;
+  }
+
+  .kerstrun-facts,
+  .kerstrun-options {
+    grid-template-columns: 1fr;
+  }
+
+  .kerstrun-progress {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .kerstrun-option {
+    padding: 22px 18px;
+  }
+}
+
 .image-row {
   display: flex;
   // justify-content: flex-start; // needed to start the animation from the beginning

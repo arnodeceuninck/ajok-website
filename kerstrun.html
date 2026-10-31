@@ -1,0 +1,50 @@
+---
+layout: default
+title: "AJOK Kerstrun"
+---
+
+<main class="kerstrun-page">
+  <header class="kerstrun-hero">
+    <p class="kerstrun-eyebrow">Samen in beweging voor AJOK</p>
+    <h1>De AJOK Kerstrun</h1>
+    <p class="kerstrun-intro">Koop rondjes voor een loper of trek zelf je loopschoenen aan. Elk rondje helpt AJOK om jongeren een onvergetelijke vakantie te bezorgen.</p>
+    <div class="kerstrun-facts" aria-label="Praktische informatie">
+      <div><span>Wanneer</span><strong>Zondag 20 december</strong></div>
+      <div><span>Uur</span><strong>16u tot 20u</strong></div>
+      <div><span>Waar</span><strong>KRC Gent Atletiek, Gentbrugge</strong></div>
+      <div><span>Prijs</span><strong>&euro;3 per rondje</strong></div>
+    </div>
+  </header>
+
+  <section class="kerstrun-progress" aria-labelledby="kerstrun-progress-title">
+    <div>
+      <p class="kerstrun-eyebrow">Samen maken we kilometers</p>
+      <h2 id="kerstrun-progress-title">De teller staat op</h2>
+    </div>
+    <p class="kerstrun-total"><strong>{{ site.data.kerstrun.rondjes_verkocht }}</strong><span>rondjes gekocht</span></p>
+  </section>
+
+  <section class="kerstrun-options" aria-label="Meedoen aan de Kerstrun">
+    <article class="kerstrun-option" id="rondjes-kopen">
+      <p class="kerstrun-eyebrow">Steun een loper</p>
+      <h2>Koop rondjes</h2>
+      <p>Koop een of meerdere rondjes aan &euro;3 per rondje. Onze lopers en vrijwilligers nemen ze voor jou voor hun rekening.</p>
+      {% if site.data.kerstrun.rondjes_form_url and site.data.kerstrun.rondjes_form_url != "" %}
+        <iframe class="kerstrun-form" src="{{ site.data.kerstrun.rondjes_form_url }}?embedded=true" title="Rondjes kopen voor de AJOK Kerstrun" loading="lazy"></iframe>
+      {% else %}
+        <p class="kerstrun-form-placeholder">Het formulier om rondjes te kopen volgt binnenkort.</p>
+      {% endif %}
+    </article>
+
+    <article class="kerstrun-option" id="inschrijven-als-loper">
+      <p class="kerstrun-eyebrow">Doe zelf mee</p>
+      <h2>Schrijf je in als loper</h2>
+      <p>Loop mee tijdens de Kerstrun en help ons zoveel mogelijk rondjes te verzamelen.</p>
+      {% if site.data.kerstrun.lopers_form_url and site.data.kerstrun.lopers_form_url != "" %}
+        <iframe class="kerstrun-form" src="{{ site.data.kerstrun.lopers_form_url }}?embedded=true" title="Inschrijven als loper voor de AJOK Kerstrun" loading="lazy"></iframe>
+      {% else %}
+        <p class="kerstrun-form-placeholder">Het inschrijfformulier voor lopers volgt binnenkort.</p>
+      {% endif %}
+    </article>
+  </section>
+</main>
