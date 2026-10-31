@@ -260,7 +260,7 @@ a {
   position: relative;
   display: block;
   width: 100%;
-  margin: 0 0 36px;
+  margin: 24px 0 36px;
   overflow: hidden;
   color: #fff;
   background: linear-gradient(110deg, #123f32 0%, #176447 64%, #9b3028 100%);
@@ -277,15 +277,18 @@ a {
 
 .kerstrun-banner__garland {
   display: block;
-  height: 14px;
+  height: 18px;
   background:
-    radial-gradient(circle, #f7c64b 0 3px, transparent 4px) 0 0 / 42px 12px repeat-x,
-    radial-gradient(circle, #f5f0d7 0 3px, transparent 4px) 21px 0 / 42px 12px repeat-x,
-    linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)) 0 5px / 100% 1px no-repeat;
+    radial-gradient(circle, #f7c64b 0 3px, transparent 4px) 0 0 / 48px 12px repeat-x,
+    radial-gradient(circle, #f5f0d7 0 3px, transparent 4px) 12px 0 / 48px 12px repeat-x,
+    radial-gradient(circle, #e45145 0 3px, transparent 4px) 24px 0 / 48px 12px repeat-x,
+    radial-gradient(circle, #70d2a3 0 3px, transparent 4px) 36px 0 / 48px 12px repeat-x,
+    linear-gradient(rgba(255, 255, 255, 0.45), rgba(255, 255, 255, 0.45)) 0 5px / 100% 1px no-repeat;
 }
 
 .kerstrun-banner__inner {
   position: relative;
+  z-index: 1;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -372,6 +375,34 @@ a {
   bottom: 12px;
   color: rgba(255, 218, 114, 0.85);
   font-size: 1.2rem;
+}
+
+.kerstrun-banner__ornament {
+  position: absolute;
+  z-index: 0;
+  font-size: 1.8rem;
+  line-height: 1;
+  pointer-events: none;
+}
+
+.kerstrun-banner__ornament--tree {
+  top: 28px;
+  left: 2.5%;
+}
+
+.kerstrun-banner__ornament--gift {
+  right: 2.5%;
+  bottom: 20px;
+}
+
+.kerstrun-banner::after {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 7px;
+  background: repeating-linear-gradient(45deg, #fff4d2 0 8px, #b83c32 8px 16px, #fff4d2 16px 24px, #176447 24px 32px);
+  content: "";
 }
 
 .kerstrun-page {
@@ -519,6 +550,10 @@ a {
   }
 
   .kerstrun-banner__snowflake--two {
+    display: none;
+  }
+
+  .kerstrun-banner__ornament {
     display: none;
   }
 
