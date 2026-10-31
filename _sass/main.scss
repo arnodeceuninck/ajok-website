@@ -148,9 +148,6 @@ a {
 .disabled-camp-card p {
   margin: 0;
 }
-
-
-
 .white-line-below {
   border-bottom: 1px solid white; padding-bottom: 5px; width: fit-content;
 }
@@ -295,7 +292,7 @@ a {
   gap: 28px;
   max-width: 1240px;
   margin: 0 auto;
-  padding: 22px 32px 26px;
+  padding: 22px 32px 46px;
 }
 
 .kerstrun-banner__message {
@@ -360,21 +357,74 @@ a {
 
 .kerstrun-banner__snowflake {
   position: absolute;
+  z-index: 0;
   color: rgba(255, 255, 255, 0.7);
+  opacity: 0;
   pointer-events: none;
+  animation: kerstrun-snowfall 7s linear infinite;
 }
 
 .kerstrun-banner__snowflake--one {
-  top: 24px;
-  right: 8%;
+  top: 0;
+  left: 14%;
   font-size: 2rem;
+  animation-delay: -1s;
 }
 
 .kerstrun-banner__snowflake--two {
-  right: 32%;
-  bottom: 12px;
-  color: rgba(255, 218, 114, 0.85);
+  top: 0;
+  left: 42%;
   font-size: 1.2rem;
+  animation-delay: -4s;
+}
+
+.kerstrun-banner__snowflake--three {
+  top: 0;
+  left: 67%;
+  font-size: 1.6rem;
+  animation-delay: -2.5s;
+}
+
+.kerstrun-banner__snowflake--four {
+  top: 0;
+  left: 88%;
+  font-size: 1.1rem;
+  animation-delay: -5.5s;
+}
+
+.kerstrun-banner__presents {
+  position: absolute;
+  z-index: 0;
+  bottom: 9px;
+  left: 50%;
+  display: flex;
+  gap: 8px;
+  font-size: 1.25rem;
+  line-height: 1;
+  pointer-events: none;
+  transform: translateX(-50%);
+}
+
+@keyframes kerstrun-snowfall {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -12px, 0) rotate(0deg);
+  }
+  15%, 85% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0;
+    transform: translate3d(16px, 150px, 0) rotate(150deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .kerstrun-banner__snowflake {
+    top: 24px;
+    opacity: 0.7;
+    animation: none;
+  }
 }
 
 .kerstrun-banner__ornament {
@@ -428,7 +478,6 @@ a {
   max-width: 700px;
   font-size: 1.1rem;
 }
-
 .kerstrun-facts {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -518,7 +567,7 @@ a {
     align-items: flex-start;
     flex-wrap: wrap;
     gap: 16px;
-    padding: 20px 18px 24px;
+    padding: 20px 18px 46px;
   }
 
   .kerstrun-banner__message {
@@ -545,15 +594,18 @@ a {
   }
 
   .kerstrun-banner__snowflake--one {
-    top: 70px;
-    right: 16px;
+    left: 14%;
   }
 
   .kerstrun-banner__snowflake--two {
-    display: none;
+    left: 42%;
   }
 
-  .kerstrun-banner__ornament {
+  .kerstrun-banner__snowflake--three {
+    left: 72%;
+  }
+
+  .kerstrun-banner__snowflake--four {
     display: none;
   }
 
