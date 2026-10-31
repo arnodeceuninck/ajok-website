@@ -148,9 +148,6 @@ a {
 .disabled-camp-card p {
   margin: 0;
 }
-
-
-
 .white-line-below {
   border-bottom: 1px solid white; padding-bottom: 5px; width: fit-content;
 }
@@ -254,6 +251,462 @@ a {
   position: relative;
   margin-top: 20px;
   margin-bottom: 20px;
+}
+
+.kerstrun-banner {
+  position: relative;
+  display: block;
+  width: 100%;
+  margin: 24px 0 36px;
+  overflow: hidden;
+  color: #fff;
+  background: linear-gradient(110deg, #123f32 0%, #176447 64%, #9b3028 100%);
+  text-decoration: none;
+  transition: filter 160ms ease;
+}
+
+.kerstrun-banner:hover,
+.kerstrun-banner:focus-visible {
+  color: #fff;
+  filter: brightness(1.08);
+  text-decoration: none;
+}
+
+.kerstrun-banner__garland {
+  display: block;
+  height: 18px;
+  animation: kerstrun-lights-twinkle 1.6s ease-in-out infinite alternate;
+  background:
+    radial-gradient(circle, #f7c64b 0 3px, transparent 4px) 0 0 / 48px 12px repeat-x,
+    radial-gradient(circle, #f5f0d7 0 3px, transparent 4px) 12px 0 / 48px 12px repeat-x,
+    radial-gradient(circle, #e45145 0 3px, transparent 4px) 24px 0 / 48px 12px repeat-x,
+    radial-gradient(circle, #70d2a3 0 3px, transparent 4px) 36px 0 / 48px 12px repeat-x,
+    linear-gradient(rgba(255, 255, 255, 0.45), rgba(255, 255, 255, 0.45)) 0 5px / 100% 1px no-repeat;
+}
+
+.kerstrun-banner__inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 22px 32px 26px;
+}
+
+.kerstrun-banner__message {
+  display: grid;
+  gap: 5px;
+}
+
+.kerstrun-banner__eyebrow,
+.kerstrun-eyebrow {
+  margin: 0;
+  color: #ffda72;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.kerstrun-banner__eyebrow span {
+  padding: 0 4px;
+  color: #fff;
+}
+
+.kerstrun-banner__title {
+  font-size: clamp(1.4rem, 3vw, 2.15rem);
+  font-weight: 800;
+  line-height: 1.15;
+}
+
+.kerstrun-banner__details {
+  font-size: 0.95rem;
+}
+
+.kerstrun-banner__count {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 0 0 auto;
+  padding: 10px 16px;
+  color: #173c2e;
+  background: #fff4d2;
+  border: 2px solid #f7c64b;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+.kerstrun-banner__count strong {
+  color: #a73229;
+  font-size: 2.2rem;
+  line-height: 1;
+}
+
+.kerstrun-banner__link {
+  flex: 0 0 auto;
+  padding: 12px 16px;
+  color: #173c2e;
+  background: #fff;
+  border-radius: 4px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.kerstrun-banner__snowflake {
+  position: absolute;
+  z-index: 0;
+  color: rgba(255, 255, 255, 0.7);
+  opacity: 0;
+  pointer-events: none;
+  animation: kerstrun-snowfall 7s linear infinite;
+}
+
+.kerstrun-banner__snowflake--one {
+  top: 0;
+  left: 14%;
+  font-size: 2rem;
+  animation-delay: -1s;
+}
+
+.kerstrun-banner__snowflake--two {
+  top: 0;
+  left: 42%;
+  font-size: 1.2rem;
+  animation-delay: -4s;
+}
+
+.kerstrun-banner__snowflake--three {
+  top: 0;
+  left: 67%;
+  font-size: 1.6rem;
+  animation-delay: -2.5s;
+}
+
+.kerstrun-banner__snowflake--four {
+  top: 0;
+  left: 88%;
+  font-size: 1.1rem;
+  animation-delay: -5.5s;
+}
+
+.kerstrun-banner__snowflake--five {
+  top: 0;
+  left: 27%;
+  font-size: 1.4rem;
+  animation-delay: -3.2s;
+}
+
+.kerstrun-banner__snowflake--six {
+  top: 0;
+  left: 58%;
+  font-size: 1.8rem;
+  animation-delay: -6.2s;
+}
+
+.kerstrun-banner__snowflake--seven {
+  top: 0;
+  left: 78%;
+  font-size: 1.3rem;
+  animation-delay: -2s;
+}
+
+@keyframes kerstrun-lights-twinkle {
+  from {
+    filter: brightness(0.85) drop-shadow(0 0 1px rgba(255, 218, 114, 0.25));
+  }
+  to {
+    filter: brightness(1.45) drop-shadow(0 0 7px rgba(255, 218, 114, 0.9));
+  }
+}
+
+@keyframes kerstrun-snowfall {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -12px, 0) rotate(0deg);
+  }
+  15%, 85% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0;
+    transform: translate3d(16px, 150px, 0) rotate(150deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .kerstrun-banner__garland {
+    animation: none;
+  }
+
+  .kerstrun-banner__snowflake {
+    top: 24px;
+    opacity: 0.7;
+    animation: none;
+  }
+}
+
+.kerstrun-banner::after {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 7px;
+  background: repeating-linear-gradient(45deg, #fff4d2 0 8px, #b83c32 8px 16px, #fff4d2 16px 24px, #176447 24px 32px);
+  content: "";
+}
+
+.kerstrun-page {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 48px 24px 72px;
+}
+
+.kerstrun-hero {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(28px, 6vw, 64px);
+  color: #fff;
+  background: linear-gradient(110deg, #123f32 0%, #176447 64%, #9b3028 100%);
+}
+
+.kerstrun-hero > .kerstrun-banner__garland {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+
+.kerstrun-hero::after {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  height: 8px;
+  background: repeating-linear-gradient(45deg, #fff4d2 0 8px, #b83c32 8px 16px, #fff4d2 16px 24px, #176447 24px 32px);
+  content: "";
+}
+
+.kerstrun-hero__content {
+  position: relative;
+  z-index: 1;
+  padding-top: 18px;
+}
+
+.kerstrun-hero > .kerstrun-banner__snowflake {
+  top: 18px;
+}
+
+.kerstrun-hero .kerstrun-banner__snowflake--one {
+  left: 8%;
+}
+
+.kerstrun-hero .kerstrun-banner__snowflake--two {
+  left: 28%;
+}
+
+.kerstrun-hero .kerstrun-banner__snowflake--three {
+  left: 48%;
+}
+
+.kerstrun-hero .kerstrun-banner__snowflake--four {
+  left: 68%;
+}
+
+.kerstrun-hero .kerstrun-banner__snowflake--five {
+  left: 88%;
+}
+
+.kerstrun-hero .kerstrun-banner__snowflake--six {
+  left: 38%;
+}
+
+.kerstrun-hero .kerstrun-banner__snowflake--seven {
+  left: 78%;
+}
+
+.kerstrun-hero h1 {
+  margin-bottom: 12px;
+  font-size: clamp(2.2rem, 6vw, 4rem);
+  font-weight: 800;
+}
+
+.kerstrun-intro {
+  max-width: 700px;
+  font-size: 1.1rem;
+}
+.kerstrun-facts {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 36px;
+}
+
+.kerstrun-facts div {
+  display: grid;
+  gap: 4px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.45);
+}
+
+.kerstrun-facts div strong {
+  color: #fff;
+}
+
+.kerstrun-facts span {
+  color: #f7b52c;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.kerstrun-progress {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin: 32px 0 48px;
+  padding: 24px 0;
+  border-bottom: 2px solid #174d3b;
+}
+
+.kerstrun-progress h2,
+.kerstrun-option h2 {
+  margin: 0;
+  font-size: clamp(1.5rem, 4vw, 2.2rem);
+  font-style: normal;
+  text-transform: none;
+}
+
+.kerstrun-total {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.kerstrun-total strong {
+  color: #174d3b;
+  font-size: 3rem;
+  line-height: 1;
+}
+
+.kerstrun-options {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 32px;
+}
+
+.kerstrun-option {
+  position: relative;
+  min-width: 0;
+  padding: 33px 28px 28px;
+  background: rgba(255, 255, 255, 0.55);
+}
+
+.kerstrun-option::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 5px;
+  background: repeating-linear-gradient(90deg, #176447 0 22px, #b83c32 22px 44px, #f7c64b 44px 66px);
+  content: "";
+}
+
+.kerstrun-option > p:not(.kerstrun-eyebrow):not(.kerstrun-form-placeholder) {
+  min-height: 3em;
+}
+
+.kerstrun-form {
+  display: block;
+  width: 100%;
+  min-height: 700px;
+  border: 0;
+}
+
+.kerstrun-form-placeholder {
+  margin: 24px 0 0;
+  padding: 16px;
+  background: #fff;
+  border-left: 4px solid #df6316;
+}
+
+@media (max-width: 767px) {
+  .kerstrun-banner__inner {
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 20px 18px 24px;
+  }
+
+  .kerstrun-banner__message {
+    flex: 1 1 100%;
+  }
+
+  .kerstrun-banner__details {
+    max-width: 34ch;
+  }
+
+  .kerstrun-banner__count {
+    padding: 8px 12px;
+  }
+
+  .kerstrun-banner__count strong {
+    font-size: 1.8rem;
+  }
+
+  .kerstrun-banner__link {
+    margin-left: auto;
+    padding: 10px 12px;
+    white-space: normal;
+    text-align: center;
+  }
+
+  .kerstrun-banner__snowflake--one {
+    left: 14%;
+  }
+
+  .kerstrun-banner__snowflake--two {
+    left: 42%;
+  }
+
+  .kerstrun-banner__snowflake--three {
+    left: 72%;
+  }
+
+  .kerstrun-banner__snowflake--four {
+    display: none;
+  }
+
+  .kerstrun-banner__snowflake--five {
+    left: 27%;
+  }
+
+  .kerstrun-banner__snowflake--six,
+  .kerstrun-banner__snowflake--seven {
+    display: none;
+  }
+
+  .kerstrun-facts,
+  .kerstrun-options {
+    grid-template-columns: 1fr;
+  }
+
+  .kerstrun-progress {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .kerstrun-option {
+    padding: 22px 18px;
+  }
 }
 
 .image-row {
