@@ -275,6 +275,7 @@ a {
 .kerstrun-banner__garland {
   display: block;
   height: 18px;
+  animation: kerstrun-lights-twinkle 1.6s ease-in-out infinite alternate;
   background:
     radial-gradient(circle, #f7c64b 0 3px, transparent 4px) 0 0 / 48px 12px repeat-x,
     radial-gradient(circle, #f5f0d7 0 3px, transparent 4px) 12px 0 / 48px 12px repeat-x,
@@ -292,7 +293,7 @@ a {
   gap: 28px;
   max-width: 1240px;
   margin: 0 auto;
-  padding: 22px 32px 46px;
+  padding: 22px 32px 26px;
 }
 
 .kerstrun-banner__message {
@@ -392,17 +393,34 @@ a {
   animation-delay: -5.5s;
 }
 
-.kerstrun-banner__presents {
-  position: absolute;
-  z-index: 0;
-  bottom: 9px;
-  left: 50%;
-  display: flex;
-  gap: 8px;
-  font-size: 1.25rem;
-  line-height: 1;
-  pointer-events: none;
-  transform: translateX(-50%);
+.kerstrun-banner__snowflake--five {
+  top: 0;
+  left: 27%;
+  font-size: 1.4rem;
+  animation-delay: -3.2s;
+}
+
+.kerstrun-banner__snowflake--six {
+  top: 0;
+  left: 58%;
+  font-size: 1.8rem;
+  animation-delay: -6.2s;
+}
+
+.kerstrun-banner__snowflake--seven {
+  top: 0;
+  left: 78%;
+  font-size: 1.3rem;
+  animation-delay: -2s;
+}
+
+@keyframes kerstrun-lights-twinkle {
+  from {
+    filter: brightness(0.85) drop-shadow(0 0 1px rgba(255, 218, 114, 0.25));
+  }
+  to {
+    filter: brightness(1.45) drop-shadow(0 0 7px rgba(255, 218, 114, 0.9));
+  }
 }
 
 @keyframes kerstrun-snowfall {
@@ -420,29 +438,15 @@ a {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .kerstrun-banner__garland {
+    animation: none;
+  }
+
   .kerstrun-banner__snowflake {
     top: 24px;
     opacity: 0.7;
     animation: none;
   }
-}
-
-.kerstrun-banner__ornament {
-  position: absolute;
-  z-index: 0;
-  font-size: 1.8rem;
-  line-height: 1;
-  pointer-events: none;
-}
-
-.kerstrun-banner__ornament--tree {
-  top: 28px;
-  left: 2.5%;
-}
-
-.kerstrun-banner__ornament--gift {
-  right: 2.5%;
-  bottom: 20px;
 }
 
 .kerstrun-banner::after {
@@ -462,10 +466,60 @@ a {
 }
 
 .kerstrun-hero {
+  position: relative;
+  overflow: hidden;
   padding: clamp(28px, 6vw, 64px);
   color: #fff;
-  background: #174d3b;
-  border-bottom: 8px solid #df6316;
+  background: linear-gradient(110deg, #123f32 0%, #176447 64%, #9b3028 100%);
+}
+
+.kerstrun-hero::after {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  height: 8px;
+  background: repeating-linear-gradient(45deg, #fff4d2 0 8px, #b83c32 8px 16px, #fff4d2 16px 24px, #176447 24px 32px);
+  content: "";
+}
+
+.kerstrun-hero__content {
+  position: relative;
+  z-index: 1;
+  padding-top: 18px;
+}
+
+.kerstrun-hero > .kerstrun-banner__snowflake {
+  top: 18px;
+}
+
+.kerstrun-hero .kerstrun-banner__snowflake--one {
+  left: 8%;
+}
+
+.kerstrun-hero .kerstrun-banner__snowflake--two {
+  left: 28%;
+}
+
+.kerstrun-hero .kerstrun-banner__snowflake--three {
+  left: 48%;
+}
+
+.kerstrun-hero .kerstrun-banner__snowflake--four {
+  left: 68%;
+}
+
+.kerstrun-hero .kerstrun-banner__snowflake--five {
+  left: 88%;
+}
+
+.kerstrun-hero .kerstrun-banner__snowflake--six {
+  left: 38%;
+}
+
+.kerstrun-hero .kerstrun-banner__snowflake--seven {
+  left: 78%;
 }
 
 .kerstrun-hero h1 {
@@ -490,6 +544,10 @@ a {
   gap: 4px;
   padding-top: 12px;
   border-top: 1px solid rgba(255, 255, 255, 0.45);
+}
+
+.kerstrun-facts div strong {
+  color: #fff;
 }
 
 .kerstrun-facts span {
@@ -538,10 +596,20 @@ a {
 }
 
 .kerstrun-option {
+  position: relative;
   min-width: 0;
-  padding: 28px;
+  padding: 33px 28px 28px;
   background: rgba(255, 255, 255, 0.55);
-  border-top: 5px solid #174d3b;
+}
+
+.kerstrun-option::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 5px;
+  background: repeating-linear-gradient(90deg, #176447 0 22px, #b83c32 22px 44px, #f7c64b 44px 66px);
+  content: "";
 }
 
 .kerstrun-option > p:not(.kerstrun-eyebrow):not(.kerstrun-form-placeholder) {
@@ -567,7 +635,7 @@ a {
     align-items: flex-start;
     flex-wrap: wrap;
     gap: 16px;
-    padding: 20px 18px 46px;
+    padding: 20px 18px 24px;
   }
 
   .kerstrun-banner__message {
@@ -606,6 +674,15 @@ a {
   }
 
   .kerstrun-banner__snowflake--four {
+    display: none;
+  }
+
+  .kerstrun-banner__snowflake--five {
+    left: 27%;
+  }
+
+  .kerstrun-banner__snowflake--six,
+  .kerstrun-banner__snowflake--seven {
     display: none;
   }
 
