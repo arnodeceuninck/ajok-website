@@ -1,0 +1,25 @@
+{% assign kerstrun = site.data.kerstrun %}
+{% assign verkocht = kerstrun.rondjes_verkocht | default: 0 %}
+{% assign doel = kerstrun.rondjes_doel | default: 500 %}
+{% assign procent = verkocht | times: 100 | divided_by: doel | at_most: 100 %}
+{% assign euro = verkocht | times: kerstrun.prijs_per_rondje %}
+{% assign km = verkocht | times: 0.4 | round: 1 %}
+
+<div class="kerstrun-teller {% if include.compact %}kerstrun-teller--compact{% endif %}">
+  <div class="kerstrun-track" role="progressbar" aria-valuemin="0" aria-valuemax="{{ doel }}" aria-valuenow="{{ verkocht }}"
+       aria-label="{{ verkocht }} van de {{ doel }} rondjes gekocht">
+    <div class="kerstrun-track__fill" style="width: {{ procent }}%;"></div>
+    <div class="kerstrun-track__runner" style="--p: {{ procent }};">
+      {% include kerstrun-santa.html class="kerstrun-track__santa" %}
+    </div>
+    <span class="kerstrun-track__finish" aria-hidden="true"></span>
+  </div>
+
+  {% unless include.compact %}
+  <div class="kerstrun-stats">
+    <div><strong>{{ verkocht }}</strong><span>van de {{ doel }} rondjes</span></div>
+    <div><strong>&euro;{{ euro }}</strong><span>voor kampen</span></div>
+    <div><strong>{{ km }} km</strong><span>samen gelopen</span></div>
+  </div>
+  {% endunless %}
+</div>

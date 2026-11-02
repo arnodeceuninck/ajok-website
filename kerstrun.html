@@ -1,0 +1,146 @@
+---
+layout: default
+title: "Kerstrun"
+---
+
+{% assign kerstrun = site.data.kerstrun %}
+{% assign verkocht = kerstrun.rondjes_verkocht | default: 0 %}
+{% comment %} Met 67 euro gaat één kind mee op kamp (zie steun.html, peter/meter) {% endcomment %}
+{% assign rondjes_per_kind = 67.0 | divided_by: kerstrun.prijs_per_rondje | ceil %}
+{% assign prijs_per_kind = rondjes_per_kind | times: kerstrun.prijs_per_rondje %}
+{% assign prijs_tien = kerstrun.prijs_per_rondje | times: 10 %}
+
+<!-- Hero: same sky, clouds and hills as the rest of the site, but snowed under -->
+<div class="kerstrun-hero">
+  <div class="kerstrun-snow" aria-hidden="true"></div>
+
+  <img src="assets/images/artifacts/wolkjes.webp" class="kerstrun-hero__clouds" alt="" loading="lazy" />
+
+  <div class="container position-relative" style="padding-top: 40px; padding-bottom: 20px;">
+    <div class="row align-items-center g-4">
+      <div class="col-12 col-md-7">
+        <p class="kerstrun-eyebrow mb-3">{{ kerstrun.datum }} &middot; {{ kerstrun.uur }}</p>
+        <div>
+          <h1 class="display-1 kerstrun-title">Kerstrun</h1>
+          <span class="kerstrun-title__vzw">AJOK</span>
+        </div>
+        <p class="lead">Koop rondjes, wij lopen ze. Elk rondje van 400 meter brengt een kind een stapje dichter bij een onvergetelijk kamp.</p>
+
+        <div>
+          <a href="#rondjes-kopen" class="btn btn-success btn-kerstrun">Koop rondjes &middot; &euro;{{ kerstrun.prijs_per_rondje }} per stuk</a>
+          <a href="#loop-mee" class="btn btn-kerstrun-rood">Loop zelf mee</a>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-5 text-center">
+        <div class="kerstrun-hero__santa">
+          {% include kerstrun-santa.html %}
+          <span class="kerstrun-bubble">Ho ho ho!<br>Nog {{ kerstrun.rondjes_doel | minus: verkocht | at_least: 0 }} rondjes te gaan!</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <img src="assets/images/artifacts/heuveltjes.webp" class="kerstrun-hills" alt="" loading="lazy" />
+</div>
+
+<!-- Counter: red band, like the orange photo band on the other pages -->
+<div class="kerstrun-band">
+  {% include kerstrun-lights.html %}
+  <div class="container py-4">
+    <h2 class="white-line-below text-white">De teller</h2>
+    {% if verkocht == 0 %}
+      <p class="text-white mb-4">De Kerstman staat al te trappelen aan de start. Koop jij het eerste rondje?</p>
+    {% else %}
+      <p class="text-white mb-4">Kijk de Kerstman eens vooruit gaan! Help hem tot aan de finish.</p>
+    {% endif %}
+    {% include kerstrun-teller.html %}
+  </div>
+</div>
+
+<!-- What does a lap do? -->
+<div class="container p-5 scroll-animation position-relative">
+  <h2 class="black-line-below">Wat doet jouw rondje?</h2>
+  <img src="assets/images/artifacts/wolkjes.webp" class="opacity-sm-80" loading="lazy" alt=""
+       style="position: absolute; height: 120px; width: auto; right: -30px; top: 0; z-index: -1;" />
+
+  <div class="row g-4 mt-2">
+    <div class="col-12 col-md-4">
+      <div class="kerstrun-card kerstrun-card--groen">
+        <span class="kerstrun-card__price">&euro;{{ kerstrun.prijs_per_rondje }}</span>
+        <h5>1 rondje</h5>
+        <p>400 meter lopen in jouw naam. Een warm kerstgebaar!</p>
+      </div>
+    </div>
+    <div class="col-12 col-md-4">
+      <div class="kerstrun-card kerstrun-card--goud">
+        <span class="kerstrun-card__price">&euro;{{ prijs_tien }}</span>
+        <h5>10 rondjes</h5>
+        <p>4 kilometer! Daar krijgt zelfs het rendier dorst van.</p>
+      </div>
+    </div>
+    <div class="col-12 col-md-4">
+      <div class="kerstrun-card kerstrun-card--rood">
+        <span class="kerstrun-card__ribbon">Topcadeau</span>
+        <span class="kerstrun-card__price">&euro;{{ prijs_per_kind }}</span>
+        <h5>{{ rondjes_per_kind }} rondjes</h5>
+        <p>Genoeg om één kind mee op kamp te nemen.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Buy laps -->
+<div class="kerstrun-section kerstrun-section--wit" id="rondjes-kopen">
+  <div class="container p-5 position-relative">
+    <div class="row g-5">
+      <div class="col-12 col-lg-5">
+        <h2 class="black-line-below">Koop rondjes</h2>
+        <p>Jij kiest hoeveel rondjes je koopt, onze lopers en vrijwilligers lopen ze op {{ kerstrun.datum | downcase }} voor jou. Het hele bedrag gaat naar de kampen van AJOK.</p>
+        <ol class="kerstrun-steps">
+          <li><strong>Kies je aantal rondjes</strong> aan &euro;{{ kerstrun.prijs_per_rondje }} per rondje.</li>
+          <li><strong>Wij lopen ze</strong> op de piste van {{ kerstrun.locatie }}.</li>
+          <li><strong>Een kind gaat op kamp</strong> dankzij jou. Het mooiste kerstcadeau!</li>
+        </ol>
+        <p class="kerstrun-tip"><span aria-hidden="true">&#127873;</span> Op zoek naar een origineel kerstcadeau? Koop rondjes op naam van iemand anders!</p>
+      </div>
+      <div class="col-12 col-lg-7">
+        {% if kerstrun.rondjes_form_url and kerstrun.rondjes_form_url != "" %}
+          <iframe class="kerstrun-form" src="{{ kerstrun.rondjes_form_url }}?embedded=true" title="Rondjes kopen voor de AJOK Kerstrun" loading="lazy"></iframe>
+        {% else %}
+          <div class="kerstrun-form-placeholder">
+            {% include kerstrun-santa.html class="kerstrun-form-placeholder__santa" %}
+            <p><strong>De Kerstman is het formulier nog aan het inpakken.</strong><br>Binnenkort kan je hier rondjes kopen!</p>
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Run along -->
+<div class="kerstrun-section" id="loop-mee">
+  <div class="container p-5 position-relative">
+    <div class="row g-5">
+      <div class="col-12 col-lg-5">
+        <h2 class="black-line-below">Loop mee</h2>
+        <p>Trek je loopschoenen (of je kerstmuts) aan en help ons zoveel mogelijk rondjes te lopen. Iedereen is welkom: snel of traag, alleen of in groep, in sportkledij of verkleed als rendier.</p>
+        <div class="kerstrun-facts">
+          <div><span>Wanneer</span><strong>{{ kerstrun.datum }}</strong></div>
+          <div><span>Uur</span><strong>{{ kerstrun.uur }}</strong></div>
+          <div><span>Waar</span><strong>{{ kerstrun.locatie }}</strong></div>
+        </div>
+      </div>
+      <div class="col-12 col-lg-7">
+        {% if kerstrun.lopers_form_url and kerstrun.lopers_form_url != "" %}
+          <iframe class="kerstrun-form" src="{{ kerstrun.lopers_form_url }}?embedded=true" title="Inschrijven als loper voor de AJOK Kerstrun" loading="lazy"></iframe>
+        {% else %}
+          <div class="kerstrun-form-placeholder">
+            <p><strong>Het inschrijfformulier voor lopers volgt binnenkort.</strong><br>Rek je alvast maar op!</p>
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+  <img src="assets/images/artifacts/heuveltjes.webp" class="kerstrun-hills" alt="" loading="lazy" />
+</div>
