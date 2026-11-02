@@ -1,0 +1,599 @@
+/*------------------------------------
+- KERSTRUN
+- Christmas version of the regular AJOK look: same sky, clouds, hills,
+- cards and buttons, but with a red / green / gold palette and snow.
+------------------------------------*/
+
+$kerst-rood: #c8102e;
+$kerst-rood-donker: #a3161a;
+$kerst-groen: #1f7a4a;
+$kerst-groen-donker: #145c36;
+$kerst-goud: #F7B52C; // same as .ajok-orange
+$kerst-sneeuw: #ffffff;
+
+
+/* --- Shared bits --- */
+
+.kerstrun-eyebrow {
+  margin-bottom: 4px;
+  color: $kerst-rood;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.btn-kerstrun {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.btn-kerstrun-rood {
+  @extend .btn-kerstrun;
+  color: #fff;
+  background-color: $kerst-rood;
+  border-color: $kerst-rood;
+}
+
+.btn-kerstrun-rood:hover,
+.btn-kerstrun-rood:focus {
+  color: #fff;
+  background-color: $kerst-rood-donker;
+  border-color: $kerst-rood-donker;
+}
+
+// Falling snow, purely with background gradients
+.kerstrun-snow {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image:
+    radial-gradient(6px 6px at 20px 30px, #fff 50%, transparent 52%),
+    radial-gradient(5px 5px at 90px 140px, #fff 50%, transparent 52%),
+    radial-gradient(5px 5px at 160px 60px, #fff 50%, transparent 52%),
+    radial-gradient(5px 5px at 220px 190px, #fff 50%, transparent 52%),
+    radial-gradient(4px 4px at 60px 230px, #fff 50%, transparent 52%),
+    radial-gradient(6px 6px at 130px 10px, rgba(255, 255, 255, 0.8) 50%, transparent 52%),
+    radial-gradient(5px 5px at 240px 100px, rgba(255, 255, 255, 0.8) 50%, transparent 52%);
+  background-size: 260px 260px;
+  animation: kerstrun-snowfall 14s linear infinite;
+}
+
+@keyframes kerstrun-snowfall {
+  from { background-position: 0 0; }
+  to   { background-position: 60px 260px; }
+}
+
+// String of lights
+.kerstrun-lights {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  height: 26px;
+  padding: 4px 10px 0;
+  overflow: hidden;
+}
+
+.kerstrun-lights::before {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #0d3a22;
+}
+
+.kerstrun-lights i {
+  position: relative;
+  flex: 0 0 auto;
+  width: 10px;
+  height: 15px;
+  margin-top: 3px;
+  border-radius: 50% 50% 50% 50% / 40% 40% 60% 60%;
+  animation: kerstrun-twinkle 1.4s ease-in-out infinite alternate;
+}
+
+.kerstrun-lights i::before {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: 2px;
+  width: 6px;
+  height: 4px;
+  background: #0d3a22;
+  border-radius: 1px;
+}
+
+.kerstrun-lights i:nth-child(4n+1) { background: $kerst-rood; box-shadow: 0 2px 10px $kerst-rood; }
+.kerstrun-lights i:nth-child(4n+2) { background: $kerst-goud; box-shadow: 0 2px 10px $kerst-goud; animation-delay: 0.35s; }
+.kerstrun-lights i:nth-child(4n+3) { background: #5fd38d; box-shadow: 0 2px 10px #5fd38d; animation-delay: 0.7s; }
+.kerstrun-lights i:nth-child(4n+4) { background: #fff; box-shadow: 0 2px 10px #fff; animation-delay: 1.05s; }
+
+@keyframes kerstrun-twinkle {
+  from { opacity: 1; }
+  to   { opacity: 0.35; box-shadow: none; }
+}
+
+// Snow-covered version of the green hills used across the site
+.kerstrun-hills {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  height: clamp(70px, 11vw, 150px);
+  object-fit: cover;
+  object-position: top;
+  filter: grayscale(1) brightness(1.75);
+}
+
+
+/* --- Hero --- */
+
+.kerstrun-hero {
+  position: relative;
+  overflow: hidden;
+}
+
+.kerstrun-hero .container {
+  z-index: 1;
+}
+
+.kerstrun-hero__clouds {
+  position: absolute;
+  top: 20px;
+  left: -40px;
+  height: 120px;
+  width: auto;
+  z-index: 0;
+}
+
+.kerstrun-title {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 0;
+}
+
+// Little Santa hat on the "K"
+.kerstrun-title::before {
+  content: "";
+  position: absolute;
+  top: -0.2em;
+  left: 0;
+  width: 0.62em;
+  height: 0.5em;
+  transform: rotate(-18deg);
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 48'%3E%3Cpath d='M6 38 Q12 6 40 8 Q52 10 54 26 Q46 16 38 18 Q48 30 50 38 Z' fill='%23c8102e'/%3E%3Crect x='2' y='34' width='52' height='12' rx='6' fill='%23fff'/%3E%3Ccircle cx='54' cy='26' r='6' fill='%23fff'/%3E%3C/svg%3E") no-repeat center / contain;
+}
+
+.kerstrun-title__vzw {
+  margin-left: 6px;
+  color: $kerst-rood;
+  font-weight: 700;
+}
+
+.kerstrun-hero__santa {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  max-width: 340px;
+  padding-top: 48px;
+}
+
+.kerstrun-santa {
+  width: 100%;
+  height: auto;
+  animation: kerstrun-jog 0.45s ease-in-out infinite alternate;
+}
+
+@keyframes kerstrun-jog {
+  from { transform: translateY(0) rotate(0deg); }
+  to   { transform: translateY(-8px) rotate(-2deg); }
+}
+
+.kerstrun-bubble {
+  position: absolute;
+  top: 0;
+  left: -10px;
+  padding: 10px 14px;
+  background: #fff;
+  border-radius: 14px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  line-height: 1.25;
+  text-align: left;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.kerstrun-bubble::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 22px;
+  border: 10px solid transparent;
+  border-top-color: #fff;
+  border-bottom: 0;
+}
+
+
+/* --- Counter band --- */
+
+.kerstrun-band {
+  position: relative;
+  background: linear-gradient(180deg, $kerst-groen-donker, $kerst-groen);
+}
+
+.kerstrun-band h2 {
+  margin-top: 10px;
+}
+
+.kerstrun-teller {
+  padding-top: 72px;
+}
+
+.kerstrun-track {
+  --runner: 64px;
+  position: relative;
+  height: 26px;
+  border-radius: 13px;
+  // Athletics track: red with white lane lines
+  background:
+    linear-gradient(#fff, #fff) 0 33% / 100% 2px no-repeat,
+    linear-gradient(#fff, #fff) 0 66% / 100% 2px no-repeat,
+    #b8432f;
+  box-shadow: inset 0 0 0 3px rgba(255, 255, 255, 0.6);
+}
+
+.kerstrun-track__fill {
+  height: 100%;
+  min-width: 26px;
+  background: $kerst-goud;
+  border-radius: 13px;
+  opacity: 0.9;
+}
+
+.kerstrun-track__runner {
+  position: absolute;
+  bottom: 6px;
+  // --p is 0..100; keep the runner inside the track at both ends
+  left: calc(var(--p) * (100% - var(--runner)) / 100);
+  width: var(--runner);
+}
+
+.kerstrun-track__santa {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.kerstrun-track__finish {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 20px;
+  height: 100%;
+  border-radius: 0 13px 13px 0;
+  background: repeating-conic-gradient(#222 0 25%, #fff 0 50%) 0 0 / 10px 10px;
+}
+
+.kerstrun-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 24px;
+  color: #fff;
+  text-align: center;
+}
+
+.kerstrun-stats strong {
+  display: block;
+  color: $kerst-goud;
+  font-size: clamp(1.6rem, 4vw, 2.6rem);
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.kerstrun-stats span {
+  font-size: 0.9rem;
+}
+
+.kerstrun-teller--compact {
+  padding-top: 38px;
+}
+
+.kerstrun-teller--compact .kerstrun-track {
+  --runner: 40px;
+  height: 14px;
+  background-size: 100% 1px, 100% 1px, auto;
+}
+
+.kerstrun-teller--compact .kerstrun-track__fill {
+  min-width: 14px;
+}
+
+.kerstrun-teller--compact .kerstrun-track__finish {
+  width: 12px;
+  background-size: 6px 6px;
+}
+
+.kerstrun-teller--compact .kerstrun-track__runner {
+  bottom: 2px;
+}
+
+
+/* --- "Wat doet jouw rondje?" cards, styled like .camp-card --- */
+
+.kerstrun-card {
+  position: relative;
+  height: 100%;
+  padding: 24px 16px;
+  border: 12px solid #fff;
+  border-radius: 10px;
+  color: #fff;
+  text-align: center;
+  transition: transform 160ms ease;
+}
+
+.kerstrun-card:hover {
+  transform: translateY(-4px) rotate(-1deg);
+}
+
+.kerstrun-card--groen { background: $kerst-groen; }
+.kerstrun-card--rood  { background: $kerst-rood; }
+.kerstrun-card--goud  { background: $kerst-goud; color: #000; }
+
+.kerstrun-card__price {
+  display: block;
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.kerstrun-card h5 {
+  margin: 8px 0;
+  font-style: italic;
+  text-transform: uppercase;
+}
+
+.kerstrun-card p {
+  margin: 0;
+}
+
+.kerstrun-card__ribbon {
+  position: absolute;
+  top: -22px;
+  right: -14px;
+  padding: 4px 12px;
+  color: #000;
+  background: $kerst-goud;
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  transform: rotate(6deg);
+}
+
+
+/* --- Buy laps / run along sections --- */
+
+.kerstrun-section {
+  position: relative;
+}
+
+.kerstrun-section--wit {
+  background: rgba(255, 255, 255, 0.55);
+}
+
+.kerstrun-steps {
+  counter-reset: kerstrun-step;
+  list-style: none;
+  padding: 0;
+  margin: 24px 0;
+}
+
+.kerstrun-steps li {
+  counter-increment: kerstrun-step;
+  position: relative;
+  padding-left: 48px;
+  margin-bottom: 16px;
+}
+
+.kerstrun-steps li::before {
+  content: counter(kerstrun-step);
+  position: absolute;
+  top: -4px;
+  left: 0;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  color: #fff;
+  background: $kerst-rood;
+  font-weight: 800;
+  line-height: 34px;
+  text-align: center;
+}
+
+.kerstrun-steps li:nth-child(2)::before { background: $kerst-groen; }
+.kerstrun-steps li:nth-child(3)::before { background: $kerst-goud; color: #000; }
+
+.kerstrun-tip {
+  padding: 12px 16px;
+  background: #fff;
+  border-left: 6px solid $kerst-goud;
+}
+
+.kerstrun-facts {
+  display: grid;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.kerstrun-facts div {
+  padding: 8px 16px;
+  background: #fff;
+  border-left: 6px solid $kerst-groen;
+}
+
+.kerstrun-facts span {
+  display: block;
+  color: $kerst-rood;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.kerstrun-form,
+.kerstrun-form-placeholder {
+  width: 100%;
+  background: #fff;
+  border: 12px solid #fff;
+  border-radius: 10px;
+}
+
+.kerstrun-form {
+  min-height: 900px;
+}
+
+.kerstrun-form-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 280px;
+  padding: 24px;
+  text-align: center;
+  outline: 3px dashed $kerst-groen;
+  outline-offset: -12px;
+}
+
+.kerstrun-form-placeholder__santa {
+  width: 140px;
+  height: auto;
+  margin-bottom: 12px;
+}
+
+
+/* --- Homepage banner --- */
+
+.kerstrun-banner {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  color: #fff;
+  background: linear-gradient(180deg, $kerst-groen-donker, $kerst-groen);
+  text-decoration: none;
+}
+
+.kerstrun-banner:hover,
+.kerstrun-banner:focus-visible {
+  color: #fff;
+}
+
+.kerstrun-banner__inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 32px;
+  padding-top: 8px;
+  padding-bottom: 20px;
+}
+
+.kerstrun-banner .kerstrun-eyebrow {
+  color: $kerst-goud;
+}
+
+.kerstrun-banner__santa {
+  width: 90px;
+  height: auto;
+  animation: kerstrun-jog 0.45s ease-in-out infinite alternate;
+}
+
+.kerstrun-banner__text {
+  flex: 1 1 260px;
+}
+
+.kerstrun-banner__text p {
+  margin: 0;
+}
+
+.kerstrun-banner__title {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-style: italic;
+  font-weight: 800;
+  line-height: 1.15;
+  text-transform: uppercase;
+}
+
+.kerstrun-banner__teller {
+  flex: 0 1 240px;
+}
+
+.kerstrun-banner__teller .kerstrun-teller {
+  padding-top: 38px;
+}
+
+.kerstrun-banner__count {
+  display: block;
+  margin-top: 6px;
+  font-size: 0.85rem;
+  text-align: right;
+}
+
+.kerstrun-banner__count strong {
+  color: $kerst-goud;
+  font-size: 1.1rem;
+}
+
+.kerstrun-banner__cta {
+  margin: 0;
+}
+
+.kerstrun-banner:hover .kerstrun-banner__cta {
+  background-color: #218838;
+}
+
+
+/* --- Small screens & reduced motion --- */
+
+@media (max-width: 767px) {
+  .kerstrun-hero__santa {
+    max-width: 240px;
+  }
+
+  .kerstrun-bubble {
+    left: -4px;
+    font-size: 0.75rem;
+  }
+
+  .kerstrun-stats {
+    gap: 8px;
+  }
+
+  .kerstrun-banner__teller {
+    flex-basis: 100%;
+  }
+
+  .kerstrun-banner__inner {
+    column-gap: 16px;
+  }
+
+  .kerstrun-banner__text {
+    flex-basis: 200px;
+  }
+
+  .kerstrun-banner__santa {
+    width: 56px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .kerstrun-snow,
+  .kerstrun-lights i,
+  .kerstrun-santa,
+  .kerstrun-banner__santa {
+    animation: none;
+  }
+}
