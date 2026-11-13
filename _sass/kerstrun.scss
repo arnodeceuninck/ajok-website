@@ -139,6 +139,64 @@
   flex: 0 0 auto;
 }
 
+.kerstrun-santa,
+.kerstrun-banner__santa,
+.kerstrun-hero__santa {
+  animation: kerstrun-santa-bounce 520ms ease-in-out infinite;
+  transform-box: fill-box;
+  transform-origin: center bottom;
+}
+
+.kerstrun-santa__leg {
+  transform-box: view-box;
+  transform-origin: 50% 50%;
+}
+
+.kerstrun-santa__leg--left {
+  animation: kerstrun-santa-leg-left 520ms ease-in-out infinite;
+  transform-origin: 88px 208px;
+}
+
+.kerstrun-santa__leg--right {
+  animation: kerstrun-santa-leg-right 520ms ease-in-out infinite;
+  transform-origin: 132px 208px;
+}
+
+.kerstrun-santa__arm--left {
+  animation: kerstrun-santa-arm-left 520ms ease-in-out infinite;
+  transform-origin: 80px 158px;
+}
+
+.kerstrun-santa__arm--right {
+  animation: kerstrun-santa-arm-right 520ms ease-in-out infinite;
+  transform-origin: 140px 160px;
+}
+
+@keyframes kerstrun-santa-bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+@keyframes kerstrun-santa-leg-left {
+  0%, 100% { transform: rotate(12deg); }
+  50% { transform: rotate(-12deg); }
+}
+
+@keyframes kerstrun-santa-leg-right {
+  0%, 100% { transform: rotate(-12deg); }
+  50% { transform: rotate(12deg); }
+}
+
+@keyframes kerstrun-santa-arm-left {
+  0%, 100% { transform: rotate(-8deg); }
+  50% { transform: rotate(8deg); }
+}
+
+@keyframes kerstrun-santa-arm-right {
+  0%, 100% { transform: rotate(8deg); }
+  50% { transform: rotate(-8deg); }
+}
+
 .kerstrun-banner__snowflake {
   position: absolute;
   z-index: 0;
@@ -221,7 +279,12 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .kerstrun-banner__garland {
+  .kerstrun-banner__garland,
+  .kerstrun-santa,
+  .kerstrun-banner__santa,
+  .kerstrun-hero__santa,
+  .kerstrun-santa__leg,
+  .kerstrun-santa__arm {
     animation: none;
   }
 
