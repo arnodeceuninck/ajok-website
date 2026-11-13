@@ -470,7 +470,7 @@ a {
 .kerstrun-page {
   max-width: 1140px;
   margin: 0 auto;
-  padding: 0 0 72px;
+  padding: 24px 0 72px;
 }
 
 .kerstrun-hero {
@@ -507,6 +507,26 @@ a {
   position: relative;
   z-index: 1;
   padding: 44px 24px 48px;
+}
+
+.kerstrun-hero__clouds,
+.kerstrun-hero__birds {
+  position: absolute;
+  z-index: 0;
+  width: 150px;
+  height: auto;
+  opacity: 0.9;
+  pointer-events: none;
+}
+
+.kerstrun-hero__clouds {
+  bottom: 20px;
+  left: 18px;
+}
+
+.kerstrun-hero__birds {
+  top: 38px;
+  right: 24px;
 }
 
 .kerstrun-hero > .kerstrun-banner__snowflake {
@@ -718,6 +738,18 @@ a {
   .kerstrun-banner__snowflake--six,
   .kerstrun-banner__snowflake--seven {
     display: none;
+  }
+
+  .kerstrun-hero__clouds {
+    bottom: 10px;
+    left: 8px;
+    width: 100px;
+  }
+
+  .kerstrun-hero__birds {
+    top: 28px;
+    right: 12px;
+    width: 90px;
   }
 
   .kerstrun-facts,
