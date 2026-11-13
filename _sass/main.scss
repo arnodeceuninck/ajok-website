@@ -668,6 +668,7 @@ a {
   background: #fff;
   display: flex;
   flex-direction: column;
+  height: 100%;
 }
 
 .kerstrun-option::before {
@@ -681,7 +682,7 @@ a {
 }
 
 .kerstrun-option__link {
-  margin: 20px 0 0;
+  margin: auto 0 0;
   align-self: flex-start;
 }
 
