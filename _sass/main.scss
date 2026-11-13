@@ -30,201 +30,6 @@
 //   object-fit: cover; /* Ensure the image covers the container without stretching */
 // }
 
-.kerstrun-banner {
-  margin: 24px 0 36px;
-  border-bottom: 8px solid #c5f1fe;
-  color: #212529;
-  background: #f7b52c;
-}
-
-.kerstrun-banner:hover,
-.kerstrun-banner:focus-visible {
-  color: #212529;
-  filter: brightness(1.04);
-}
-
-.kerstrun-banner::before {
-  position: absolute;
-  top: -72px;
-  right: 20%;
-  width: 180px;
-  height: 180px;
-  border-radius: 50%;
-  background: rgba(197, 241, 254, 0.45);
-  content: "";
-}
-
-.kerstrun-banner::after {
-  height: 8px;
-  background: #c5f1fe;
-}
-
-.kerstrun-banner__inner {
-  min-height: 126px;
-  padding: 22px 32px;
-}
-
-.kerstrun-banner__eyebrow,
-.kerstrun-eyebrow {
-  color: #8b4b00;
-}
-
-.kerstrun-banner__title {
-  color: #212529;
-  font-style: italic;
-  text-transform: uppercase;
-}
-
-.kerstrun-banner__details {
-  color: #333;
-}
-
-.kerstrun-banner__count {
-  color: #212529;
-  background: #fff;
-  border: 0;
-  border-radius: 0;
-}
-
-.kerstrun-banner__count strong {
-  color: #d66b00;
-}
-
-.kerstrun-banner__link {
-  color: #212529;
-  background: #c5f1fe;
-  border-radius: 0;
-  text-decoration: underline;
-  text-transform: uppercase;
-}
-
-.kerstrun-page {
-  max-width: none;
-  padding: 0 0 64px;
-}
-
-.kerstrun-hero {
-  padding: 0;
-  color: #212529;
-  background: #f7b52c;
-}
-
-.kerstrun-hero::after {
-  height: 10px;
-  background: #c5f1fe;
-}
-
-.kerstrun-hero__content {
-  max-width: 1140px;
-  margin: 0 auto;
-  padding: 54px 24px 48px;
-}
-
-.kerstrun-hero h1 {
-  margin: 8px 0 14px;
-  font-size: clamp(2.2rem, 6vw, 4rem);
-  font-style: italic;
-  font-weight: 800;
-  text-transform: uppercase;
-}
-
-.kerstrun-intro {
-  max-width: 700px;
-  font-size: 1.1rem;
-}
-
-.kerstrun-facts {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  margin-top: 32px;
-}
-
-.kerstrun-facts div {
-  gap: 5px;
-  border-top: 1px solid rgba(33, 37, 41, 0.35);
-}
-
-.kerstrun-facts dt {
-  color: #8b4b00;
-  font-size: 0.8rem;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-
-.kerstrun-facts dd {
-  margin: 0;
-  font-weight: 700;
-}
-
-.kerstrun-progress {
-  align-items: center;
-  margin: 40px auto;
-  padding: 26px 32px;
-  background: rgba(255, 255, 255, 0.75);
-  border: 0;
-}
-
-.kerstrun-progress h2,
-.kerstrun-option h2 {
-  margin: 0;
-  font-size: clamp(1.35rem, 3vw, 2rem);
-  font-style: italic;
-  text-transform: uppercase;
-}
-
-.kerstrun-total strong {
-  color: #d66b00;
-}
-
-.kerstrun-options {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 28px;
-}
-
-.kerstrun-option {
-  padding: 30px;
-  background: #fff;
-}
-
-.kerstrun-option::before {
-  height: 8px;
-  background: #f7b52c;
-}
-
-.kerstrun-option > p:not(.kerstrun-eyebrow):not(.kerstrun-form-placeholder) {
-  min-height: 0;
-}
-
-.kerstrun-form-placeholder {
-  border-left-color: #f7b52c;
-}
-
-@media (max-width: 767px) {
-  .kerstrun-banner__inner {
-    padding: 20px 18px 24px;
-  }
-
-  .kerstrun-banner__link {
-    background: #c5f1fe;
-  }
-
-  .kerstrun-hero__content {
-    padding: 40px 22px 36px;
-  }
-
-  .kerstrun-facts {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .kerstrun-progress {
-    align-items: flex-start;
-    padding: 22px;
-  }
-
-  .kerstrun-option {
-    padding: 26px 22px;
-  }
-}
-
 .image-row {
   display: flex;
   justify-content: center;
@@ -454,29 +259,31 @@ a {
   width: 100%;
   margin: 24px 0 36px;
   overflow: hidden;
-  color: #fff;
-  background: linear-gradient(110deg, #123f32 0%, #176447 64%, #9b3028 100%);
+  color: #212529;
+  background:
+    radial-gradient(circle at 88% 0, rgba(197, 241, 254, 0.8) 0 110px, transparent 111px),
+    linear-gradient(110deg, #f7b52c 0%, #ffcc00 68%, #c5f1fe 100%);
   text-decoration: none;
   transition: filter 160ms ease;
 }
 
 .kerstrun-banner:hover,
 .kerstrun-banner:focus-visible {
-  color: #fff;
+  color: #212529;
   filter: brightness(1.08);
   text-decoration: none;
 }
 
 .kerstrun-banner__garland {
   display: block;
-  height: 18px;
-  animation: kerstrun-lights-twinkle 1.6s ease-in-out infinite alternate;
+  height: 22px;
+  animation: kerstrun-lights-twinkle 2.4s ease-in-out infinite alternate;
   background:
-    radial-gradient(circle, #f7c64b 0 3px, transparent 4px) 0 0 / 48px 12px repeat-x,
-    radial-gradient(circle, #f5f0d7 0 3px, transparent 4px) 12px 0 / 48px 12px repeat-x,
-    radial-gradient(circle, #e45145 0 3px, transparent 4px) 24px 0 / 48px 12px repeat-x,
-    radial-gradient(circle, #70d2a3 0 3px, transparent 4px) 36px 0 / 48px 12px repeat-x,
-    linear-gradient(rgba(255, 255, 255, 0.45), rgba(255, 255, 255, 0.45)) 0 5px / 100% 1px no-repeat;
+    radial-gradient(circle, #ffcc00 0 3px, transparent 4px) 0 0 / 48px 12px repeat-x,
+    radial-gradient(circle, #c5f1fe 0 3px, transparent 4px) 12px 0 / 48px 12px repeat-x,
+    radial-gradient(circle, #b83c32 0 3px, transparent 4px) 24px 0 / 48px 12px repeat-x,
+    radial-gradient(circle, #176447 0 3px, transparent 4px) 36px 0 / 48px 12px repeat-x,
+    linear-gradient(rgba(23, 100, 71, 0.65), rgba(23, 100, 71, 0.65)) 0 5px / 100% 1px no-repeat;
 }
 
 .kerstrun-banner__inner {
@@ -499,7 +306,7 @@ a {
 .kerstrun-banner__eyebrow,
 .kerstrun-eyebrow {
   margin: 0;
-  color: #ffda72;
+  color: #844900;
   font-size: 0.8rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -507,16 +314,20 @@ a {
 
 .kerstrun-banner__eyebrow span {
   padding: 0 4px;
-  color: #fff;
+  color: #176447;
 }
 
 .kerstrun-banner__title {
+  color: #212529;
   font-size: clamp(1.4rem, 3vw, 2.15rem);
   font-weight: 800;
+  font-style: italic;
   line-height: 1.15;
+  text-transform: uppercase;
 }
 
 .kerstrun-banner__details {
+  color: #333;
   font-size: 0.95rem;
 }
 
@@ -526,17 +337,17 @@ a {
   gap: 12px;
   flex: 0 0 auto;
   padding: 10px 16px;
-  color: #173c2e;
-  background: #fff4d2;
-  border: 2px solid #f7c64b;
-  border-radius: 4px;
+  color: #212529;
+  background: #fff;
+  border: 2px solid #c5f1fe;
+  border-radius: 0;
   font-size: 0.9rem;
   font-weight: 700;
   line-height: 1.15;
 }
 
 .kerstrun-banner__count strong {
-  color: #a73229;
+  color: #b83c32;
   font-size: 2.2rem;
   line-height: 1;
 }
@@ -544,17 +355,19 @@ a {
 .kerstrun-banner__link {
   flex: 0 0 auto;
   padding: 12px 16px;
-  color: #173c2e;
-  background: #fff;
-  border-radius: 4px;
+  color: #212529;
+  background: #c5f1fe;
+  border-radius: 0;
   font-weight: 700;
+  text-decoration: underline;
+  text-transform: uppercase;
   white-space: nowrap;
 }
 
 .kerstrun-banner__snowflake {
   position: absolute;
   z-index: 0;
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(23, 100, 71, 0.55);
   opacity: 0;
   pointer-events: none;
   animation: kerstrun-snowfall 7s linear infinite;
@@ -611,10 +424,10 @@ a {
 
 @keyframes kerstrun-lights-twinkle {
   from {
-    filter: brightness(0.85) drop-shadow(0 0 1px rgba(255, 218, 114, 0.25));
+    filter: brightness(0.85) drop-shadow(0 0 1px rgba(23, 100, 71, 0.25));
   }
   to {
-    filter: brightness(1.45) drop-shadow(0 0 7px rgba(255, 218, 114, 0.9));
+    filter: brightness(1.25) drop-shadow(0 0 7px rgba(23, 100, 71, 0.55));
   }
 }
 
@@ -639,7 +452,7 @@ a {
 
   .kerstrun-banner__snowflake {
     top: 24px;
-    opacity: 0.7;
+    opacity: 0.55;
     animation: none;
   }
 }
@@ -649,7 +462,7 @@ a {
   right: 0;
   bottom: 0;
   left: 0;
-  height: 7px;
+  height: 8px;
   background: repeating-linear-gradient(45deg, #fff4d2 0 8px, #b83c32 8px 16px, #fff4d2 16px 24px, #176447 24px 32px);
   content: "";
 }
@@ -657,15 +470,17 @@ a {
 .kerstrun-page {
   max-width: 1140px;
   margin: 0 auto;
-  padding: 48px 24px 72px;
+  padding: 0 0 72px;
 }
 
 .kerstrun-hero {
   position: relative;
   overflow: hidden;
-  padding: clamp(28px, 6vw, 64px);
-  color: #fff;
-  background: linear-gradient(110deg, #123f32 0%, #176447 64%, #9b3028 100%);
+  padding: 0;
+  color: #212529;
+  background:
+    radial-gradient(circle at 88% 0, rgba(197, 241, 254, 0.8) 0 140px, transparent 141px),
+    #f7b52c;
 }
 
 .kerstrun-hero > .kerstrun-banner__garland {
@@ -681,19 +496,21 @@ a {
   bottom: 0;
   left: 0;
   z-index: 1;
-  height: 8px;
-  background: repeating-linear-gradient(45deg, #fff4d2 0 8px, #b83c32 8px 16px, #fff4d2 16px 24px, #176447 24px 32px);
+  height: 10px;
+  background: repeating-linear-gradient(45deg, #c5f1fe 0 12px, #fff4d2 12px 24px, #b83c32 24px 30px, #176447 30px 36px);
   content: "";
 }
 
 .kerstrun-hero__content {
+  max-width: 1140px;
+  margin: 0 auto;
   position: relative;
   z-index: 1;
-  padding-top: 18px;
+  padding: 44px 24px 48px;
 }
 
 .kerstrun-hero > .kerstrun-banner__snowflake {
-  top: 18px;
+  top: 35px;
 }
 
 .kerstrun-hero .kerstrun-banner__snowflake--one {
@@ -725,9 +542,11 @@ a {
 }
 
 .kerstrun-hero h1 {
-  margin-bottom: 12px;
+  margin: 8px 0 14px;
   font-size: clamp(2.2rem, 6vw, 4rem);
   font-weight: 800;
+  font-style: italic;
+  text-transform: uppercase;
 }
 
 .kerstrun-intro {
@@ -745,18 +564,19 @@ a {
   display: grid;
   gap: 4px;
   padding-top: 12px;
-  border-top: 1px solid rgba(255, 255, 255, 0.45);
+  border-top: 1px solid rgba(23, 100, 71, 0.45);
 }
 
-.kerstrun-facts div strong {
-  color: #fff;
-}
-
-.kerstrun-facts span {
-  color: #f7b52c;
+.kerstrun-facts dt {
+  color: #844900;
   font-size: 0.8rem;
   font-weight: 700;
   text-transform: uppercase;
+}
+
+.kerstrun-facts dd {
+  margin: 0;
+  font-weight: 700;
 }
 
 .kerstrun-progress {
@@ -764,17 +584,17 @@ a {
   align-items: center;
   justify-content: space-between;
   gap: 24px;
-  margin: 32px 0 48px;
-  padding: 24px 0;
-  border-bottom: 2px solid #174d3b;
+  margin: 40px auto;
+  padding: 26px 32px;
+  background: rgba(255, 255, 255, 0.75);
 }
 
 .kerstrun-progress h2,
 .kerstrun-option h2 {
   margin: 0;
   font-size: clamp(1.5rem, 4vw, 2.2rem);
-  font-style: normal;
-  text-transform: none;
+  font-style: italic;
+  text-transform: uppercase;
 }
 
 .kerstrun-total {
@@ -786,7 +606,7 @@ a {
 }
 
 .kerstrun-total strong {
-  color: #174d3b;
+  color: #176447;
   font-size: 3rem;
   line-height: 1;
 }
@@ -794,14 +614,14 @@ a {
 .kerstrun-options {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 32px;
+  gap: 28px;
 }
 
 .kerstrun-option {
   position: relative;
   min-width: 0;
-  padding: 33px 28px 28px;
-  background: rgba(255, 255, 255, 0.55);
+  padding: 30px;
+  background: #fff;
 }
 
 .kerstrun-option::before {
@@ -809,13 +629,13 @@ a {
   top: 0;
   right: 0;
   left: 0;
-  height: 5px;
-  background: repeating-linear-gradient(90deg, #176447 0 22px, #b83c32 22px 44px, #f7c64b 44px 66px);
+  height: 8px;
+  background: repeating-linear-gradient(90deg, #f7b52c 0 22px, #176447 22px 30px, #b83c32 30px 36px, #c5f1fe 36px 58px);
   content: "";
 }
 
 .kerstrun-option > p:not(.kerstrun-eyebrow):not(.kerstrun-form-placeholder) {
-  min-height: 3em;
+  min-height: 0;
 }
 
 .kerstrun-form {
@@ -829,7 +649,7 @@ a {
   margin: 24px 0 0;
   padding: 16px;
   background: #fff;
-  border-left: 4px solid #df6316;
+  border-left: 4px solid #f7b52c;
 }
 
 @media (max-width: 767px) {
@@ -908,178 +728,6 @@ a {
   display: flex;
   // justify-content: flex-start; // needed to start the animation from the beginning
   // animation: scroll 50s linear infinite; /* 30s for slow scroll, adjust if needed */
-}
-
-.kerstrun-banner {
-  margin: 24px 0 36px;
-  border-bottom: 8px solid #c5f1fe;
-  color: #212529;
-  background: #f7b52c;
-}
-
-.kerstrun-banner:hover,
-.kerstrun-banner:focus-visible {
-  color: #212529;
-}
-
-.kerstrun-banner::after,
-.kerstrun-hero::after {
-  height: 8px;
-  background: #c5f1fe;
-}
-
-.kerstrun-banner__inner {
-  min-height: 126px;
-  padding: 22px 32px;
-}
-
-.kerstrun-banner__eyebrow,
-.kerstrun-eyebrow {
-  color: #8b4b00;
-}
-
-.kerstrun-banner__title {
-  color: #212529;
-  font-style: italic;
-  text-transform: uppercase;
-}
-
-.kerstrun-banner__details {
-  color: #333;
-}
-
-.kerstrun-banner__count {
-  color: #212529;
-  background: #fff;
-  border: 0;
-  border-radius: 0;
-}
-
-.kerstrun-banner__count strong {
-  color: #d66b00;
-}
-
-.kerstrun-banner__link {
-  color: #212529;
-  background: #c5f1fe;
-  border-radius: 0;
-  text-decoration: underline;
-  text-transform: uppercase;
-}
-
-.kerstrun-page {
-  max-width: none;
-  padding: 0 0 64px;
-}
-
-.kerstrun-hero {
-  padding: 0;
-  color: #212529;
-  background: #f7b52c;
-}
-
-.kerstrun-hero__content {
-  max-width: 1140px;
-  margin: 0 auto;
-  padding: 54px 24px 48px;
-}
-
-.kerstrun-hero h1 {
-  margin: 8px 0 14px;
-  font-style: italic;
-  text-transform: uppercase;
-}
-
-.kerstrun-facts {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  margin-top: 32px;
-}
-
-.kerstrun-facts div {
-  gap: 5px;
-  border-top-color: rgba(33, 37, 41, 0.35);
-}
-
-.kerstrun-facts dt {
-  color: #8b4b00;
-  font-size: 0.8rem;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-
-.kerstrun-facts dd {
-  margin: 0;
-  font-weight: 700;
-}
-
-.kerstrun-progress {
-  align-items: center;
-  margin: 40px auto;
-  padding: 26px 32px;
-  background: rgba(255, 255, 255, 0.75);
-  border: 0;
-}
-
-.kerstrun-progress h2,
-.kerstrun-option h2 {
-  font-style: italic;
-  text-transform: uppercase;
-}
-
-.kerstrun-total strong {
-  color: #d66b00;
-}
-
-.kerstrun-options {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 28px;
-}
-
-.kerstrun-option {
-  padding: 30px;
-  background: #fff;
-}
-
-.kerstrun-option::before {
-  height: 8px;
-  background: #f7b52c;
-}
-
-.kerstrun-option > p:not(.kerstrun-eyebrow):not(.kerstrun-form-placeholder) {
-  min-height: 0;
-}
-
-.kerstrun-form-placeholder {
-  border-left-color: #f7b52c;
-}
-
-@media (max-width: 767px) {
-  .kerstrun-banner__inner {
-    padding: 20px 18px 24px;
-  }
-
-  .kerstrun-hero__content {
-    padding: 40px 22px 36px;
-  }
-
-  .kerstrun-facts {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .kerstrun-progress {
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 12px;
-    padding: 22px;
-  }
-
-  .kerstrun-options {
-    grid-template-columns: 1fr;
-  }
-
-  .kerstrun-option {
-    padding: 26px 22px;
-  }
 }
 
 .fixed-height-img {
