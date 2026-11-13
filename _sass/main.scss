@@ -259,17 +259,17 @@ a {
   width: 100%;
   margin: 24px 0 36px;
   overflow: hidden;
-  color: #212529;
+  color: #fff;
   background:
-    radial-gradient(circle at 88% 0, rgba(197, 241, 254, 0.8) 0 110px, transparent 111px),
-    linear-gradient(110deg, #f7b52c 0%, #ffcc00 68%, #c5f1fe 100%);
+    radial-gradient(circle at 90% 0, rgba(184, 60, 50, 0.8) 0 150px, transparent 151px),
+    linear-gradient(110deg, #123f32 0%, #176447 68%, #123f32 100%);
   text-decoration: none;
   transition: filter 160ms ease;
 }
 
 .kerstrun-banner:hover,
 .kerstrun-banner:focus-visible {
-  color: #212529;
+  color: #fff;
   filter: brightness(1.08);
   text-decoration: none;
 }
@@ -279,10 +279,10 @@ a {
   height: 22px;
   animation: kerstrun-lights-twinkle 2.4s ease-in-out infinite alternate;
   background:
-    radial-gradient(circle, #ffcc00 0 3px, transparent 4px) 0 0 / 48px 12px repeat-x,
-    radial-gradient(circle, #c5f1fe 0 3px, transparent 4px) 12px 0 / 48px 12px repeat-x,
-    radial-gradient(circle, #b83c32 0 3px, transparent 4px) 24px 0 / 48px 12px repeat-x,
-    radial-gradient(circle, #176447 0 3px, transparent 4px) 36px 0 / 48px 12px repeat-x,
+    radial-gradient(circle, #f7c64b 0 3px, transparent 4px) 0 0 / 48px 12px repeat-x,
+    radial-gradient(circle, #fff4d2 0 3px, transparent 4px) 12px 0 / 48px 12px repeat-x,
+    radial-gradient(circle, #e45145 0 3px, transparent 4px) 24px 0 / 48px 12px repeat-x,
+    radial-gradient(circle, #70d2a3 0 3px, transparent 4px) 36px 0 / 48px 12px repeat-x,
     linear-gradient(rgba(23, 100, 71, 0.65), rgba(23, 100, 71, 0.65)) 0 5px / 100% 1px no-repeat;
 }
 
@@ -306,7 +306,7 @@ a {
 .kerstrun-banner__eyebrow,
 .kerstrun-eyebrow {
   margin: 0;
-  color: #844900;
+  color: #ffda72;
   font-size: 0.8rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -314,11 +314,11 @@ a {
 
 .kerstrun-banner__eyebrow span {
   padding: 0 4px;
-  color: #176447;
+  color: #fff;
 }
 
 .kerstrun-banner__title {
-  color: #212529;
+  color: #fff;
   font-size: clamp(1.4rem, 3vw, 2.15rem);
   font-weight: 800;
   font-style: italic;
@@ -327,7 +327,7 @@ a {
 }
 
 .kerstrun-banner__details {
-  color: #333;
+  color: rgba(255, 255, 255, 0.92);
   font-size: 0.95rem;
 }
 
@@ -337,9 +337,9 @@ a {
   gap: 12px;
   flex: 0 0 auto;
   padding: 10px 16px;
-  color: #212529;
-  background: #fff;
-  border: 2px solid #c5f1fe;
+  color: #173c2e;
+  background: #fff4d2;
+  border: 2px solid #f7c64b;
   border-radius: 0;
   font-size: 0.9rem;
   font-weight: 700;
@@ -347,7 +347,7 @@ a {
 }
 
 .kerstrun-banner__count strong {
-  color: #b83c32;
+  color: #a73229;
   font-size: 2.2rem;
   line-height: 1;
 }
@@ -355,8 +355,8 @@ a {
 .kerstrun-banner__link {
   flex: 0 0 auto;
   padding: 12px 16px;
-  color: #212529;
-  background: #c5f1fe;
+  color: #173c2e;
+  background: #f7c64b;
   border-radius: 0;
   font-weight: 700;
   text-decoration: underline;
@@ -367,7 +367,7 @@ a {
 .kerstrun-banner__snowflake {
   position: absolute;
   z-index: 0;
-  color: rgba(23, 100, 71, 0.55);
+  color: rgba(255, 255, 255, 0.75);
   opacity: 0;
   pointer-events: none;
   animation: kerstrun-snowfall 7s linear infinite;
@@ -424,10 +424,10 @@ a {
 
 @keyframes kerstrun-lights-twinkle {
   from {
-    filter: brightness(0.85) drop-shadow(0 0 1px rgba(23, 100, 71, 0.25));
+    filter: brightness(0.85) drop-shadow(0 0 1px rgba(255, 218, 114, 0.25));
   }
   to {
-    filter: brightness(1.25) drop-shadow(0 0 7px rgba(23, 100, 71, 0.55));
+    filter: brightness(1.45) drop-shadow(0 0 7px rgba(255, 218, 114, 0.9));
   }
 }
 
@@ -452,7 +452,7 @@ a {
 
   .kerstrun-banner__snowflake {
     top: 24px;
-    opacity: 0.55;
+    opacity: 0.7;
     animation: none;
   }
 }
@@ -477,10 +477,10 @@ a {
   position: relative;
   overflow: hidden;
   padding: 0;
-  color: #212529;
+  color: #fff;
   background:
-    radial-gradient(circle at 88% 0, rgba(197, 241, 254, 0.8) 0 140px, transparent 141px),
-    #f7b52c;
+    radial-gradient(circle at 92% 10%, rgba(184, 60, 50, 0.55) 0 140px, transparent 141px),
+    linear-gradient(110deg, #123f32 0%, #176447 72%, #123f32 100%);
 }
 
 .kerstrun-hero > .kerstrun-banner__garland {
@@ -497,7 +497,7 @@ a {
   left: 0;
   z-index: 1;
   height: 10px;
-  background: repeating-linear-gradient(45deg, #c5f1fe 0 12px, #fff4d2 12px 24px, #b83c32 24px 30px, #176447 30px 36px);
+  background: repeating-linear-gradient(45deg, #fff4d2 0 12px, #b83c32 12px 24px, #176447 24px 36px, #f7c64b 36px 42px);
   content: "";
 }
 
@@ -545,6 +545,7 @@ a {
   margin: 8px 0 14px;
   font-size: clamp(2.2rem, 6vw, 4rem);
   font-weight: 800;
+  color: #fff;
   font-style: italic;
   text-transform: uppercase;
 }
@@ -564,11 +565,11 @@ a {
   display: grid;
   gap: 4px;
   padding-top: 12px;
-  border-top: 1px solid rgba(23, 100, 71, 0.45);
+  border-top: 1px solid rgba(255, 255, 255, 0.45);
 }
 
 .kerstrun-facts dt {
-  color: #844900;
+  color: #ffda72;
   font-size: 0.8rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -576,6 +577,7 @@ a {
 
 .kerstrun-facts dd {
   margin: 0;
+  color: #fff;
   font-weight: 700;
 }
 
@@ -595,6 +597,16 @@ a {
   font-size: clamp(1.5rem, 4vw, 2.2rem);
   font-style: italic;
   text-transform: uppercase;
+}
+
+.kerstrun-progress h2,
+.kerstrun-progress .kerstrun-eyebrow,
+.kerstrun-option h2 {
+  color: #176447;
+}
+
+.kerstrun-option .kerstrun-eyebrow {
+  color: #b83c32;
 }
 
 .kerstrun-total {
@@ -630,7 +642,7 @@ a {
   right: 0;
   left: 0;
   height: 8px;
-  background: repeating-linear-gradient(90deg, #f7b52c 0 22px, #176447 22px 30px, #b83c32 30px 36px, #c5f1fe 36px 58px);
+  background: repeating-linear-gradient(90deg, #176447 0 22px, #b83c32 22px 44px, #f7c64b 44px 66px);
   content: "";
 }
 
