@@ -657,7 +657,7 @@ a {
 
 .kerstrun-options {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 28px;
 }
 
@@ -666,6 +666,8 @@ a {
   min-width: 0;
   padding: 30px;
   background: #fff;
+  display: flex;
+  flex-direction: column;
 }
 
 .kerstrun-option::before {
@@ -678,22 +680,15 @@ a {
   content: "";
 }
 
-.kerstrun-option > p:not(.kerstrun-eyebrow):not(.kerstrun-form-placeholder) {
-  min-height: 0;
+.kerstrun-option__link {
+  margin: 20px 0 0;
+  align-self: flex-start;
 }
 
-.kerstrun-form {
-  display: block;
-  width: 100%;
-  min-height: 700px;
-  border: 0;
-}
-
-.kerstrun-form-placeholder {
-  margin: 24px 0 0;
-  padding: 16px;
-  background: #fff;
-  border-left: 4px solid #f7b52c;
+@media (max-width: 991px) {
+  .kerstrun-options {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 767px) {
