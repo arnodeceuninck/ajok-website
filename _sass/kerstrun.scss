@@ -4,11 +4,12 @@
   width: 100%;
   margin: 24px 0 36px;
   overflow: hidden;
-  border: 3px solid #f7c64b;
+  border: 3px solid #e8c66a;
   color: #173c2e;
   background:
-    radial-gradient(circle at 92% 8%, rgba(251, 224, 217, 0.9) 0 130px, transparent 131px),
-    linear-gradient(110deg, #fff8df 0%, #e8f7e9 55%, #dff4fb 100%);
+    radial-gradient(circle at 94% 6%, #f8ded8 0 115px, transparent 116px),
+    radial-gradient(circle at 55% 115%, #e5f2e4 0 150px, transparent 151px),
+    #fff8e8;
   text-decoration: none;
   transition: filter 160ms ease;
 }
@@ -26,10 +27,10 @@
   animation: kerstrun-lights-twinkle 2.4s ease-in-out infinite alternate;
   background:
     radial-gradient(circle, #f7c64b 0 3px, transparent 4px) 0 0 / 48px 12px repeat-x,
-    radial-gradient(circle, #fff4d2 0 3px, transparent 4px) 12px 0 / 48px 12px repeat-x,
-    radial-gradient(circle, #e45145 0 3px, transparent 4px) 24px 0 / 48px 12px repeat-x,
-    radial-gradient(circle, #70d2a3 0 3px, transparent 4px) 36px 0 / 48px 12px repeat-x,
-    linear-gradient(rgba(23, 100, 71, 0.65), rgba(23, 100, 71, 0.65)) 0 5px / 100% 1px no-repeat;
+    radial-gradient(circle, #fff 0 3px, transparent 4px) 12px 0 / 48px 12px repeat-x,
+    radial-gradient(circle, #d96b60 0 3px, transparent 4px) 24px 0 / 48px 12px repeat-x,
+    radial-gradient(circle, #72a77b 0 3px, transparent 4px) 36px 0 / 48px 12px repeat-x,
+    linear-gradient(rgba(23, 60, 46, 0.55), rgba(23, 60, 46, 0.55)) 0 5px / 100% 1px no-repeat;
 }
 
 .kerstrun-banner__inner {
@@ -84,8 +85,8 @@
   margin-top: 3px;
   padding: 6px 12px;
   color: #173c2e;
-  background: #f7c64b;
-  border-left: 4px solid #b83c32;
+  background: #f8e6a8;
+  border-left: 4px solid #c65a50;
   font-size: 0.9rem;
   font-weight: 800;
   transform: rotate(-1deg);
@@ -104,7 +105,7 @@
   padding: 10px 16px;
   color: #173c2e;
   background: #fff;
-  border: 2px solid #d5ebd7;
+  border: 2px solid #e8c66a;
   font-size: 0.9rem;
   font-weight: 700;
   line-height: 1.15;
@@ -120,8 +121,8 @@
   flex: 0 0 auto;
   padding: 12px 16px;
   color: #173c2e;
-  background: #f7c64b;
-  border: 2px solid #e6ad23;
+  background: #f8e6a8;
+  border: 2px solid #e8c66a;
   font-weight: 700;
   text-transform: uppercase;
   white-space: nowrap;
@@ -129,7 +130,7 @@
 }
 
 .kerstrun-banner:hover .kerstrun-banner__link {
-  background: #ffd96b;
+  background: #f3dc8a;
 }
 
 .kerstrun-banner__santa {
@@ -142,7 +143,7 @@
 .kerstrun-banner__snowflake {
   position: absolute;
   z-index: 0;
-  color: rgba(23, 100, 71, 0.45);
+  color: rgba(23, 100, 71, 0.3);
   opacity: 0;
   pointer-events: none;
   animation: kerstrun-snowfall 7s linear infinite;
@@ -278,10 +279,12 @@
   z-index: 1;
   overflow: hidden;
   padding: 0;
-  color: #fff;
+  color: #173c2e;
+  border: 3px solid #e8c66a;
   background:
-    radial-gradient(circle at 92% 10%, rgba(184, 60, 50, 0.55) 0 140px, transparent 141px),
-    linear-gradient(110deg, #123f32 0%, #176447 72%, #123f32 100%);
+    radial-gradient(circle at 94% 6%, #f8ded8 0 135px, transparent 136px),
+    radial-gradient(circle at 55% 115%, #e5f2e4 0 170px, transparent 171px),
+    #fff8e8;
 }
 
 .kerstrun-hero > .kerstrun-banner__garland {
@@ -298,7 +301,7 @@
   left: 0;
   z-index: 1;
   height: 10px;
-  background: repeating-linear-gradient(45deg, #fff4d2 0 12px, #b83c32 12px 24px, #176447 24px 36px, #f7c64b 36px 42px);
+  background: repeating-linear-gradient(45deg, #fff 0 12px, #d96b60 12px 24px, #72a77b 24px 36px, #f7c64b 36px 42px);
   content: "";
 }
 
@@ -307,7 +310,16 @@
   margin: 0 auto;
   position: relative;
   z-index: 1;
-  padding: 44px 24px 48px;
+  padding: 44px 230px 48px 24px;
+}
+
+.kerstrun-hero__santa {
+  position: absolute;
+  right: 24px;
+  bottom: 18px;
+  z-index: 1;
+  width: 180px;
+  height: auto;
 }
 
 .kerstrun-progress,
@@ -318,6 +330,7 @@
 
 .kerstrun-hero > .kerstrun-banner__snowflake {
   top: 35px;
+  color: rgba(23, 100, 71, 0.3);
 }
 
 .kerstrun-hero .kerstrun-banner__snowflake--one {
@@ -352,9 +365,13 @@
   margin: 8px 0 14px;
   font-size: clamp(2.2rem, 6vw, 4rem);
   font-weight: 800;
-  color: #fff;
+  color: #176447;
   font-style: italic;
   text-transform: uppercase;
+}
+
+.kerstrun-hero .kerstrun-eyebrow {
+  color: #b83c32;
 }
 
 .kerstrun-hero__slogan {
@@ -362,9 +379,8 @@
   margin: 0 0 16px;
   padding: 8px 16px;
   color: #173c2e;
-  background: #f7c64b;
-  border-radius: 999px;
-  box-shadow: 0 4px 0 rgba(0, 0, 0, 0.14);
+  background: #f8e6a8;
+  border-left: 4px solid #c65a50;
   font-size: 1.05rem;
   font-weight: 800;
   transform: rotate(-1deg);
@@ -385,11 +401,11 @@
   display: grid;
   gap: 4px;
   padding-top: 12px;
-  border-top: 1px solid rgba(255, 255, 255, 0.45);
+  border-top: 1px solid rgba(23, 60, 46, 0.24);
 }
 
 .kerstrun-facts dt {
-  color: #ffda72;
+  color: #b83c32;
   font-size: 0.8rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -397,7 +413,7 @@
 
 .kerstrun-facts dd {
   margin: 0;
-  color: #fff;
+  color: #173c2e;
   font-weight: 700;
 }
 
@@ -553,6 +569,14 @@
   .kerstrun-options {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
+  .kerstrun-hero__content {
+    padding-right: 180px;
+  }
+
+  .kerstrun-hero__santa {
+    width: 130px;
+  }
 }
 
 @media (max-width: 767px) {
@@ -565,6 +589,14 @@
 
   .kerstrun-banner__slogan {
     font-size: 0.82rem;
+  }
+
+  .kerstrun-hero__content {
+    padding-right: 22px;
+  }
+
+  .kerstrun-hero__santa {
+    display: none;
   }
 
   .kerstrun-banner__message {
