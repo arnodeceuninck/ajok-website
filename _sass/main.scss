@@ -468,13 +468,39 @@ a {
 }
 
 .kerstrun-page {
-  max-width: 1140px;
-  margin: 0 auto;
+  position: relative;
+  isolation: isolate;
   padding: 24px 0 72px;
+}
+
+.kerstrun-page__artifacts {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.kerstrun-page__birds,
+.kerstrun-page__clouds {
+  position: absolute;
+  width: 150px;
+  height: auto;
+}
+
+.kerstrun-page__birds {
+  top: 440px;
+  right: 24px;
+}
+
+.kerstrun-page__clouds {
+  top: 760px;
+  left: 18px;
 }
 
 .kerstrun-hero {
   position: relative;
+  z-index: 1;
   overflow: hidden;
   padding: 0;
   color: #fff;
@@ -509,24 +535,10 @@ a {
   padding: 44px 24px 48px;
 }
 
-.kerstrun-hero__clouds,
-.kerstrun-hero__birds {
-  position: absolute;
-  z-index: 0;
-  width: 150px;
-  height: auto;
-  opacity: 0.9;
-  pointer-events: none;
-}
-
-.kerstrun-hero__clouds {
-  bottom: 20px;
-  left: 18px;
-}
-
-.kerstrun-hero__birds {
-  top: 38px;
-  right: 24px;
+.kerstrun-progress,
+.kerstrun-options {
+  position: relative;
+  z-index: 1;
 }
 
 .kerstrun-hero > .kerstrun-banner__snowflake {
@@ -740,16 +752,9 @@ a {
     display: none;
   }
 
-  .kerstrun-hero__clouds {
-    bottom: 10px;
-    left: 8px;
+  .kerstrun-page__birds,
+  .kerstrun-page__clouds {
     width: 100px;
-  }
-
-  .kerstrun-hero__birds {
-    top: 28px;
-    right: 12px;
-    width: 90px;
   }
 
   .kerstrun-facts,
