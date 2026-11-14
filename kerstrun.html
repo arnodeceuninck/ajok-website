@@ -28,6 +28,7 @@ title: "AJOK Kerstrun"
 
   <div class="kerstrun-page__artifacts" aria-hidden="true">
     <img class="kerstrun-page__birds" src="assets/images/artifacts/vogeltjes.webp" alt="" loading="lazy">
+    <img class="kerstrun-page__clouds" src="assets/images/artifacts/wolkjes.webp" alt="" loading="lazy">
   </div>
 
   <section class="kerstrun-progress container" aria-labelledby="kerstrun-progress-title">
@@ -38,29 +39,31 @@ title: "AJOK Kerstrun"
     <p class="kerstrun-total"><strong>{{ site.data.kerstrun.rondjes_verkocht }}</strong><span>rondjes gekocht</span></p>
   </section>
 
-  {% include section-img-right.html
-      title="Koop rondjes"
-      id="rondjes-kopen"
-      text="Koop snel een of meer rondjes voor slechts &euro;3 per rondje. Een rondje is 400 meter. Onze vrijwilligers lopen alle betaalde rondjes voor jou."
-      call_to_action="Koop een rondje"
-      url=site.data.kerstrun.rondjes_form_url
-      img="assets/images/steun-ons/peter-meter-original.jpg"
-      img_mobile="assets/images/steun-ons/peter-meter-original.jpg" %}
+  <section class="kerstrun-options container" aria-label="Meedoen aan de Kerstrun">
+    <article class="kerstrun-option" id="rondjes-kopen">
+      <span class="kerstrun-option__icon" aria-hidden="true">&#127873;</span>
+      <p class="kerstrun-eyebrow">Steun een loper</p>
+      <h2>Koop rondjes</h2>
+      <p>Koop snel een of meer rondjes voor slechts &euro;3 per rondje. Een rondje is 400 meter. Onze vrijwilligers lopen alle betaalde rondjes voor jou.</p>
+      <a class="btn btn-success kerstrun-option__link" href="{{ site.data.kerstrun.rondjes_form_url }}" target="_blank" rel="noopener noreferrer">Koop een rondje</a>
+    </article>
 
-  {% include section-img-left.html
-      title="Loop een rondje"
-      id="inschrijven-als-loper"
-      text="Help onze vrijwilligers alle gekochte rondjes te lopen of wandelen. Je kiest zelf hoeveel rondjes van 400 meter je doet."
-      call_to_action="Schrijf je in als loper"
-      url=site.data.kerstrun.lopers_form_url
-      img="assets/images/steun-ons/word-sponsor.jpeg"
-      img_mobile="assets/images/steun-ons/word-sponsor-mobile.jpeg" %}
+    <article class="kerstrun-option" id="inschrijven-als-loper">
+      <span class="kerstrun-option__icon" aria-hidden="true">&#127939;</span>
+      <p class="kerstrun-eyebrow">Doe zelf mee</p>
+      <h2>Loop een rondje</h2>
+      <p>Help onze vrijwilligers alle gekochte rondjes te lopen of wandelen. Je kiest zelf hoeveel rondjes van 400 meter je doet.</p>
+      <a class="btn btn-success kerstrun-option__link" href="{{ site.data.kerstrun.lopers_form_url }}" target="_blank" rel="noopener noreferrer">Schrijf je in als loper</a>
+    </article>
 
-  {% include section-img-right.html
-      title="Kom supporteren"
-      id="supporter"
-      text="Geen loper of wandelaar? Kom gezellig supporteren! We zoeken ook lekkere zoetigheden voor onze lopers en supporters. Bak je mee? Breng je zoetigheid naar de looppiste."
-      call_to_action="Supporter gezellig mee"
-      url=site.data.kerstrun.supporter_form_url
-      img="assets/images/steun-ons/trooper.jpeg" %}
+    <article class="kerstrun-option" id="supporter">
+      <span class="kerstrun-option__icon" aria-hidden="true">&#129473;</span>
+      <p class="kerstrun-eyebrow">Supporter mee</p>
+      <h2>Kom supporteren</h2>
+      <p>Geen loper of wandelaar? Kom gezellig supporteren! We zoeken ook lekkere zoetigheden voor onze lopers en supporters. Bak je mee? Breng je zoetigheid naar de looppiste.</p>
+      <a class="btn btn-success kerstrun-option__link" href="{{ site.data.kerstrun.supporter_form_url }}" target="_blank" rel="noopener noreferrer">Supporter gezellig mee</a>
+    </article>
+  </section>
+
+  <img class="kerstrun-page__hills" src="assets/images/artifacts/heuveltjes.webp" alt="" aria-hidden="true" loading="lazy">
 </main>
