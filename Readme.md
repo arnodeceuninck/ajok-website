@@ -21,7 +21,7 @@ Bv:
 - `_data/kampen.yml` om info over kampen te updaten (datum, beschrijving...)
 - `_data/peter_meters.yml` om peters en meters te updaten
 - `_data/forms.yml` om inschrijvingsformulieren te updaten
-- `_data/kerstrun.yml` om het aantal verkochte rondjes en de links naar de Kerstrun-formulieren te updaten
+- `_data/kerstrun.yml` om het aantal verkochte rondjes en de links naar de Kerstrun-formulieren te updaten (de live teller haalt het actuele aantal op via `kerstrun-api/`, zie [kerstrun-api/README.md](kerstrun-api/README.md); `rondjes_verkocht` is de fallback)
 
 [Video: Overlopen _data folder](https://youtu.be/MQvd1eHGmwI)
 

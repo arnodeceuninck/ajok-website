@@ -51,3 +51,12 @@ url: "https://ajokvzw.be" # the base hostname & protocol for your site, e.g. htt
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+exclude:
+  - kerstrun-api/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/
+  - .sass-cache/
+  - .jekyll-cache/
