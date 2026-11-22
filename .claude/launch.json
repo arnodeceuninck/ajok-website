@@ -1,0 +1,23 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "jekyll",
+      "runtimeExecutable": "cmd",
+      "runtimeArgs": [
+        "/c",
+        "set JEKYLL_NO_BUNDLER_REQUIRE=true&& jekyll serve --config _config.yml,C:/Users/arnod/AppData/Local/Temp/claude/C--Users-arnod--claude-spares-spare-IkuHId/4e5e167f-a677-469f-90b0-65189eb35aeb/scratchpad/local.yml --port 4000"
+      ],
+      "port": 4000
+    },
+    {
+      "name": "jekyll-kerstrun-test",
+      "runtimeExecutable": "cmd",
+      "runtimeArgs": [
+        "/c",
+        "set JEKYLL_NO_BUNDLER_REQUIRE=true&& jekyll serve --config _config.yml,C:/Users/arnod/AppData/Local/Temp/claude/7e2bb801fcf163f2/363654bc-d33c-4e10-b387-78262e2a4970/scratchpad/local.yml --port 4000"
+      ],
+      "port": 4000
+    }
+  ]
+}

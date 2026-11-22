@@ -1,0 +1,64 @@
+{% if site.data.kerstrun.api_url and site.data.kerstrun.api_url != "" %}
+<script>
+  // Live Kerstrun teller.
+  // 1. Toon meteen de beste gekende waarde: de laatst opgehaalde (localStorage)
+  //    als die nieuwer is dan deze build, anders de waarde uit _data/kerstrun.yml.
+  // 2. Haal daarna de actuele waarde op bij de kerstrun-api en ververs regelmatig.
+  // 3. Lukt dat niet, dan blijft de laatst getoonde waarde gewoon staan.
+  (function () {
+    var els = document.querySelectorAll('[data-kerstrun-rondjes]');
+    if (!els.length) return;
+
+    var API_URL = {{ site.data.kerstrun.api_url | jsonify }};
+    var BUILD_VALUE = {{ site.data.kerstrun.rondjes_verkocht | jsonify }};
+    var BUILD_TIME = Date.parse({{ site.time | date_to_xmlschema | jsonify }});
+    var STORAGE_KEY = 'kerstrun-rondjes';
+    var REFRESH_MS = 60 * 1000;
+    var TIMEOUT_MS = 6000;
+
+    var shownTime = BUILD_TIME;
+
+    function show(value) {
+      for (var i = 0; i < els.length; i++) els[i].textContent = value;
+    }
+
+    function readCache() {
+      try { return JSON.parse(localStorage.getItem(STORAGE_KEY)); } catch (e) { return null; }
+    }
+
+    function writeCache(data) {
+      try { localStorage.setItem(STORAGE_KEY, JSON.stringify(data)); } catch (e) { /* ignore */ }
+    }
+
+    // Only accept values newer than what we already show; a site rebuild with a
+    // fresh number in kerstrun.yml therefore wins over an old cached value.
+    function apply(data) {
+      if (!data || typeof data.rondjes !== 'number' || !isFinite(data.rondjes)) return false;
+      var t = Date.parse(data.updated_at);
+      if (isNaN(t) || t < shownTime) return false;
+      shownTime = t;
+      show(data.rondjes);
+      return true;
+    }
+
+    show(BUILD_VALUE);
+    apply(readCache());
+
+    function refresh() {
+      if (!window.fetch) return;
+      var ctrl = window.AbortController ? new AbortController() : null;
+      var timer = ctrl ? setTimeout(function () { ctrl.abort(); }, TIMEOUT_MS) : null;
+      fetch(API_URL, { signal: ctrl ? ctrl.signal : undefined, mode: 'cors' })
+        .then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
+        .then(function (data) {
+          if (apply(data)) writeCache({ rondjes: data.rondjes, updated_at: data.updated_at });
+        })
+        .catch(function () { /* keep last known value */ })
+        .then(function () { if (timer) clearTimeout(timer); });
+    }
+
+    refresh();
+    setInterval(function () { if (!document.hidden) refresh(); }, REFRESH_MS);
+  })();
+</script>
+{% endif %}
