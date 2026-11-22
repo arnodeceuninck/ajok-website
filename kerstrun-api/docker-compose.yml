@@ -9,7 +9,7 @@ services:
       SHEET_GID: "1174835771"
       SUM_RANGE: "D2:D"
       REFRESH_SECONDS: "60"
-      ALLOWED_ORIGINS: "https://ajokvzw.be,https://www.ajokvzw.be,http://localhost:4000,http://127.0.0.1:4000"
+      ALLOWED_ORIGINS: "https://ajokvzw.be,https://www.ajokvzw.be,https://ajok-website.pages.dev,https://*.ajok-website.pages.dev,http://localhost:4000,http://127.0.0.1:4000"
     volumes:
       # Service account key (never commit this file!)
       - ./secrets/service-account.json:/secrets/service-account.json:ro

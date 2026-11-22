@@ -47,7 +47,7 @@ GET /health
 | `SHEET_GID` | `1174835771` | `gid` van het tabblad (tabnaam mag dus wijzigen) |
 | `SUM_RANGE` | `D2:D` | Bereik dat opgeteld wordt |
 | `REFRESH_SECONDS` | `60` | Hoe vaak Google bevraagd wordt (min. 10) |
-| `ALLOWED_ORIGINS` | `https://ajokvzw.be,https://www.ajokvzw.be` | CORS origins, komma-gescheiden, of `*` |
+| `ALLOWED_ORIGINS` | `https://ajokvzw.be,https://www.ajokvzw.be,https://ajok-website.pages.dev,https://*.ajok-website.pages.dev` | CORS origins, komma-gescheiden, of `*`. `https://*.domein` laat elk subdomein toe (bv. PR-previews op Cloudflare Pages) |
 | `GOOGLE_APPLICATION_CREDENTIALS` | `/secrets/service-account.json` | Pad naar de service-account key |
 | `STATE_FILE` | `/data/state.json` | Waar de laatste waarde bewaard wordt |
 | `PORT` | `8080` | |

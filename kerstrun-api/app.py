@@ -29,7 +29,27 @@ STATE_FILE = os.environ.get("STATE_FILE", "/data/state.json")
 REFRESH_SECONDS = max(10, int(os.environ.get("REFRESH_SECONDS", "60")))
 PORT = int(os.environ.get("PORT", "8080"))
 # Comma separated list of origins allowed to call the API, or "*".
-ALLOWED_ORIGINS = [o.strip() for o in os.environ.get("ALLOWED_ORIGINS", "https://ajokvzw.be,https://www.ajokvzw.be").split(",") if o.strip()]
+# An entry may start its host with "*." to allow any single subdomain label,
+# e.g. "https://*.ajok-website.pages.dev" for preview deployments.
+ALLOWED_ORIGINS = [o.strip().rstrip("/") for o in os.environ.get(
+    "ALLOWED_ORIGINS",
+    "https://ajokvzw.be,https://www.ajokvzw.be,https://ajok-website.pages.dev,https://*.ajok-website.pages.dev",
+).split(",") if o.strip()]
+
+
+def origin_allowed(origin):
+    if not origin:
+        return False
+    for allowed in ALLOWED_ORIGINS:
+        if allowed == origin:
+            return True
+        scheme, sep, host = allowed.partition("://*.")
+        if sep and origin.startswith(scheme + "://"):
+            # Exactly one extra label in front of the suffix, no dots or ports smuggled in.
+            label, dot, rest = origin[len(scheme) + 3:].partition(".")
+            if dot and rest == host and label and all(c.isalnum() or c == "-" for c in label):
+                return True
+    return False
 
 SHEETS_API = "https://sheets.googleapis.com/v4/spreadsheets"
 SCOPES = ["https://www.googleapis.com/auth/spreadsheets.readonly"]
@@ -167,7 +187,7 @@ def make_handler(state):
             origin = self.headers.get("Origin")
             if "*" in ALLOWED_ORIGINS:
                 self.send_header("Access-Control-Allow-Origin", "*")
-            elif origin and origin in ALLOWED_ORIGINS:
+            elif origin_allowed(origin):
                 self.send_header("Access-Control-Allow-Origin", origin)
                 self.send_header("Vary", "Origin")
 
